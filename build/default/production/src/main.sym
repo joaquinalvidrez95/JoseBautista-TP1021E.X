@@ -1,0 +1,444 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     @CURRENT_TASK
+022-028 @TASKINFO1_2_2_0_0
+029-02F @TASKINFO2_2_2_0_0
+030-036 @TASKINFO3_2_2_0_0
+037-03D @TASKINFO4_2_2_0_0
+03E.0   showDisplayCompletely
+03E.1   buttonStateStart
+03E.2   buttonStateMenu
+03E.3   startButtonState
+03E.4   menuButtonState
+03E.5   nextButtonState
+03F-050 myDisplay
+051     nextStateAfterWaitingForButtonBeingReleased
+052     numberOfMenuButtonHasBeenReleased
+053     Task_checkIfStartStopResetButtonIsHeld.nextUpButtonCounter
+054     Task_checkIfMenuButtonIsHeld.menuButtonCounter
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+095     WPUB
+0D0-0D1 Display_saveFormat.displayPtr
+0D0-0D1 Display_swapFormat.displayPtr
+0D0-0D1 Display_increaseAlarm.displayPtr
+0D0-0D1 SeventSegmentDisplay_showHyphensTwoDigits.arrayToSend
+0D0-0D1 Display_showLimitTime.displayPtr
+0D0-0D1 Display_saveRtcCurrentTime.displayPtr
+0D0-0D1 Display_isAlarmOkay.displayPtr
+0D0-0D1 Display_saveAlarm.displayPtr
+0D0-0D1 Display_resume.displayPtr
+0D0-0D3 SevenSegmentDisplay_clearDisplay.charactersArray
+0D0-0D7 SevenSegmentDisplay_clearDisplayTwoLines.charactersArray
+0D0-0D1 Display_stop.displayPtr
+0D0-0D1 Display_showFormat.displayPtr
+0D0     runStateMachinePart1.@SCRATCH1
+0D1     @delay_ms1.P1
+0D1     runStateMachinePart1.@SCRATCH2
+0D2-0D3 Timer_showFormatSeconds.numbersToSend
+0D2-0D3 Timer_showFormatMinutes.numbersToSend
+0D2     Display_showFormat.@SCRATCH1
+0D2     Display_resume.@SCRATCH1
+0D2     Display_stop.@SCRATCH1
+0D2     Display_saveRtcCurrentTime.@SCRATCH1
+0D2     Display_swapFormat.@SCRATCH1
+0D2     Display_saveFormat.@SCRATCH1
+0D2     Display_saveAlarm.@SCRATCH1
+0D2     Display_showLimitTime.@SCRATCH1
+0D2     Display_increaseAlarm.@SCRATCH1
+0D2     Display_isAlarmOkay.@SCRATCH1
+0D2     runStateMachinePart1.@SCRATCH3
+0D3     Display_resume.@SCRATCH2
+0D3     Display_stop.@SCRATCH2
+0D3     Display_swapFormat.@SCRATCH2
+0D3     Display_showLimitTime.@SCRATCH2
+0D3     Display_increaseAlarm.@SCRATCH2
+0D3     runStateMachinePart1.@SCRATCH4
+0D4-0D5 Timer_increaseTimerMinutes.timerPtr
+0D4-0D5 Timer_showSecondsOfLimitTime.timerPtr
+0D4-0D5 Timer_increaseTimerSeconds.timerPtr
+0D4-0D5 Timer_showMinutesOfLimitTime.timerPtr
+0D4     Display_resume.@SCRATCH3
+0D4     Display_stop.@SCRATCH3
+0D4     Display_swapFormat.@SCRATCH3
+0D6-0E7 Display_new.erickaDisplay
+0D6-0D7 Timer_showMinutesOfLimitTime.numbersToSend
+0D6-0D7 Timer_showSecondsOfLimitTime.numbersToSend
+0D6     Timer_increaseTimerMinutes.@SCRATCH1
+0D6     Timer_increaseTimerSeconds.@SCRATCH1
+0D7     Timer_increaseTimerMinutes.@SCRATCH2
+0D7     Timer_increaseTimerSeconds.@SCRATCH2
+0D8-0DD Timer_showMinutesOfLimitTime.displayableTime
+0D8-0DD Timer_showSecondsOfLimitTime.displayableTime
+0D8     Timer_increaseTimerMinutes.@SCRATCH3
+0D8     Timer_increaseTimerSeconds.@SCRATCH3
+0DE     Timer_showMinutesOfLimitTime.@SCRATCH1
+0DE     Timer_showSecondsOfLimitTime.@SCRATCH1
+0DF     Timer_showMinutesOfLimitTime.@SCRATCH2
+0DF     Timer_showSecondsOfLimitTime.@SCRATCH2
+0E0     Timer_showMinutesOfLimitTime.@SCRATCH3
+0E0     Timer_showSecondsOfLimitTime.@SCRATCH3
+0E1     Timer_showMinutesOfLimitTime.@SCRATCH4
+0E1     Timer_showSecondsOfLimitTime.@SCRATCH4
+0E8-0E9 Display_updateRtc.displayPtr
+0E8-0E9 Display_saveState.displayPtr
+0E8-0E9 Display_isTimerDone.displayPtr
+0E8-0E9 Display_updateTimer.displayPtr
+0E8-0E9 Display_showCount.displayPtr
+0E8-0E9 Timer_updateTimerFromEeprom.timerPtr
+0E8     setDate.daySet
+0E8-0E9 Display_setState.displayPtr
+0E8     Display_new.@SCRATCH1
+0E9     setDate.dateSet
+0E9     Display_new.@SCRATCH2
+0EA     Display_showCount.withBlink
+0EA     setDate.monthSet
+0EA-0ED Display_updateRtc.time
+0EA     Display_setState.DisplayState
+0EA-0EB Timer_updateTimerFromEeprom.addressRtcHours
+0EA     Display_updateTimer.@SCRATCH1
+0EA     Display_saveState.@SCRATCH1
+0EA     Display_isTimerDone.@SCRATCH1
+0EA     Display_new.@SCRATCH3
+0EB     setDate.yearSet
+0EB     Display_updateTimer.@SCRATCH2
+0EB     Display_showCount.@SCRATCH1
+0EB     Display_setState.@SCRATCH1
+0EB     Display_isTimerDone.@SCRATCH2
+0EB     Display_new.@SCRATCH4
+0EC-0EF Time_getCurrentTime.currentTime
+0EC-0ED Timer_updateCountdownTime.timerPtr
+0EC-0ED Timer_updateTimerFromEeprom.addressRtcMinutes
+0EC-0ED Timer_isTimerFinished.timerPtr
+0EC     setDate.@SCRATCH1
+0EC     Display_updateTimer.@SCRATCH3
+0EC     Display_showCount.@SCRATCH2
+0EC     Display_setState.@SCRATCH2
+0ED-0EE Timer_showSecondsOfCountdownTime.timerPtr
+0ED-0EE Timer_showMinutesOfCountdownTime.timerPtr
+0ED     Display_updateTimer.@SCRATCH4
+0ED     Display_setState.@SCRATCH3
+0EE-0EF Time_setClockTime.timePtr
+0EE-0EF Timer_updateTimerFromEeprom.addressRtcSeconds
+0EE     Timer_newMinutes.minutesUpperBound
+0EE     Timer_newSeconds.secondsUpperBound
+0EE     Timer_isTimerFinished.@SCRATCH1
+0EE     Display_updateRtc.@SCRATCH1
+0EE     Display_updateTimer.@SCRATCH5
+0EF     Timer_showMinutesOfCountdownTime.blink
+0EF     Timer_isTimerFinished.@SCRATCH2
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+110-113 Timer_updateCountdownTime.currentTimeInSeconds
+110-11E Timer_newSeconds.newTimer
+110-111 Timer_showSecondsOfCountdownTime.timeToSend
+110-111 Timer_showMinutesOfCountdownTime.timeToSend
+110-11E Timer_newMinutes.newTimer
+110-111 Time_isTimeZero.timePtr
+110     Time_getCurrentTime.currentHour
+110     Time_setClockTime.@SCRATCH1
+110     Timer_updateTimerFromEeprom.@SCRATCH1
+111     Time_getCurrentTime.currentMinute
+111     Time_setClockTime.@SCRATCH2
+111     Timer_updateTimerFromEeprom.@SCRATCH2
+112-117 Timer_showMinutesOfCountdownTime.TimeInDigits
+112-117 Timer_showSecondsOfCountdownTime.TimeInDigits
+112     Time_getCurrentTime.currentSecond
+112     Time_isTimeZero.@SCRATCH1
+112     Time_setClockTime.@SCRATCH3
+112     Timer_updateTimerFromEeprom.@SCRATCH3
+113     Time_new.hour
+113     setTime.hSet
+113     Timer_updateTimerFromEeprom.@SCRATCH4
+114-117 Timer_updateCountdownTime.limitTimeInSeconds
+114     Time_new.minute
+114     setTime.mSet
+115     setTime.sSet
+115     Time_new.second
+116-119 Time_new.time
+116     bcd_to_decimal.d
+116     decimal_to_bcd.d
+116     DS3231_Read.address
+116     setTime.@SCRATCH1
+117     DS3231_Write.address
+117     DS3231_Read.value
+117     bcd_to_decimal.@SCRATCH1
+117     decimal_to_bcd.@SCRATCH1
+118-11B Timer_showMinutesOfCountdownTime.time
+118-11B Timer_updateCountdownTime.countdownTimeInSeconds
+118     DS3231_Write.value
+118-11B Timer_showSecondsOfCountdownTime.countdownTime
+118     @I2C_READ_1.P1
+118     bcd_to_decimal.@SCRATCH2
+118     decimal_to_bcd.@SCRATCH2
+119     @I2C_WRITE_1.P1
+119     @I2C_READ_1.@SCRATCH1
+119     bcd_to_decimal.@SCRATCH3
+11A     @I2C_READ_1.@SCRATCH2
+11C-11F Timer_updateCountdownTime.hour
+11C-11D SevenSegmentDisplay_showArrayOfNumbers.arrayOfNumbers
+11C     @MUL88.P1
+11C     Timer_showMinutesOfCountdownTime.@SCRATCH1
+11C     Timer_showSecondsOfCountdownTime.@SCRATCH1
+11D     @MUL88.P1
+11D     Timer_showMinutesOfCountdownTime.@SCRATCH2
+11D     Timer_showSecondsOfCountdownTime.@SCRATCH2
+11E     SevenSegmentDisplay_showArrayOfNumbers.arraySize
+11E     @DIV88.P1
+11E     Timer_showMinutesOfCountdownTime.@SCRATCH3
+11E     Timer_showSecondsOfCountdownTime.@SCRATCH3
+11F     SevenSegmentDisplay_showArrayOfNumbers.withDot
+11F     @DIV88.P1
+11F     Timer_showMinutesOfCountdownTime.@SCRATCH4
+11F     Timer_showSecondsOfCountdownTime.@SCRATCH4
+120-123 Timer_updateCountdownTime.minute
+120-121 SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.arrayOfNumbers
+120-121 SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.arrayOfNumbers
+120-121 ShiftRegister_sendData.charactersArray
+120     @DIV88.@SCRATCH1
+122     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.arraySize
+122     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.arraySize
+122     ShiftRegister_sendData.arraySize
+122-123 Time_getTimeInDigits.timePtr
+123     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.i
+123     ShiftRegister_sendData.i
+123     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.i
+124     Time_getTimeInDigits.formatted
+124     ShiftRegister_sendData.j
+124     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.@SCRATCH1
+124     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.@SCRATCH1
+124     Timer_updateCountdownTime.@SCRATCH1
+125     ShiftRegister_sendData.character
+125-12A Time_getTimeInDigits.newTimeInDigits
+125     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.@SCRATCH2
+125     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.@SCRATCH2
+125     Timer_updateCountdownTime.@SCRATCH2
+126-127 Time_changeTimeToSeconds.timePtr
+126     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers.@SCRATCH3
+126     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot.@SCRATCH3
+126     Timer_updateCountdownTime.@SCRATCH3
+127     Timer_updateCountdownTime.@SCRATCH4
+128-12B Time_changeTimeToSeconds.hoursInSeconds
+128     Timer_updateCountdownTime.@SCRATCH5
+129     Timer_updateCountdownTime.@SCRATCH6
+12A     Timer_updateCountdownTime.@SCRATCH7
+12B     Time_getTimeInDigits.hour
+12B     Timer_updateCountdownTime.@SCRATCH8
+12C-12F Time_changeTimeToSeconds.minutesInSeconds
+12C     Time_getTimeInDigits.@SCRATCH1
+12C     Timer_updateCountdownTime.@SCRATCH9
+12D-12E Array_splitNumberIntoDigits.number
+12D     Timer_updateCountdownTime.@SCRATCH10
+12E     Timer_updateCountdownTime.@SCRATCH11
+12F-130 Array_splitNumberIntoDigits.digits
+12F     Timer_updateCountdownTime.@SCRATCH12
+130-133 Time_changeTimeToSeconds.seconds
+130     Timer_updateCountdownTime.@SCRATCH13
+131     Array_splitNumberIntoDigits.arraySize
+131     Timer_updateCountdownTime.@SCRATCH14
+132     Array_splitNumberIntoDigits.index
+132     Timer_updateCountdownTime.@SCRATCH15
+133     Array_splitNumberIntoDigits.digit
+133     Timer_updateCountdownTime.@SCRATCH16
+134-135 Array_clearArray.array
+134-135 @DIV1616.P1
+134     Array_splitNumberIntoDigits.@SCRATCH1
+134     Time_changeTimeToSeconds.@SCRATCH1
+134     Timer_updateCountdownTime.@SCRATCH17
+135     Array_splitNumberIntoDigits.@SCRATCH2
+135     Time_changeTimeToSeconds.@SCRATCH2
+135     Timer_updateCountdownTime.@SCRATCH18
+136     Array_clearArray.arraySize
+136-139 @DIVS3232.P1
+136-137 @DIV1616.P2
+136     Time_changeTimeToSeconds.@SCRATCH3
+137     Array_clearArray.i
+137     Time_changeTimeToSeconds.@SCRATCH4
+138     Array_clearArray.@SCRATCH1
+138     @DIV1616.@SCRATCH1
+138     Time_changeTimeToSeconds.@SCRATCH5
+139     Array_clearArray.@SCRATCH2
+139     Time_changeTimeToSeconds.@SCRATCH6
+13A-13D @MUL3232.P1
+13A-13D @DIVS3232.P2
+13E-141 @MUL3232.P1
+13E     @DIVS3232.@SCRATCH1
+13F     @DIVS3232.@SCRATCH2
+140     @DIVS3232.@SCRATCH3
+141     @DIVS3232.@SCRATCH4
+142     @MUL3232.@SCRATCH1
+142     @DIVS3232.@SCRATCH5
+143     @MUL3232.@SCRATCH2
+143     @DIVS3232.@SCRATCH6
+144     @MUL3232.@SCRATCH3
+145     @MUL3232.@SCRATCH4
+146     @MUL3232.@SCRATCH5
+
+ROM Allocation:
+000004  SevenSegmentDisplay_characters.call
+000008  SevenSegmentDisplay_characters.data
+000023  @const1091.call
+00002F  @DIV88
+000046  decimal_to_bcd
+000062  @I2C_WRITE_1
+0000AE  DS3231_Write
+0000ED  setTime
+000118  Display_updateRtc
+000174  Time_setClockTime
+0001B4  @MUL3232
+0001E0  Time_changeTimeToSeconds
+000278  @DIVS3232
+0002F4  Timer_updateCountdownTime
+000433  Display_clearRtc
+000433  Time_clearRtcTime
+00043F  setDate
+000497  DS3231_Read
+0004DE  @I2C_READ_1
+000549  @MUL88
+000570  bcd_to_decimal
+000587  Display_updateTimer
+000593  Time_getCurrentTime
+000598  ds3231_get_Time
+0005C8  Time_new
+000672  @DIV1616
+000699  Array_splitNumberIntoDigits
+0006A0  Array_clearArray
+0006DC  Time_getTimeInDigits
+000749  ShiftRegister_sendData
+000786  ShiftRegister_closeStrobe
+000790  SevenSegmentDisplay_showArrayOfNumbers
+00079A  SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot
+0007CF  SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers
+000800  Display_showCount
+000814  Timer_showMinutesOfCountdownTime
+00089C  Timer_showSecondsOfCountdownTime
+000911  Display_isTimerDone
+00091E  Timer_isTimerFinished
+000930  Time_isTimeZero
+000953  Display_setState
+000978  Display_saveState
+0009C2  @delay_ms1
+0009D6  blinkDisplay
+0009E2  SevenSegmentDisplay_clearDisplay
+0009FF  runStateMachinePart1
+000A05  Display_new
+000A56  Timer_newMinutes
+000AA8  Timer_newSeconds
+000B0F  Timer_updateTimerFromEeprom
+000C41  Display_resume
+000CAA  Display_stop
+000CCE  Display_saveRtcCurrentTime
+000D72  SeventSegmentDisplay_showHyphensTwoDigits
+000DF9  @goto11508
+000E0C  Display_showLimitTime
+000E22  Timer_showMinutesOfLimitTime
+000E86  Timer_showSecondsOfLimitTime
+000ED7  SevenSegmentDisplay_clearDisplayTwoLines
+000EF6  Task_checkIfStartStopResetButtonIsHeld
+000F14  Task_checkIfMenuButtonIsHeld
+000F32  Task_blinkDisplay
+000F43  @cinit1
+000F43  MAIN
+000F60  @cinit2
+000F61  setupHardware
+001000  Task_runStateMachine
+00102D  Display_increaseAlarm
+001042  Timer_increaseTimerMinutes
+001086  Timer_increaseTimerSeconds
+0010E4  Display_isAlarmOkay
+00111F  Display_showFormat
+001128  Timer_showFormatMinutes
+001142  Timer_showFormatSeconds
+001164  Display_swapFormat
+00120E  Display_saveAlarm
+00126D  Display_saveFormat
+
+Project Directory:
+    C:\Users\Diseno4\MPLABXProjects\JoseBautista-TP1021E.X\
+
+Project Files:
+    src\main.c                                              [16-Nov-17 15:13  CRC=B69548F7]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F886.h   [12-Nov-13 15:35  CRC=E3D32390]
+    src\josedisplay.h                                       [16-Nov-17 15:19  CRC=80BB3BBF]
+    src\JoaquinSupportAPI\timer.h                           [16-Nov-17 15:39  CRC=6CEE334F]
+    src\JoaquinSupportAPI\tiempo.h                          [10-Nov-17 12:08  CRC=F95D7B8E]
+    src\JoaquinSupportAPI\ds3231.h                          [29-Sep-17 14:56  CRC=94704CD8]
+    src\JoaquinSupportAPI\array.h                           [09-Nov-17 09:46  CRC=A29D7FB3]
+    src\JoaquinSupportAPI\sevensegmentdisplay.h             [16-Nov-17 13:26  CRC=409F1C37]
+    src\JoaquinSupportAPI\shiftregister.h                   [12-Oct-17 11:06  CRC=99A3CB98]
+    src\JoaquinSupportAPI\buttons.h                         [07-Nov-17 18:20  CRC=CA7F87E2]
+
+Source signature=27BF1B41
+
+Units:
+    src\main (main)
+
+Compiler Settings:
+    Processor:      PIC16F886
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Predefined symbols:
+       #define __16F886 1
+
+Task Info:
+    Ticks: 100 ns
+    Cycle: 5 ms
+
+Tasks:
+    Task_checkIfStartStopResetButtonIsHeld
+    Task_checkIfMenuButtonIsHeld
+    Task_runStateMachine
+    Task_blinkDisplay
+
+Task Schedule:
+       5 ms  1076:Task_runStateMachine
+       1 ms  1078:Task_blinkDisplay
+    Sync to next 5 ms
+       1 ms  1072:Task_checkIfStartStopResetButtonIsHeld
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       1 ms  1074:Task_checkIfMenuButtonIsHeld
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+       1 ms  1078:Task_blinkDisplay
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+       5 ms  1076:Task_runStateMachine
+    Sync to next 5 ms
+
+Output Files:
+    XREF file:   build\default\production\src\main.xsym
+    Errors:      build\default\production\src\main.err
+    Ext Symbols: build\default\production\src\main.esym
+    INHX8:       build\default\production\src\main.hex
+    Symbols:     build\default\production\src\main.sym
+    List:        build\default\production\src\main.lst
+    Debug/COFF:  build\default\production\src\main.cof
+    Project:     main.ccspjt
+    Call Tree:   build\default\production\src\main.tre
+    Statistics:  build\default\production\src\main.STA

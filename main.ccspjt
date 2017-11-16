@@ -1,0 +1,16 @@
+[PROJECT]
+Target=build\default\production\src\main.hex
+Processor_Text=PIC16F886
+CCSVersion=5.015
+Compiler=PCM
+[Target Data]
+FileList=build\default\production\src\main.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Users\Diseno4\MPLABXProjects\JoseBautista-TP1021E.X\src\JoaquinSupportAPI\
+[build\default\production\src\main.c]
+Type=4
+[mru-list]
+1=build\default\production\src\main.c
+[Units]
+Count=1
+1=src\main (main)

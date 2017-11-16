@@ -1,0 +1,251 @@
+ÀÄJoseBautista-TP1021E
+   ÃÄMAIN  1/170  Ram=0
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄsetupHardware  (Inline)  Ram=0
+   ³  ³  ÀÄ@delay_ms1  1/20  Ram=1
+   ³  ÃÄ@const1091  0/12  Ram=0
+   ³  ÀÄ@const1091  0/12  Ram=0
+   ÃÄTask_runStateMachine  2/723  Ram=0
+   ³  ÃÄrunStateMachinePart1  1/1018  Ram=4
+   ³  ³  ÃÄ@goto11508  1/19  Ram=0
+   ³  ³  ÃÄDisplay_new  (Inline)  Ram=22
+   ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ÃÄTimer_newMinutes  (Inline)  Ram=16
+   ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ÃÄTimer_newSeconds  (Inline)  Ram=16
+   ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ÃÄTimer_updateTimerFromEeprom  (Inline)  Ram=12
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÀÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ÃÄDisplay_updateRtc  0/156  Ram=7
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ÀÄTime_setClockTime  (Inline)  Ram=5
+   ³  ³  ³  ³     ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³     ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³     ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³     ÀÄsetTime  0/43  Ram=4
+   ³  ³  ³  ³        ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³        ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³        ³  ÀÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³        ÃÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³        ³  ÃÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³        ³  ÃÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³        ³  ÀÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³        ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³  ³        ÃÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³  ³        ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³        ³  ÀÄ*
+   ³  ³  ³  ³        ÀÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³           ÀÄ*
+   ³  ³  ³  ÃÄTimer_updateCountdownTime  0/319  Ram=32
+   ³  ³  ³  ³  ÃÄTime_changeTimeToSeconds  0/152  Ram=20
+   ³  ³  ³  ³  ³  ÃÄ@MUL3232  0/44  Ram=13
+   ³  ³  ³  ³  ³  ÀÄ@MUL3232  0/44  Ram=13
+   ³  ³  ³  ³  ÃÄTime_changeTimeToSeconds  0/152  Ram=20
+   ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ÃÄ@DIVS3232  0/124  Ram=14
+   ³  ³  ³  ³  ÃÄ@DIVS3232  0/124  Ram=14
+   ³  ³  ³  ³  ÃÄ@DIVS3232  0/124  Ram=14
+   ³  ³  ³  ³  ÃÄ@DIVS3232  0/124  Ram=14
+   ³  ³  ³  ³  ÀÄ@DIVS3232  0/124  Ram=14
+   ³  ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ³  ÃÄTime_clearRtcTime  (Inline)  Ram=0
+   ³  ³  ³  ³  ³  ÀÄsetTime  0/43  Ram=4
+   ³  ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ³  ÀÄsetDate  (Inline)  Ram=5
+   ³  ³  ³  ³     ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÃÄdecimal_to_bcd  0/28  Ram=3
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÀÄDS3231_Write  0/63  Ram=2
+   ³  ³  ³  ³        ÀÄ*
+   ³  ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ³  ÃÄTime_getCurrentTime  (Inline)  Ram=7
+   ³  ³  ³  ³  ³  ÃÄds3231_get_Time  (Inline)  Ram=3
+   ³  ³  ³  ³  ³  ³  ÃÄDS3231_Read  0/178  Ram=2
+   ³  ³  ³  ³  ³  ³  ³  ÃÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³  ³  ³  ³  ÃÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³  ³  ³  ³  ÃÄ@I2C_WRITE_1  0/76  Ram=1
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ@I2C_READ_1  (Inline)  Ram=3
+   ³  ³  ³  ³  ³  ³  ÃÄbcd_to_decimal  0/23  Ram=4
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ@MUL88  0/39  Ram=2
+   ³  ³  ³  ³  ³  ³  ÃÄDS3231_Read  0/178  Ram=2
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ³  ³  ÃÄbcd_to_decimal  0/23  Ram=4
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ³  ³  ÃÄDS3231_Read  0/178  Ram=2
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ³  ³  ÀÄbcd_to_decimal  0/23  Ram=4
+   ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ³  ³  ÀÄTime_new  (Inline)  Ram=7
+   ³  ³  ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ³  ³  ÀÄTimer_updateCountdownTime  0/319  Ram=32
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ³  ÃÄTimer_showMinutesOfCountdownTime  (Inline)  Ram=19
+   ³  ³  ³  ³  ³  ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ³  ³  ³  ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³  ³  ÃÄTime_getTimeInDigits  0/109  Ram=11
+   ³  ³  ³  ³  ³  ³  ÃÄArray_splitNumberIntoDigits  0/67  Ram=7
+   ³  ³  ³  ³  ³  ³  ³  ÃÄArray_clearArray  (Inline)  Ram=6
+   ³  ³  ³  ³  ³  ³  ³  ÃÄ@DIV1616  0/39  Ram=5
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ@DIV1616  0/39  Ram=5
+   ³  ³  ³  ³  ³  ³  ÃÄArray_splitNumberIntoDigits  0/67  Ram=7
+   ³  ³  ³  ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ³  ³  ³  ÀÄArray_splitNumberIntoDigits  0/67  Ram=7
+   ³  ³  ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ³  ³  ÀÄSevenSegmentDisplay_showArrayOfNumbers  0/109  Ram=4
+   ³  ³  ³  ³  ³     ÃÄSevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot  (Inline)  Ram=7
+   ³  ³  ³  ³  ³     ³  ÀÄ@const714  0/31  Ram=0
+   ³  ³  ³  ³  ³     ÃÄSevenSegmentDisplay_changeNumbersIntoDisplayableNumbers  (Inline)  Ram=7
+   ³  ³  ³  ³  ³     ³  ÀÄ@const714  0/31  Ram=0
+   ³  ³  ³  ³  ³     ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³  ³  ³  ³        ÀÄShiftRegister_closeStrobe  (Inline)  Ram=0
+   ³  ³  ³  ³  ÀÄTimer_showSecondsOfCountdownTime  (Inline)  Ram=18
+   ³  ³  ³  ³     ÃÄ@MUL88  0/39  Ram=2
+   ³  ³  ³  ³     ÃÄ@DIV88  0/23  Ram=3
+   ³  ³  ³  ³     ÃÄTime_getTimeInDigits  0/109  Ram=11
+   ³  ³  ³  ³     ³  ÀÄ*
+   ³  ³  ³  ³     ÀÄSevenSegmentDisplay_showArrayOfNumbers  0/109  Ram=4
+   ³  ³  ³  ³        ÀÄ*
+   ³  ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄDisplay_isTimerDone  1/66  Ram=4
+   ³  ³  ³  ³  ÀÄTimer_isTimerFinished  (Inline)  Ram=4
+   ³  ³  ³  ³     ÀÄTime_isTimeZero  (Inline)  Ram=3
+   ³  ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ³  ÀÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_resume  (Inline)  Ram=5
+   ³  ³  ÃÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄDisplay_updateRtc  0/156  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄblinkDisplay  1/41  Ram=0
+   ³  ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  1/20  Ram=1
+   ³  ³  ³  ÃÄSevenSegmentDisplay_clearDisplay  (Inline)  Ram=4
+   ³  ³  ³  ³  ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³  ³  ³     ÀÄ*
+   ³  ³  ³  ÃÄ@delay_ms1  1/20  Ram=1
+   ³  ³  ³  ÀÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_stop  (Inline)  Ram=5
+   ³  ³  ÃÄDisplay_saveRtcCurrentTime  (Inline)  Ram=3
+   ³  ³  ÃÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄblinkDisplay  1/41  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_isTimerDone  1/66  Ram=4
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄblinkDisplay  1/41  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄblinkDisplay  1/41  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄSeventSegmentDisplay_showHyphensTwoDigits  (Inline)  Ram=2
+   ³  ³  ³  ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÃÄ@delay_ms1  1/20  Ram=1
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄDisplay_showCount  1/273  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄblinkDisplay  1/41  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ³  ÃÄDisplay_saveState  1/74  Ram=3
+   ³  ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄDisplay_setState  1/37  Ram=6
+   ³  ÃÄDisplay_showLimitTime  1/203  Ram=4
+   ³  ³  ÃÄTimer_showMinutesOfLimitTime  (Inline)  Ram=14
+   ³  ³  ³  ÃÄTime_getTimeInDigits  0/109  Ram=11
+   ³  ³  ³  ³  ÀÄ*
+   ³  ³  ³  ÀÄSevenSegmentDisplay_showArrayOfNumbers  0/109  Ram=4
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÀÄTimer_showSecondsOfLimitTime  (Inline)  Ram=14
+   ³  ³     ÃÄTime_getTimeInDigits  0/109  Ram=11
+   ³  ³     ³  ÀÄ*
+   ³  ³     ÀÄSevenSegmentDisplay_showArrayOfNumbers  0/109  Ram=4
+   ³  ³        ÀÄ*
+   ³  ÃÄSevenSegmentDisplay_clearDisplayTwoLines  1/31  Ram=8
+   ³  ³  ÃÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³  ³  ÀÄ*
+   ³  ³  ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³     ÀÄ*
+   ³  ÃÄDisplay_increaseAlarm  (Inline)  Ram=4
+   ³  ³  ÃÄTimer_increaseTimerMinutes  (Inline)  Ram=5
+   ³  ³  ÀÄTimer_increaseTimerSeconds  (Inline)  Ram=5
+   ³  ÃÄDisplay_showLimitTime  1/203  Ram=4
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms1  1/20  Ram=1
+   ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ÃÄDisplay_isAlarmOkay  (Inline)  Ram=3
+   ³  ÃÄDisplay_showFormat  (Inline)  Ram=3
+   ³  ³  ÃÄTimer_showFormatMinutes  (Inline)  Ram=2
+   ³  ³  ³  ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³  ³     ÀÄ*
+   ³  ³  ÀÄTimer_showFormatSeconds  (Inline)  Ram=2
+   ³  ³     ÀÄShiftRegister_sendData  0/71  Ram=5
+   ³  ³        ÀÄ*
+   ³  ÃÄSevenSegmentDisplay_clearDisplayTwoLines  1/31  Ram=8
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplay_swapFormat  (Inline)  Ram=5
+   ³  ÃÄDisplay_saveAlarm  (Inline)  Ram=3
+   ³  ÃÄDisplay_saveFormat  (Inline)  Ram=3
+   ³  ÃÄDisplay_clearRtc  0/100  Ram=0
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplay_updateTimer  0/235  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄDisplay_setState  1/37  Ram=6
+   ³  ÀÄDisplay_saveState  1/74  Ram=3
+   ÃÄTask_checkIfStartStopResetButtonIsHeld  1/30  Ram=0
+   ÃÄTask_checkIfMenuButtonIsHeld  1/30  Ram=0
+   ÀÄTask_blinkDisplay  1/17  Ram=0

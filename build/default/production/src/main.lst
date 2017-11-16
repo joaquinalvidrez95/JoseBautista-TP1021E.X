@@ -1,0 +1,6844 @@
+CCS PCM C Compiler, Version 5.015, 5967               16-Nov-17 15:39
+
+               Filename:   C:\Users\Diseno4\MPLABXProjects\JoseBautista-TP1021E.X\build\default\production\src\main.lst
+
+               ROM used:   4797 words (59%)
+                           Largest free fragment is 2048
+               RAM used:   58 (16%) at main() level
+                           231 (63%) worst case
+               Stack used: 8 locations (1 in main + 7 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  0F
+0001:  MOVWF  0A
+0002:  GOTO   743
+0003:  NOP
+.................... /*  
+....................  * File:   main.c 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on November 16, 2017, 11:19 AM 
+....................  */ 
+....................  
+.................... #include <16F886.h> 
+.................... //////////// Standard Header file for the PIC16F886 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2013 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F886 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  F6
+0009:  RETLW  60
+000A:  RETLW  D5
+000B:  RETLW  F1
+000C:  RETLW  63
+000D:  RETLW  B3
+000E:  RETLW  B7
+000F:  RETLW  E0
+0010:  RETLW  F7
+0011:  RETLW  F3
+0012:  RETLW  01
+0013:  RETLW  08
+0014:  RETLW  E7
+0015:  RETLW  96
+0016:  RETLW  97
+0017:  RETLW  87
+0018:  RETLW  67
+0019:  RETLW  37
+001A:  RETLW  96
+001B:  RETLW  75
+001C:  RETLW  25
+001D:  RETLW  76
+001E:  RETLW  17
+001F:  RETLW  04
+0020:  RETLW  64
+0021:  RETLW  C3
+0022:  RETLW  35
+0023:  BCF    0A.0
+0024:  BCF    0A.1
+0025:  BCF    0A.2
+0026:  ADDWF  02,F
+0027:  RETLW  22
+0028:  RETLW  00
+0029:  RETLW  29
+002A:  RETLW  00
+002B:  RETLW  30
+002C:  RETLW  00
+002D:  RETLW  37
+002E:  RETLW  00
+002F:  BSF    03.6
+0030:  MOVF   1F,W
+0031:  CLRF   78
+0032:  SUBWF  1E,W
+0033:  BTFSC  03.0
+0034:  GOTO   038
+0035:  MOVF   1E,W
+0036:  MOVWF  77
+0037:  GOTO   044
+0038:  CLRF   77
+0039:  MOVLW  08
+003A:  MOVWF  20
+003B:  RLF    1E,F
+003C:  RLF    77,F
+003D:  MOVF   1F,W
+003E:  SUBWF  77,W
+003F:  BTFSC  03.0
+0040:  MOVWF  77
+0041:  RLF    78,F
+0042:  DECFSZ 20,F
+0043:  GOTO   03B
+0044:  BCF    03.6
+0045:  RETURN
+*
+01B4:  MOVLW  20
+01B5:  BSF    03.6
+01B6:  MOVWF  46
+01B7:  CLRF   42
+01B8:  CLRF   43
+01B9:  CLRF   44
+01BA:  CLRF   45
+01BB:  MOVF   3D,W
+01BC:  MOVWF  7A
+01BD:  MOVF   3C,W
+01BE:  MOVWF  79
+01BF:  MOVF   3B,W
+01C0:  MOVWF  78
+01C1:  MOVF   3A,W
+01C2:  MOVWF  77
+01C3:  BCF    03.0
+01C4:  BTFSS  77.0
+01C5:  GOTO   1D4
+01C6:  MOVF   3E,W
+01C7:  ADDWF  42,F
+01C8:  MOVF   3F,W
+01C9:  BTFSC  03.0
+01CA:  INCFSZ 3F,W
+01CB:  ADDWF  43,F
+01CC:  MOVF   40,W
+01CD:  BTFSC  03.0
+01CE:  INCFSZ 40,W
+01CF:  ADDWF  44,F
+01D0:  MOVF   41,W
+01D1:  BTFSC  03.0
+01D2:  INCFSZ 41,W
+01D3:  ADDWF  45,F
+01D4:  RRF    45,F
+01D5:  RRF    44,F
+01D6:  RRF    43,F
+01D7:  RRF    42,F
+01D8:  RRF    7A,F
+01D9:  RRF    79,F
+01DA:  RRF    78,F
+01DB:  RRF    77,F
+01DC:  DECFSZ 46,F
+01DD:  GOTO   1C3
+01DE:  BCF    03.6
+01DF:  RETURN
+*
+0278:  BTFSC  03.1
+0279:  GOTO   27D
+027A:  MOVLW  3E
+027B:  MOVWF  04
+027C:  BSF    03.7
+027D:  BSF    03.6
+027E:  MOVF   39,W
+027F:  XORWF  3D,W
+0280:  ANDLW  80
+0281:  MOVWF  43
+0282:  BTFSS  39.7
+0283:  GOTO   28F
+0284:  COMF   36,F
+0285:  COMF   37,F
+0286:  COMF   38,F
+0287:  COMF   39,F
+0288:  INCF   36,F
+0289:  BTFSC  03.2
+028A:  INCF   37,F
+028B:  BTFSC  03.2
+028C:  INCF   38,F
+028D:  BTFSC  03.2
+028E:  INCF   39,F
+028F:  BTFSS  3D.7
+0290:  GOTO   29C
+0291:  COMF   3A,F
+0292:  COMF   3B,F
+0293:  COMF   3C,F
+0294:  COMF   3D,F
+0295:  INCF   3A,F
+0296:  BTFSC  03.2
+0297:  INCF   3B,F
+0298:  BTFSC  03.2
+0299:  INCF   3C,F
+029A:  BTFSC  03.2
+029B:  INCF   3D,F
+029C:  CLRF   77
+029D:  CLRF   78
+029E:  CLRF   79
+029F:  CLRF   7A
+02A0:  CLRF   3E
+02A1:  CLRF   3F
+02A2:  CLRF   40
+02A3:  CLRF   41
+02A4:  MOVF   3D,W
+02A5:  IORWF  3C,W
+02A6:  IORWF  3B,W
+02A7:  IORWF  3A,W
+02A8:  BTFSC  03.2
+02A9:  GOTO   2DA
+02AA:  MOVLW  20
+02AB:  MOVWF  42
+02AC:  BCF    03.0
+02AD:  RLF    36,F
+02AE:  RLF    37,F
+02AF:  RLF    38,F
+02B0:  RLF    39,F
+02B1:  RLF    3E,F
+02B2:  RLF    3F,F
+02B3:  RLF    40,F
+02B4:  RLF    41,F
+02B5:  MOVF   3D,W
+02B6:  SUBWF  41,W
+02B7:  BTFSS  03.2
+02B8:  GOTO   2C3
+02B9:  MOVF   3C,W
+02BA:  SUBWF  40,W
+02BB:  BTFSS  03.2
+02BC:  GOTO   2C3
+02BD:  MOVF   3B,W
+02BE:  SUBWF  3F,W
+02BF:  BTFSS  03.2
+02C0:  GOTO   2C3
+02C1:  MOVF   3A,W
+02C2:  SUBWF  3E,W
+02C3:  BTFSS  03.0
+02C4:  GOTO   2D4
+02C5:  MOVF   3A,W
+02C6:  SUBWF  3E,F
+02C7:  MOVF   3B,W
+02C8:  BTFSS  03.0
+02C9:  INCFSZ 3B,W
+02CA:  SUBWF  3F,F
+02CB:  MOVF   3C,W
+02CC:  BTFSS  03.0
+02CD:  INCFSZ 3C,W
+02CE:  SUBWF  40,F
+02CF:  MOVF   3D,W
+02D0:  BTFSS  03.0
+02D1:  INCFSZ 3D,W
+02D2:  SUBWF  41,F
+02D3:  BSF    03.0
+02D4:  RLF    77,F
+02D5:  RLF    78,F
+02D6:  RLF    79,F
+02D7:  RLF    7A,F
+02D8:  DECFSZ 42,F
+02D9:  GOTO   2AC
+02DA:  BTFSS  43.7
+02DB:  GOTO   2E7
+02DC:  COMF   77,F
+02DD:  COMF   78,F
+02DE:  COMF   79,F
+02DF:  COMF   7A,F
+02E0:  INCF   77,F
+02E1:  BTFSC  03.2
+02E2:  INCF   78,F
+02E3:  BTFSC  03.2
+02E4:  INCF   79,F
+02E5:  BTFSC  03.2
+02E6:  INCF   7A,F
+02E7:  MOVF   3E,W
+02E8:  MOVWF  00
+02E9:  INCF   04,F
+02EA:  MOVF   3F,W
+02EB:  MOVWF  00
+02EC:  INCF   04,F
+02ED:  MOVF   40,W
+02EE:  MOVWF  00
+02EF:  INCF   04,F
+02F0:  MOVF   41,W
+02F1:  MOVWF  00
+02F2:  BCF    03.6
+02F3:  RETURN
+*
+0549:  CLRF   77
+054A:  CLRF   78
+054B:  BSF    03.6
+054C:  MOVF   1C,W
+054D:  BCF    03.0
+054E:  BTFSC  1D.0
+054F:  ADDWF  77,F
+0550:  RRF    77,F
+0551:  RRF    78,F
+0552:  BTFSC  1D.1
+0553:  ADDWF  77,F
+0554:  RRF    77,F
+0555:  RRF    78,F
+0556:  BTFSC  1D.2
+0557:  ADDWF  77,F
+0558:  RRF    77,F
+0559:  RRF    78,F
+055A:  BTFSC  1D.3
+055B:  ADDWF  77,F
+055C:  RRF    77,F
+055D:  RRF    78,F
+055E:  BTFSC  1D.4
+055F:  ADDWF  77,F
+0560:  RRF    77,F
+0561:  RRF    78,F
+0562:  BTFSC  1D.5
+0563:  ADDWF  77,F
+0564:  RRF    77,F
+0565:  RRF    78,F
+0566:  BTFSC  1D.6
+0567:  ADDWF  77,F
+0568:  RRF    77,F
+0569:  RRF    78,F
+056A:  BTFSC  1D.7
+056B:  ADDWF  77,F
+056C:  RRF    77,F
+056D:  RRF    78,F
+056E:  BCF    03.6
+056F:  RETURN
+*
+0672:  CLRF   78
+0673:  CLRF   79
+0674:  CLRF   77
+0675:  CLRF   7A
+0676:  BSF    03.6
+0677:  MOVF   37,W
+0678:  BTFSS  03.2
+0679:  GOTO   67D
+067A:  MOVF   36,W
+067B:  BTFSC  03.2
+067C:  GOTO   697
+067D:  MOVLW  10
+067E:  MOVWF  38
+067F:  BCF    03.0
+0680:  RLF    34,F
+0681:  RLF    35,F
+0682:  RLF    77,F
+0683:  RLF    7A,F
+0684:  MOVF   37,W
+0685:  SUBWF  7A,W
+0686:  BTFSS  03.2
+0687:  GOTO   68A
+0688:  MOVF   36,W
+0689:  SUBWF  77,W
+068A:  BTFSS  03.0
+068B:  GOTO   693
+068C:  MOVF   36,W
+068D:  SUBWF  77,F
+068E:  BTFSS  03.0
+068F:  DECF   7A,F
+0690:  MOVF   37,W
+0691:  SUBWF  7A,F
+0692:  BSF    03.0
+0693:  RLF    78,F
+0694:  RLF    79,F
+0695:  DECFSZ 38,F
+0696:  GOTO   67F
+0697:  BCF    03.6
+0698:  RETURN
+*
+0DF9:  NOP
+0DFA:  NOP
+0DFB:  BCF    0A.0
+0DFC:  BSF    0A.1
+0DFD:  BSF    0A.2
+0DFE:  ADDLW  02
+0DFF:  BTFSC  03.0
+0E00:  INCF   0A,F
+0E01:  MOVWF  02
+0E02:  GOTO   436
+0E03:  GOTO   5C9
+0E04:  GOTO   484
+0E05:  GOTO   5F6
+0E06:  GOTO   205
+0E07:  GOTO   56F
+0E08:  GOTO   5F6
+0E09:  GOTO   5F6
+0E0A:  GOTO   5F6
+0E0B:  GOTO   5A9
+....................  
+.................... #list 
+....................  
+....................  
+.................... #FUSES HS, PUT, NOLVP, PROTECT,NOMCLR, BROWNOUT, NODEBUG      
+.................... #use delay(clock=20M) 
+*
+09C2:  MOVLW  D1
+09C3:  MOVWF  04
+09C4:  BCF    03.7
+09C5:  MOVF   00,W
+09C6:  BTFSC  03.2
+09C7:  GOTO   1D5
+09C8:  MOVLW  06
+09C9:  MOVWF  78
+09CA:  CLRF   77
+09CB:  DECFSZ 77,F
+09CC:  GOTO   1CB
+09CD:  DECFSZ 78,F
+09CE:  GOTO   1CA
+09CF:  MOVLW  7B
+09D0:  MOVWF  77
+09D1:  DECFSZ 77,F
+09D2:  GOTO   1D1
+09D3:  DECFSZ 00,F
+09D4:  GOTO   1C8
+09D5:  RETURN
+.................... #use standard_io(a) 
+.................... #use standard_io(c) 
+.................... #use standard_io(b) 
+.................... #use rtos(timer=0) 
+.................... #byte WPUB = 0x95 
+....................  
+.................... #include "josedisplay.h" 
+.................... /*  
+....................  * File:   josedisplay.h 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on November 16, 2017, 11:20 AM 
+....................  */ 
+....................  
+.................... #ifndef JOSEDISPLAY_H 
+.................... #define	JOSEDISPLAY_H 
+....................  
+....................  
+....................  
+.................... // Upper bounds 
+.................... #define ALARM_UPPER_BOUND    99 
+.................... #define SECOND_NUMBER_UPPER_BOUND   59 
+....................  
+.................... #include "timer.h" 
+.................... /*  
+....................  * File:   timer.h 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 04:59 PM 
+....................  */ 
+....................  
+.................... #ifndef TIMER_H 
+.................... #define	TIMER_H 
+....................  
+.................... #include "tiempo.h" 
+.................... /*  
+....................  * File:   time.h 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 03:54 PM 
+....................  */ 
+....................  
+.................... #ifndef TIME_H 
+.................... #define	TIME_H 
+....................  
+.................... #include "ds3231.h" 
+.................... #ifndef DS3231_H 
+.................... #define DS3231_H 
+....................  
+.................... #define RTC_SDA  PIN_C4 
+.................... #define RTC_SCL  PIN_C3  
+.................... #use i2c(master, sda=RTC_SDA, scl=RTC_SCL,fast=400000)  
+*
+0062:  MOVLW  08
+0063:  MOVWF  78
+0064:  NOP
+0065:  BCF    07.3
+0066:  BCF    20.3
+0067:  MOVF   20,W
+0068:  BSF    03.5
+0069:  MOVWF  07
+006A:  NOP
+006B:  BCF    03.5
+006C:  BSF    03.6
+006D:  RLF    19,F
+006E:  BCF    03.6
+006F:  BCF    07.4
+0070:  BTFSS  03.0
+0071:  GOTO   078
+0072:  BSF    20.4
+0073:  MOVF   20,W
+0074:  BSF    03.5
+0075:  MOVWF  07
+0076:  GOTO   07C
+0077:  BCF    03.5
+0078:  BCF    20.4
+0079:  MOVF   20,W
+007A:  BSF    03.5
+007B:  MOVWF  07
+007C:  NOP
+007D:  BCF    03.5
+007E:  BSF    20.3
+007F:  MOVF   20,W
+0080:  BSF    03.5
+0081:  MOVWF  07
+0082:  BCF    03.5
+0083:  BTFSS  07.3
+0084:  GOTO   083
+0085:  DECFSZ 78,F
+0086:  GOTO   064
+0087:  NOP
+0088:  BCF    07.3
+0089:  BCF    20.3
+008A:  MOVF   20,W
+008B:  BSF    03.5
+008C:  MOVWF  07
+008D:  NOP
+008E:  BCF    03.5
+008F:  BSF    20.4
+0090:  MOVF   20,W
+0091:  BSF    03.5
+0092:  MOVWF  07
+0093:  NOP
+0094:  NOP
+0095:  BCF    03.5
+0096:  BSF    20.3
+0097:  MOVF   20,W
+0098:  BSF    03.5
+0099:  MOVWF  07
+009A:  BCF    03.5
+009B:  BTFSS  07.3
+009C:  GOTO   09B
+009D:  CLRF   78
+009E:  NOP
+009F:  BTFSC  07.4
+00A0:  BSF    78.0
+00A1:  BCF    07.3
+00A2:  BCF    20.3
+00A3:  MOVF   20,W
+00A4:  BSF    03.5
+00A5:  MOVWF  07
+00A6:  BCF    03.5
+00A7:  BCF    07.4
+00A8:  BCF    20.4
+00A9:  MOVF   20,W
+00AA:  BSF    03.5
+00AB:  MOVWF  07
+00AC:  BCF    03.5
+00AD:  RETURN
+*
+04DE:  MOVLW  08
+04DF:  BSF    03.6
+04E0:  MOVWF  19
+04E1:  MOVF   77,W
+04E2:  MOVWF  1A
+04E3:  BCF    03.6
+04E4:  BSF    20.4
+04E5:  MOVF   20,W
+04E6:  BSF    03.5
+04E7:  MOVWF  07
+04E8:  NOP
+04E9:  BCF    03.5
+04EA:  BSF    20.3
+04EB:  MOVF   20,W
+04EC:  BSF    03.5
+04ED:  MOVWF  07
+04EE:  BCF    03.5
+04EF:  BTFSS  07.3
+04F0:  GOTO   4EF
+04F1:  BTFSC  07.4
+04F2:  BSF    03.0
+04F3:  BTFSS  07.4
+04F4:  BCF    03.0
+04F5:  RLF    78,F
+04F6:  NOP
+04F7:  BCF    20.3
+04F8:  MOVF   20,W
+04F9:  BSF    03.5
+04FA:  MOVWF  07
+04FB:  BCF    03.5
+04FC:  BCF    07.3
+04FD:  BSF    03.6
+04FE:  DECFSZ 19,F
+04FF:  GOTO   4E3
+0500:  BCF    03.6
+0501:  BSF    20.4
+0502:  MOVF   20,W
+0503:  BSF    03.5
+0504:  MOVWF  07
+0505:  NOP
+0506:  BCF    03.5
+0507:  BCF    07.4
+0508:  BSF    03.6
+0509:  MOVF   1A,W
+050A:  BTFSC  03.2
+050B:  GOTO   513
+050C:  BCF    03.6
+050D:  BCF    20.4
+050E:  MOVF   20,W
+050F:  BSF    03.5
+0510:  MOVWF  07
+0511:  BCF    03.5
+0512:  BSF    03.6
+0513:  NOP
+0514:  BCF    03.6
+0515:  BSF    20.3
+0516:  MOVF   20,W
+0517:  BSF    03.5
+0518:  MOVWF  07
+0519:  BCF    03.5
+051A:  BTFSS  07.3
+051B:  GOTO   51A
+051C:  NOP
+051D:  BCF    07.3
+051E:  BCF    20.3
+051F:  MOVF   20,W
+0520:  BSF    03.5
+0521:  MOVWF  07
+0522:  NOP
+0523:  BCF    03.5
+0524:  BCF    07.4
+0525:  BCF    20.4
+0526:  MOVF   20,W
+0527:  BSF    03.5
+0528:  MOVWF  07
+....................  
+.................... #define DS3231_Address              0x68 
+....................  
+.................... #define DS3231_Read_addr            ((DS3231_Address << 1) | 0x01) 
+.................... #define DS3231_Write_addr           ((DS3231_Address << 1) & 0xFE) 
+....................  
+.................... #define secondREG                   0x00 
+.................... #define minuteREG                   0x01 
+.................... #define hourREG                     0x02 
+.................... #define dayREG                      0x03 
+.................... #define dateREG                     0x04                              
+.................... #define monthREG                    0x05                            
+.................... #define yearREG                     0x06                    
+.................... #define alarm1secREG                0x07        
+.................... #define alarm1minREG                0x08 
+.................... #define alarm1hrREG                 0x09            
+.................... #define alarm1dateREG               0x0A  
+.................... #define alarm2minREG                0x0B    
+.................... #define alarm2hrREG                 0x0C 
+.................... #define alarm2dateREG               0x0D 
+.................... #define controlREG                  0x0E 
+.................... #define statusREG                   0x0F 
+.................... #define ageoffsetREG                0x10 
+.................... #define tempMSBREG                  0x11 
+.................... #define tempLSBREG                  0x12 
+....................  
+.................... #define _24_hour_format             0 
+.................... #define _12_hour_format             1 
+.................... #define am                          0 
+.................... #define pm                          1 
+....................  
+....................  
+.................... int bcd_to_decimal(int d); 
+.................... int decimal_to_bcd(int d); 
+.................... int DS3231_Read(int address); 
+.................... void DS3231_Write(int address, int value); 
+.................... void DS3231_init(); 
+....................  
+.................... int bcd_to_decimal(int d) { 
+....................     return ((d & 0x0F) + (((d & 0xF0) >> 4) * 10)); 
+*
+0570:  BSF    03.6
+0571:  MOVF   16,W
+0572:  ANDLW  0F
+0573:  MOVWF  17
+0574:  MOVF   16,W
+0575:  ANDLW  F0
+0576:  MOVWF  77
+0577:  SWAPF  77,F
+0578:  MOVLW  0F
+0579:  ANDWF  77,F
+057A:  MOVF   77,W
+057B:  MOVWF  19
+057C:  MOVWF  1C
+057D:  MOVLW  0A
+057E:  MOVWF  1D
+057F:  BCF    03.6
+0580:  CALL   549
+0581:  MOVF   78,W
+0582:  BSF    03.6
+0583:  ADDWF  17,W
+0584:  MOVWF  78
+0585:  BCF    03.6
+0586:  RETURN
+.................... } 
+....................  
+.................... int decimal_to_bcd(int d) { 
+....................     return (((d / 10) << 4) & 0xF0) | ((d % 10) & 0x0F); 
+*
+0046:  BSF    03.6
+0047:  MOVF   16,W
+0048:  MOVWF  1E
+0049:  MOVLW  0A
+004A:  MOVWF  1F
+004B:  BCF    03.6
+004C:  CALL   02F
+004D:  SWAPF  78,W
+004E:  MOVWF  77
+004F:  MOVLW  F0
+0050:  ANDWF  77,F
+0051:  MOVF   77,W
+0052:  ANDLW  F0
+0053:  BSF    03.6
+0054:  MOVWF  17
+0055:  MOVF   16,W
+0056:  MOVWF  1E
+0057:  MOVLW  0A
+0058:  MOVWF  1F
+0059:  BCF    03.6
+005A:  CALL   02F
+005B:  MOVF   77,W
+005C:  ANDLW  0F
+005D:  BSF    03.6
+005E:  IORWF  17,W
+005F:  MOVWF  78
+0060:  BCF    03.6
+0061:  RETURN
+.................... } 
+....................  
+.................... int DS3231_Read(int address) { 
+*
+0497:  BSF    03.6
+0498:  CLRF   17
+....................     int value = 0; 
+....................     I2C_start(); 
+0499:  BCF    03.6
+049A:  BSF    20.4
+049B:  MOVF   20,W
+049C:  BSF    03.5
+049D:  MOVWF  07
+049E:  NOP
+049F:  BCF    03.5
+04A0:  BSF    20.3
+04A1:  MOVF   20,W
+04A2:  BSF    03.5
+04A3:  MOVWF  07
+04A4:  NOP
+04A5:  BCF    03.5
+04A6:  BCF    07.4
+04A7:  BCF    20.4
+04A8:  MOVF   20,W
+04A9:  BSF    03.5
+04AA:  MOVWF  07
+04AB:  NOP
+04AC:  BCF    03.5
+04AD:  BCF    07.3
+04AE:  BCF    20.3
+04AF:  MOVF   20,W
+04B0:  BSF    03.5
+04B1:  MOVWF  07
+....................     I2C_write(DS3231_Write_addr); 
+04B2:  MOVLW  D0
+04B3:  BCF    03.5
+04B4:  BSF    03.6
+04B5:  MOVWF  19
+04B6:  BCF    03.6
+04B7:  CALL   062
+....................     I2C_write(address); 
+04B8:  BSF    03.6
+04B9:  MOVF   16,W
+04BA:  MOVWF  19
+04BB:  BCF    03.6
+04BC:  CALL   062
+....................     I2C_start(); 
+04BD:  BSF    20.4
+04BE:  MOVF   20,W
+04BF:  BSF    03.5
+04C0:  MOVWF  07
+04C1:  NOP
+04C2:  BCF    03.5
+04C3:  BSF    20.3
+04C4:  MOVF   20,W
+04C5:  BSF    03.5
+04C6:  MOVWF  07
+04C7:  NOP
+04C8:  BCF    03.5
+04C9:  BTFSS  07.3
+04CA:  GOTO   4C9
+04CB:  BCF    07.4
+04CC:  BCF    20.4
+04CD:  MOVF   20,W
+04CE:  BSF    03.5
+04CF:  MOVWF  07
+04D0:  NOP
+04D1:  BCF    03.5
+04D2:  BCF    07.3
+04D3:  BCF    20.3
+04D4:  MOVF   20,W
+04D5:  BSF    03.5
+04D6:  MOVWF  07
+....................     I2C_write(DS3231_Read_addr); 
+04D7:  MOVLW  D1
+04D8:  BCF    03.5
+04D9:  BSF    03.6
+04DA:  MOVWF  19
+04DB:  BCF    03.6
+04DC:  CALL   062
+....................     value = I2C_read(0); 
+04DD:  CLRF   77
+*
+0529:  MOVF   78,W
+052A:  BCF    03.5
+052B:  BSF    03.6
+052C:  MOVWF  17
+....................     I2C_stop(); 
+052D:  BCF    03.6
+052E:  BCF    20.4
+052F:  MOVF   20,W
+0530:  BSF    03.5
+0531:  MOVWF  07
+0532:  NOP
+0533:  BCF    03.5
+0534:  BSF    20.3
+0535:  MOVF   20,W
+0536:  BSF    03.5
+0537:  MOVWF  07
+0538:  BCF    03.5
+0539:  BTFSS  07.3
+053A:  GOTO   539
+053B:  NOP
+053C:  GOTO   53D
+053D:  NOP
+053E:  BSF    20.4
+053F:  MOVF   20,W
+0540:  BSF    03.5
+0541:  MOVWF  07
+0542:  NOP
+....................     return value; 
+0543:  BCF    03.5
+0544:  BSF    03.6
+0545:  MOVF   17,W
+0546:  MOVWF  78
+0547:  BCF    03.6
+0548:  RETURN
+.................... } 
+....................  
+.................... void DS3231_Write(int address, int value) { 
+....................     I2C_start(); 
+*
+00AE:  BSF    20.4
+00AF:  MOVF   20,W
+00B0:  BSF    03.5
+00B1:  MOVWF  07
+00B2:  NOP
+00B3:  BCF    03.5
+00B4:  BSF    20.3
+00B5:  MOVF   20,W
+00B6:  BSF    03.5
+00B7:  MOVWF  07
+00B8:  NOP
+00B9:  BCF    03.5
+00BA:  BCF    07.4
+00BB:  BCF    20.4
+00BC:  MOVF   20,W
+00BD:  BSF    03.5
+00BE:  MOVWF  07
+00BF:  NOP
+00C0:  BCF    03.5
+00C1:  BCF    07.3
+00C2:  BCF    20.3
+00C3:  MOVF   20,W
+00C4:  BSF    03.5
+00C5:  MOVWF  07
+....................     I2C_write(DS3231_Write_addr); 
+00C6:  MOVLW  D0
+00C7:  BCF    03.5
+00C8:  BSF    03.6
+00C9:  MOVWF  19
+00CA:  BCF    03.6
+00CB:  CALL   062
+....................     I2C_write(address); 
+00CC:  BSF    03.6
+00CD:  MOVF   17,W
+00CE:  MOVWF  19
+00CF:  BCF    03.6
+00D0:  CALL   062
+....................     I2C_write(value); 
+00D1:  BSF    03.6
+00D2:  MOVF   18,W
+00D3:  MOVWF  19
+00D4:  BCF    03.6
+00D5:  CALL   062
+....................     I2C_stop(); 
+00D6:  BCF    20.4
+00D7:  MOVF   20,W
+00D8:  BSF    03.5
+00D9:  MOVWF  07
+00DA:  NOP
+00DB:  BCF    03.5
+00DC:  BSF    20.3
+00DD:  MOVF   20,W
+00DE:  BSF    03.5
+00DF:  MOVWF  07
+00E0:  BCF    03.5
+00E1:  BTFSS  07.3
+00E2:  GOTO   0E1
+00E3:  NOP
+00E4:  GOTO   0E5
+00E5:  NOP
+00E6:  BSF    20.4
+00E7:  MOVF   20,W
+00E8:  BSF    03.5
+00E9:  MOVWF  07
+00EA:  NOP
+00EB:  BCF    03.5
+00EC:  RETURN
+.................... } 
+....................  
+.................... void DS3231_init() { 
+....................     DS3231_Write(controlREG, 0x00); 
+....................     DS3231_Write(statusREG, 0x08); 
+.................... } 
+....................  
+.................... void ds3231_get_Time(int &hora, int &min, int &sec) { 
+....................     sec = DS3231_Read(secondREG); 
+*
+0598:  CLRF   16
+0599:  BCF    03.6
+059A:  CALL   497
+059B:  MOVF   78,W
+059C:  BSF    03.6
+059D:  MOVWF  12
+....................     sec = bcd_to_decimal(sec); 
+059E:  MOVF   12,W
+059F:  MOVWF  16
+05A0:  BCF    03.6
+05A1:  CALL   570
+05A2:  MOVF   78,W
+05A3:  BSF    03.6
+05A4:  MOVWF  12
+....................     min = DS3231_Read(minuteREG); 
+05A5:  MOVLW  01
+05A6:  MOVWF  16
+05A7:  BCF    03.6
+05A8:  CALL   497
+05A9:  MOVF   78,W
+05AA:  BSF    03.6
+05AB:  MOVWF  11
+....................     min = bcd_to_decimal(min); 
+05AC:  MOVF   11,W
+05AD:  MOVWF  16
+05AE:  BCF    03.6
+05AF:  CALL   570
+05B0:  MOVF   78,W
+05B1:  BSF    03.6
+05B2:  MOVWF  11
+....................     hora = (0x3F & DS3231_Read(hourREG)); 
+05B3:  MOVLW  02
+05B4:  MOVWF  16
+05B5:  BCF    03.6
+05B6:  CALL   497
+05B7:  MOVF   78,W
+05B8:  ANDLW  3F
+05B9:  BSF    03.6
+05BA:  MOVWF  10
+....................     hora = bcd_to_decimal(hora); 
+05BB:  MOVF   10,W
+05BC:  MOVWF  16
+05BD:  BCF    03.6
+05BE:  CALL   570
+05BF:  MOVF   78,W
+05C0:  BSF    03.6
+05C1:  MOVWF  10
+.................... } 
+....................  
+.................... void DS3231_get_Date(int &date, int &month, int &year, int &dow) { 
+....................     year = DS3231_Read(yearREG); 
+....................     year = bcd_to_decimal(year); 
+....................     month = (0x1F & DS3231_Read(monthREG)); 
+....................     month = bcd_to_decimal(month); 
+....................     date = (0x3F & DS3231_Read(dateREG)); 
+....................     date = bcd_to_decimal(date); 
+....................     dow = (0x07 & DS3231_Read(dayREG)); 
+....................     dow = bcd_to_decimal(dow); 
+.................... } 
+....................  
+.................... void setTime(int hSet, int mSet, int sSet) { 
+....................     DS3231_Write(secondREG, (decimal_to_bcd(sSet))); 
+*
+00ED:  BSF    03.6
+00EE:  MOVF   15,W
+00EF:  MOVWF  16
+00F0:  BCF    03.6
+00F1:  CALL   046
+00F2:  MOVF   78,W
+00F3:  BSF    03.6
+00F4:  MOVWF  16
+00F5:  CLRF   17
+00F6:  MOVF   16,W
+00F7:  MOVWF  18
+00F8:  BCF    03.6
+00F9:  CALL   0AE
+....................     DS3231_Write(minuteREG, (decimal_to_bcd(mSet))); 
+00FA:  BSF    03.6
+00FB:  MOVF   14,W
+00FC:  MOVWF  16
+00FD:  BCF    03.6
+00FE:  CALL   046
+00FF:  MOVF   78,W
+0100:  BSF    03.6
+0101:  MOVWF  16
+0102:  MOVLW  01
+0103:  MOVWF  17
+0104:  MOVF   16,W
+0105:  MOVWF  18
+0106:  BCF    03.6
+0107:  CALL   0AE
+....................     DS3231_Write(hourREG, (0x3F & (decimal_to_bcd(hSet)))); 
+0108:  BSF    03.6
+0109:  MOVF   13,W
+010A:  MOVWF  16
+010B:  BCF    03.6
+010C:  CALL   046
+010D:  MOVF   78,W
+010E:  ANDLW  3F
+010F:  BSF    03.6
+0110:  MOVWF  16
+0111:  MOVLW  02
+0112:  MOVWF  17
+0113:  MOVF   16,W
+0114:  MOVWF  18
+0115:  BCF    03.6
+0116:  CALL   0AE
+0117:  RETURN
+....................  
+.................... } 
+....................  
+.................... void setDate(int daySet, int dateSet, int monthSet, int yearSet) { 
+....................     DS3231_Write(dayREG, (decimal_to_bcd(daySet))); 
+*
+043F:  MOVF   68,W
+0440:  BCF    03.5
+0441:  BSF    03.6
+0442:  MOVWF  16
+0443:  BCF    03.6
+0444:  CALL   046
+0445:  MOVF   78,W
+0446:  BSF    03.5
+0447:  MOVWF  6C
+0448:  MOVLW  03
+0449:  BCF    03.5
+044A:  BSF    03.6
+044B:  MOVWF  17
+044C:  BSF    03.5
+044D:  BCF    03.6
+044E:  MOVF   6C,W
+044F:  BCF    03.5
+0450:  BSF    03.6
+0451:  MOVWF  18
+0452:  BCF    03.6
+0453:  CALL   0AE
+....................     DS3231_Write(dateREG, (decimal_to_bcd(dateSet))); 
+0454:  BSF    03.5
+0455:  MOVF   69,W
+0456:  BCF    03.5
+0457:  BSF    03.6
+0458:  MOVWF  16
+0459:  BCF    03.6
+045A:  CALL   046
+045B:  MOVF   78,W
+045C:  BSF    03.5
+045D:  MOVWF  6C
+045E:  MOVLW  04
+045F:  BCF    03.5
+0460:  BSF    03.6
+0461:  MOVWF  17
+0462:  BSF    03.5
+0463:  BCF    03.6
+0464:  MOVF   6C,W
+0465:  BCF    03.5
+0466:  BSF    03.6
+0467:  MOVWF  18
+0468:  BCF    03.6
+0469:  CALL   0AE
+....................     DS3231_Write(monthREG, (decimal_to_bcd(monthSet))); 
+046A:  BSF    03.5
+046B:  MOVF   6A,W
+046C:  BCF    03.5
+046D:  BSF    03.6
+046E:  MOVWF  16
+046F:  BCF    03.6
+0470:  CALL   046
+0471:  MOVF   78,W
+0472:  BSF    03.5
+0473:  MOVWF  6C
+0474:  MOVLW  05
+0475:  BCF    03.5
+0476:  BSF    03.6
+0477:  MOVWF  17
+0478:  BSF    03.5
+0479:  BCF    03.6
+047A:  MOVF   6C,W
+047B:  BCF    03.5
+047C:  BSF    03.6
+047D:  MOVWF  18
+047E:  BCF    03.6
+047F:  CALL   0AE
+....................     DS3231_Write(yearREG, (decimal_to_bcd(yearSet))); 
+0480:  BSF    03.5
+0481:  MOVF   6B,W
+0482:  BCF    03.5
+0483:  BSF    03.6
+0484:  MOVWF  16
+0485:  BCF    03.6
+0486:  CALL   046
+0487:  MOVF   78,W
+0488:  BSF    03.5
+0489:  MOVWF  6C
+048A:  MOVLW  06
+048B:  BCF    03.5
+048C:  BSF    03.6
+048D:  MOVWF  17
+048E:  BSF    03.5
+048F:  BCF    03.6
+0490:  MOVF   6C,W
+0491:  BCF    03.5
+0492:  BSF    03.6
+0493:  MOVWF  18
+0494:  BCF    03.6
+0495:  CALL   0AE
+.................... } 
+....................  
+.................... void DS3231_set_date_time(int dia, int mes, int year, int dow, int hora, int min, int sec) { 
+....................     settime(hora, min, sec); 
+....................     setdate(dow, dia, mes, year); 
+.................... } 
+....................  
+.................... float getTemp() { 
+....................     register float t = 0.0; 
+....................     int lowByte = 0; 
+....................     signed char highByte = 0; 
+....................     lowByte = DS3231_Read(tempLSBREG); 
+....................     highByte = DS3231_Read(tempMSBREG); 
+....................     lowByte >>= 6; 
+....................     lowByte &= 0x03; 
+....................     t = ((float) lowByte); 
+....................     t *= 0.25; 
+....................     t += highByte; 
+....................     return t; 
+....................  
+.................... } 
+.................... #endif 
+....................  
+.................... #include "array.h" 
+.................... /*  
+....................  * File:   array.h 
+....................  * Author: DISENO4 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 04:01 PM 
+....................  */ 
+....................  
+.................... #ifndef ARRAY_H 
+.................... #define	ARRAY_H 
+....................  
+.................... #define Array_getArraySize(array)(sizeof((array))/sizeof((array)[0])) 
+....................  
+.................... void Array_clearArray(int array[], int arraySize) { 
+*
+06A0:  CLRF   37
+....................     int i = 0; 
+....................  
+....................     for (i = 0; i < arraySize; i++) { 
+06A1:  CLRF   37
+06A2:  MOVF   36,W
+06A3:  SUBWF  37,W
+06A4:  BTFSC  03.0
+06A5:  GOTO   6AF
+....................         array[i] = 0; 
+06A6:  MOVF   37,W
+06A7:  ADDWF  34,W
+06A8:  MOVWF  04
+06A9:  BCF    03.7
+06AA:  BTFSC  35.0
+06AB:  BSF    03.7
+06AC:  CLRF   00
+06AD:  INCF   37,F
+06AE:  GOTO   6A2
+....................     } 
+.................... } 
+....................  
+.................... void Array_splitNumberIntoDigits(int16 number, int digits[], int arraySize) { 
+....................     Array_clearArray(digits, arraySize); 
+*
+0699:  BSF    03.6
+069A:  MOVF   30,W
+069B:  MOVWF  35
+069C:  MOVF   2F,W
+069D:  MOVWF  34
+069E:  MOVF   31,W
+069F:  MOVWF  36
+....................  
+....................     int index = 0; 
+*
+06AF:  CLRF   32
+....................     while (number > 0) { 
+06B0:  MOVF   2D,F
+06B1:  BTFSS  03.2
+06B2:  GOTO   6B6
+06B3:  MOVF   2E,F
+06B4:  BTFSC  03.2
+06B5:  GOTO   6DA
+....................         int digit = number % 10; 
+06B6:  MOVF   2E,W
+06B7:  MOVWF  35
+06B8:  MOVF   2D,W
+06B9:  MOVWF  34
+06BA:  CLRF   37
+06BB:  MOVLW  0A
+06BC:  MOVWF  36
+06BD:  BCF    03.6
+06BE:  CALL   672
+06BF:  MOVF   77,W
+06C0:  BSF    03.6
+06C1:  MOVWF  33
+....................         digits[index] = digit; 
+06C2:  MOVF   32,W
+06C3:  ADDWF  2F,W
+06C4:  MOVWF  04
+06C5:  BCF    03.7
+06C6:  BTFSC  30.0
+06C7:  BSF    03.7
+06C8:  MOVF   33,W
+06C9:  MOVWF  00
+....................         index++; 
+06CA:  INCF   32,F
+....................         number /= 10; 
+06CB:  MOVF   2E,W
+06CC:  MOVWF  35
+06CD:  MOVF   2D,W
+06CE:  MOVWF  34
+06CF:  CLRF   37
+06D0:  MOVLW  0A
+06D1:  MOVWF  36
+06D2:  BCF    03.6
+06D3:  CALL   672
+06D4:  MOVF   79,W
+06D5:  BSF    03.6
+06D6:  MOVWF  2E
+06D7:  MOVF   78,W
+06D8:  MOVWF  2D
+06D9:  GOTO   6B0
+....................     } 
+06DA:  BCF    03.6
+06DB:  RETURN
+.................... } 
+....................  
+.................... #endif	/* ARRAY_H */ 
+....................  
+....................  
+.................... #include "sevensegmentdisplay.h" 
+.................... /*  
+....................  * File:   sevensegmentdisplay.h 
+....................  * Author: DISENO4 
+....................  * 
+....................  * Created on 2 de octubre de 2017, 09:12 AM 
+....................  */ 
+....................  
+.................... #ifndef SEVENSEGMENTDISPLAY_H 
+.................... #define   SEVENSEGMENTDISPLAY_H 
+....................  
+.................... #include "array.h" 
+.................... /*  
+....................  * File:   array.h 
+....................  * Author: DISENO4 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 04:01 PM 
+....................  */ 
+....................  
+.................... #ifndef ARRAY_H 
+.................... #define	ARRAY_H 
+....................  
+.................... #define Array_getArraySize(array)(sizeof((array))/sizeof((array)[0])) 
+....................  
+.................... void Array_clearArray(int array[], int arraySize) { 
+....................     int i = 0; 
+....................  
+....................     for (i = 0; i < arraySize; i++) { 
+....................         array[i] = 0; 
+....................     } 
+.................... } 
+....................  
+.................... void Array_splitNumberIntoDigits(int16 number, int digits[], int arraySize) { 
+....................     Array_clearArray(digits, arraySize); 
+....................  
+....................     int index = 0; 
+....................     while (number > 0) { 
+....................         int digit = number % 10; 
+....................         digits[index] = digit; 
+....................         index++; 
+....................         number /= 10; 
+....................     } 
+.................... } 
+....................  
+.................... #endif	/* ARRAY_H */ 
+....................  
+....................  
+.................... #include "shiftregister.h" 
+.................... /*  
+....................  * File:   shiftregister.h 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 04:09 PM 
+....................  */ 
+....................  
+.................... #ifndef SHIFTREGISTER_H 
+.................... #define	SHIFTREGISTER_H 
+....................  
+.................... #define  PIN_CLOCK                      PIN_A3      //CLK 
+.................... #define  PIN_DATA                       PIN_A0    //NEAR R 
+.................... #define  PIN_STROBE                     PIN_A1      //SCLK 
+....................  
+.................... void ShiftRegister_closeStrobe() { 
+....................     output_high(PIN_STROBE); // transfiere los datos a las salidas del registro 4094 
+*
+0786:  BSF    03.5
+0787:  BCF    03.6
+0788:  BCF    05.1
+0789:  BCF    03.5
+078A:  BSF    05.1
+....................     output_low(PIN_STROBE); // un pulso de strobe  
+078B:  BSF    03.5
+078C:  BCF    05.1
+078D:  BCF    03.5
+078E:  BCF    05.1
+.................... } 
+....................  
+.................... void ShiftRegister_sendData(int charactersArray [], int arraySize) { 
+*
+0749:  MOVLW  01
+074A:  BSF    03.6
+074B:  MOVWF  23
+074C:  CLRF   24
+....................     int i = 1; 
+....................     int j = 0; 
+....................  
+....................     output_low(PIN_CLOCK); // EL pin clk se pone en bajo antes de enviar bits 
+074D:  BSF    03.5
+074E:  BCF    03.6
+074F:  BCF    05.3
+0750:  BCF    03.5
+0751:  BCF    05.3
+....................     output_low(PIN_STROBE); // strobe en bajo 
+0752:  BSF    03.5
+0753:  BCF    05.1
+0754:  BCF    03.5
+0755:  BCF    05.1
+....................  
+....................     for (j = 0; j < arraySize; j++) { 
+0756:  BSF    03.6
+0757:  CLRF   24
+0758:  MOVF   22,W
+0759:  SUBWF  24,W
+075A:  BTFSC  03.0
+075B:  GOTO   786
+....................         int character = charactersArray[j]; 
+075C:  MOVF   24,W
+075D:  ADDWF  20,W
+075E:  MOVWF  04
+075F:  BCF    03.7
+0760:  BTFSC  21.0
+0761:  BSF    03.7
+0762:  MOVF   00,W
+0763:  MOVWF  25
+....................  
+....................         for (i = 1; i <= 8; i++) { 
+0764:  MOVLW  01
+0765:  MOVWF  23
+0766:  MOVF   23,W
+0767:  SUBLW  08
+0768:  BTFSS  03.0
+0769:  GOTO   784
+....................             output_bit(PIN_DATA, (character & 0x01)); // operación and para sacar bit a bit 
+076A:  BTFSC  25.0
+076B:  GOTO   770
+076C:  BCF    03.6
+076D:  BCF    05.0
+076E:  GOTO   772
+076F:  BSF    03.6
+0770:  BCF    03.6
+0771:  BSF    05.0
+0772:  BSF    03.5
+0773:  BCF    05.0
+....................             character >>= 1; //desplazo un bit a la derecha a datob y lo almaceno en dato  
+0774:  BCF    03.0
+0775:  BCF    03.5
+0776:  BSF    03.6
+0777:  RRF    25,F
+....................             output_high(PIN_CLOCK); // saca un pulso de reloj 
+0778:  BSF    03.5
+0779:  BCF    03.6
+077A:  BCF    05.3
+077B:  BCF    03.5
+077C:  BSF    05.3
+....................             output_low(PIN_CLOCK); 
+077D:  BSF    03.5
+077E:  BCF    05.3
+077F:  BCF    03.5
+0780:  BCF    05.3
+0781:  BSF    03.6
+0782:  INCF   23,F
+0783:  GOTO   766
+....................         } 
+0784:  INCF   24,F
+0785:  GOTO   758
+....................     } 
+....................  
+....................     ShiftRegister_closeStrobe(); 
+*
+078F:  RETURN
+.................... } 
+....................  
+....................  
+....................  
+....................  
+.................... #endif	/* SHIFTREGISTER_H */ 
+....................  
+....................  
+....................  
+.................... typedef enum { 
+....................     INDEX_SEVEN_SEGMENT_HYPHEN = 10, 
+....................     INDEX_SEVEN_SEGMENT_DOT, 
+....................     INDEX_CAPS_A, 
+....................     INDEX_CAPS_C, 
+....................     INDEX_CAPS_E, 
+....................     INDEX_CAPS_F, 
+....................     INDEX_CAPS_H, 
+....................     INDEX_LOWERCASE_B, 
+....................     INDEX_LOWERCASE_C, 
+....................     INDEX_LOWERCASE_D, 
+....................     INDEX_LOWERCASE_N, 
+....................     INDEX_LOWERCASE_U, 
+.................... } SEVEN_SEGMENT_DISPLAY_INDEX; 
+....................  
+.................... const int SevenSegmentDisplay_characters[] = { 
+....................     0b11110110, // 0    
+....................     0b01100000, // 1 
+....................     0b11010101, // 2 
+....................     0b11110001, // 3 
+....................     0b01100011, // 4 
+....................     0b10110011, // 5 
+....................     0b10110111, // 6 
+....................     0b11100000, // 7 
+....................     0b11110111, // 8 
+....................     0b11110011, // 9 
+....................     0b00000001, // - 
+....................     0b00001000, // .    
+....................     0b11100111, // A  
+....................     0b10010110, // C 
+....................     0b10010111, // E 
+....................     0b10000111, // F 
+....................     0b01100111, //H     
+....................     0b00110111, //b     
+....................     0b10010110, //c     
+....................     0b01110101, //d     
+....................     0b00100101, //n     
+....................     0b01110110, //u      
+....................     0b00010111, 
+....................     0b00000100, 
+....................     0b01100100, 
+....................     0b11000011, //°  
+....................     0b00110101, 
+.................... }; 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(int arrayOfNumbers[], int arraySize) { 
+*
+07CF:  CLRF   23
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+07D0:  CLRF   23
+07D1:  MOVF   22,W
+07D2:  SUBWF  23,W
+07D3:  BTFSC  03.0
+07D4:  GOTO   7F4
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+07D5:  MOVF   23,W
+07D6:  ADDWF  20,W
+07D7:  MOVWF  78
+07D8:  MOVF   21,W
+07D9:  MOVWF  7A
+07DA:  BTFSC  03.0
+07DB:  INCF   7A,F
+07DC:  MOVF   78,W
+07DD:  MOVWF  24
+07DE:  MOVF   7A,W
+07DF:  MOVWF  25
+07E0:  MOVF   23,W
+07E1:  ADDWF  20,W
+07E2:  MOVWF  04
+07E3:  BCF    03.7
+07E4:  BTFSC  21.0
+07E5:  BSF    03.7
+07E6:  MOVF   00,W
+07E7:  BCF    03.6
+07E8:  CALL   004
+07E9:  MOVWF  78
+07EA:  BSF    03.6
+07EB:  MOVF   24,W
+07EC:  MOVWF  04
+07ED:  BCF    03.7
+07EE:  BTFSC  25.0
+07EF:  BSF    03.7
+07F0:  MOVF   78,W
+07F1:  MOVWF  00
+07F2:  INCF   23,F
+07F3:  GOTO   7D1
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(int arrayOfNumbers[], int arraySize) { 
+*
+079A:  CLRF   23
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+079B:  CLRF   23
+079C:  MOVF   22,W
+079D:  SUBWF  23,W
+079E:  BTFSC  03.0
+079F:  GOTO   7C8
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+07A0:  MOVF   23,W
+07A1:  ADDWF  20,W
+07A2:  MOVWF  78
+07A3:  MOVF   21,W
+07A4:  MOVWF  7A
+07A5:  BTFSC  03.0
+07A6:  INCF   7A,F
+07A7:  MOVF   78,W
+07A8:  MOVWF  24
+07A9:  MOVF   7A,W
+07AA:  MOVWF  25
+07AB:  MOVF   23,W
+07AC:  ADDWF  20,W
+07AD:  MOVWF  04
+07AE:  BCF    03.7
+07AF:  BTFSC  21.0
+07B0:  BSF    03.7
+07B1:  MOVF   00,W
+07B2:  BCF    03.6
+07B3:  CALL   004
+07B4:  MOVWF  78
+07B5:  BSF    03.6
+07B6:  MOVF   24,W
+07B7:  MOVWF  04
+07B8:  BCF    03.7
+07B9:  BTFSC  25.0
+07BA:  BSF    03.7
+07BB:  MOVF   78,W
+07BC:  MOVWF  00
+....................         arrayOfNumbers[i] |= SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+07BD:  MOVF   23,W
+07BE:  ADDWF  20,W
+07BF:  MOVWF  04
+07C0:  BCF    03.7
+07C1:  BTFSC  21.0
+07C2:  BSF    03.7
+07C3:  MOVF   00,W
+07C4:  IORLW  08
+07C5:  MOVWF  00
+07C6:  INCF   23,F
+07C7:  GOTO   79C
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showArrayOfNumbers(int arrayOfNumbers[], int arraySize, BOOLEAN withDot) { 
+....................     if (withDot) { 
+*
+0790:  BSF    03.6
+0791:  MOVF   1F,F
+0792:  BTFSC  03.2
+0793:  GOTO   7C9
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(arrayOfNumbers, arraySize); 
+0794:  MOVF   1D,W
+0795:  MOVWF  21
+0796:  MOVF   1C,W
+0797:  MOVWF  20
+0798:  MOVF   1E,W
+0799:  MOVWF  22
+....................     } else { 
+*
+07C8:  GOTO   7F4
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayOfNumbers, arraySize); 
+07C9:  MOVF   1D,W
+07CA:  MOVWF  21
+07CB:  MOVF   1C,W
+07CC:  MOVWF  20
+07CD:  MOVF   1E,W
+07CE:  MOVWF  22
+....................     } 
+....................  
+....................     ShiftRegister_sendData(arrayOfNumbers, arraySize); 
+*
+07F4:  MOVF   1D,W
+07F5:  MOVWF  21
+07F6:  MOVF   1C,W
+07F7:  MOVWF  20
+07F8:  MOVF   1E,W
+07F9:  MOVWF  22
+07FA:  BCF    03.6
+07FB:  CALL   749
+07FC:  RETURN
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphens(void) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN] | 0b00001000; 
+....................     arrayToSend[2] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[3] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphensTwoDigits(void) { 
+....................     int arrayToSend[2] = {0}; 
+*
+0D72:  BSF    03.5
+0D73:  CLRF   50
+0D74:  CLRF   51
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+0D75:  MOVLW  01
+0D76:  MOVWF  50
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+0D77:  MOVWF  51
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+0D78:  BCF    03.5
+0D79:  BSF    03.6
+0D7A:  CLRF   21
+0D7B:  MOVLW  D0
+0D7C:  MOVWF  20
+0D7D:  MOVLW  02
+0D7E:  MOVWF  22
+0D7F:  BCF    0A.3
+0D80:  BCF    03.6
+0D81:  CALL   749
+0D82:  BSF    0A.3
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplay(void) { 
+....................     int charactersArray[4] = {0}; 
+*
+09E2:  BSF    03.5
+09E3:  CLRF   50
+09E4:  CLRF   51
+09E5:  CLRF   52
+09E6:  CLRF   53
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+09E7:  BCF    03.5
+09E8:  BSF    03.6
+09E9:  CLRF   21
+09EA:  MOVLW  D0
+09EB:  MOVWF  20
+09EC:  MOVLW  04
+09ED:  MOVWF  22
+09EE:  BCF    0A.3
+09EF:  BCF    03.6
+09F0:  CALL   749
+09F1:  BSF    0A.3
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplayTwoLines(void) { 
+....................     int charactersArray[8] = {0}; 
+*
+0ED7:  BSF    03.5
+0ED8:  CLRF   50
+0ED9:  CLRF   51
+0EDA:  CLRF   52
+0EDB:  CLRF   53
+0EDC:  CLRF   54
+0EDD:  CLRF   55
+0EDE:  CLRF   56
+0EDF:  CLRF   57
+....................  
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+0EE0:  BCF    03.5
+0EE1:  BSF    03.6
+0EE2:  CLRF   21
+0EE3:  MOVLW  D0
+0EE4:  MOVWF  20
+0EE5:  MOVLW  08
+0EE6:  MOVWF  22
+0EE7:  BCF    0A.3
+0EE8:  BCF    03.6
+0EE9:  CALL   749
+0EEA:  BSF    0A.3
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+0EEB:  BSF    03.6
+0EEC:  CLRF   21
+0EED:  MOVLW  D0
+0EEE:  MOVWF  20
+0EEF:  MOVLW  08
+0EF0:  MOVWF  22
+0EF1:  BCF    0A.3
+0EF2:  BCF    03.6
+0EF3:  CALL   749
+0EF4:  BSF    0A.3
+0EF5:  RETURN
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPin(int16 pin) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, arrayToSend, Array_getArraySize(arrayToSend)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayToSend, Array_getArraySize(arrayToSend)); 
+....................  
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPinTwoLines(int16 pin) { 
+....................     int pinDigits[4] = {0}; 
+....................     int arrayToSend[8] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, pinDigits, Array_getArraySize(pinDigits)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(pinDigits, Array_getArraySize(pinDigits)); 
+....................  
+....................     arrayToSend[4] = pinDigits[0]; 
+....................     arrayToSend[5] = pinDigits[1]; 
+....................     arrayToSend[6] = pinDigits[2]; 
+....................     arrayToSend[7] = pinDigits[3]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+.................... #endif   /* SEVENSEGMENTDISPLAY_H */ 
+....................  
+....................  
+....................  
+.................... #define UPPER_BOUND_HOURS 23 
+.................... #define UPPER_BOUND_MINUTES 59 
+.................... #define UPPER_BOUND_SECONDS 59 
+....................  
+.................... typedef enum { 
+....................     FORMAT_24 = 0, 
+....................     FORMAT_12 
+.................... } Format; 
+....................  
+.................... typedef struct { 
+....................     Format format; 
+....................     int hour; 
+....................     int minute; 
+....................     int second; 
+....................     //    char formatAddress; 
+.................... } Time; 
+....................  
+.................... typedef struct { 
+....................     int hour[2]; 
+....................     int minute[2]; 
+....................     int second[2]; 
+.................... } TimeInDigits; 
+....................  
+.................... Time Time_new(int hour, int minute, int second) { 
+....................     Time time; 
+....................  
+....................     time.hour = hour; 
+*
+05C8:  MOVF   13,W
+05C9:  MOVWF  17
+....................     time.minute = minute; 
+05CA:  MOVF   14,W
+05CB:  MOVWF  18
+....................     time.second = second; 
+05CC:  MOVF   15,W
+05CD:  MOVWF  19
+....................     return time; 
+05CE:  MOVF   16,W
+05CF:  MOVWF  77
+05D0:  MOVF   17,W
+05D1:  MOVWF  78
+05D2:  MOVF   18,W
+05D3:  MOVWF  79
+05D4:  MOVF   19,W
+05D5:  MOVWF  7A
+.................... } 
+....................  
+.................... Time Time_getCurrentTime() { 
+*
+0593:  BCF    03.5
+0594:  BSF    03.6
+0595:  CLRF   10
+0596:  CLRF   11
+0597:  CLRF   12
+....................     Time currentTime; 
+....................     int currentHour = 0; 
+....................     int currentMinute = 0; 
+....................     int currentSecond = 0; 
+....................  
+....................     ds3231_get_Time(currentHour, currentMinute, currentSecond); 
+....................     currentTime = Time_new(currentHour, currentMinute, currentSecond); 
+*
+05C2:  MOVF   10,W
+05C3:  MOVWF  13
+05C4:  MOVF   11,W
+05C5:  MOVWF  14
+05C6:  MOVF   12,W
+05C7:  MOVWF  15
+*
+05D6:  MOVF   7A,W
+05D7:  BSF    03.5
+05D8:  BCF    03.6
+05D9:  MOVWF  6F
+05DA:  MOVF   79,W
+05DB:  MOVWF  6E
+05DC:  MOVF   78,W
+05DD:  MOVWF  6D
+05DE:  MOVF   77,W
+05DF:  MOVWF  6C
+....................  
+....................     return currentTime; 
+05E0:  MOVF   6C,W
+05E1:  MOVWF  77
+05E2:  MOVF   6D,W
+05E3:  MOVWF  78
+05E4:  MOVF   6E,W
+05E5:  MOVWF  79
+05E6:  MOVF   6F,W
+05E7:  MOVWF  7A
+.................... } 
+....................  
+.................... Time Time_new(__EEADDRESS__ formatAddress) { 
+....................     Time newTime; 
+....................     newTime = Time_getCurrentTime(); 
+....................     //    newTime.formatAddress = formatAddress; 
+....................     newTime.format = read_eeprom(formatAddress) % 2; 
+....................  
+....................     return newTime; 
+.................... } 
+....................  
+.................... void Time_updateTime(Time *timePtr) { 
+....................     Time currentTime; 
+....................     currentTime = Time_getCurrentTime(); 
+....................     timePtr->hour = currentTime.hour; 
+....................     timePtr->minute = currentTime.minute; 
+....................     timePtr->second = currentTime.second; 
+.................... } 
+....................  
+.................... void Time_saveFormat(Time *timePtr) { 
+....................     //    write_eeprom(timePtr->formatAddress, timePtr->format); 
+.................... } 
+....................  
+.................... void Time_changeTimeFormat(Time *timePtr) { 
+....................     if (timePtr->format == FORMAT_12) { 
+....................         timePtr->format = FORMAT_24; 
+....................     } else if (timePtr->format == FORMAT_24) { 
+....................         timePtr->format = FORMAT_12; 
+....................     } 
+.................... } 
+....................  
+.................... TimeInDigits Time_getTimeInDigits(Time *timePtr, BOOLEAN formatted) { 
+*
+06DC:  MOVLW  01
+06DD:  BSF    03.6
+06DE:  ADDWF  22,W
+06DF:  MOVWF  04
+06E0:  BCF    03.7
+06E1:  BTFSC  23.0
+06E2:  BSF    03.7
+06E3:  MOVF   00,W
+06E4:  MOVWF  2B
+....................     TimeInDigits newTimeInDigits; 
+....................     int hour = timePtr->hour; 
+....................  
+....................     if (formatted) { 
+06E5:  MOVF   24,F
+06E6:  BTFSC  03.2
+06E7:  GOTO   711
+....................         if (timePtr->format == FORMAT_12) { 
+06E8:  MOVF   22,W
+06E9:  MOVWF  04
+06EA:  BCF    03.7
+06EB:  BTFSC  23.0
+06EC:  BSF    03.7
+06ED:  MOVF   00,W
+06EE:  ANDLW  01
+06EF:  SUBLW  01
+06F0:  BTFSS  03.2
+06F1:  GOTO   711
+....................             if (timePtr->hour == 0) { 
+06F2:  MOVLW  01
+06F3:  ADDWF  22,W
+06F4:  MOVWF  04
+06F5:  BCF    03.7
+06F6:  BTFSC  23.0
+06F7:  BSF    03.7
+06F8:  MOVF   00,F
+06F9:  BTFSS  03.2
+06FA:  GOTO   6FE
+....................                 hour = 12; 
+06FB:  MOVLW  0C
+06FC:  MOVWF  2B
+....................             } else if (timePtr->hour > 12) { 
+06FD:  GOTO   711
+06FE:  MOVLW  01
+06FF:  ADDWF  22,W
+0700:  MOVWF  04
+0701:  BCF    03.7
+0702:  BTFSC  23.0
+0703:  BSF    03.7
+0704:  MOVF   00,W
+0705:  SUBLW  0C
+0706:  BTFSC  03.0
+0707:  GOTO   711
+....................                 hour = timePtr->hour - 12; 
+0708:  MOVLW  01
+0709:  ADDWF  22,W
+070A:  MOVWF  04
+070B:  BCF    03.7
+070C:  BTFSC  23.0
+070D:  BSF    03.7
+070E:  MOVLW  0C
+070F:  SUBWF  00,W
+0710:  MOVWF  2B
+....................             } 
+....................         } 
+....................     } 
+....................  
+....................     Array_splitNumberIntoDigits( 
+....................             hour, 
+....................             newTimeInDigits.hour, 
+....................             Array_getArraySize(newTimeInDigits.hour) 
+....................             ); 
+0711:  CLRF   2E
+0712:  MOVF   2B,W
+0713:  MOVWF  2D
+0714:  MOVLW  01
+0715:  MOVWF  30
+0716:  MOVLW  25
+0717:  MOVWF  2F
+0718:  MOVLW  02
+0719:  MOVWF  31
+071A:  BCF    03.6
+071B:  CALL   699
+....................     Array_splitNumberIntoDigits( 
+....................             timePtr->minute, 
+....................             newTimeInDigits.minute, 
+....................             Array_getArraySize(newTimeInDigits.minute) 
+....................             ); 
+071C:  MOVLW  02
+071D:  BSF    03.6
+071E:  ADDWF  22,W
+071F:  MOVWF  04
+0720:  BCF    03.7
+0721:  BTFSC  23.0
+0722:  BSF    03.7
+0723:  MOVF   00,W
+0724:  MOVWF  2C
+0725:  CLRF   2E
+0726:  MOVF   2C,W
+0727:  MOVWF  2D
+0728:  MOVLW  01
+0729:  MOVWF  30
+072A:  MOVLW  27
+072B:  MOVWF  2F
+072C:  MOVLW  02
+072D:  MOVWF  31
+072E:  BCF    03.6
+072F:  CALL   699
+....................  
+....................     Array_splitNumberIntoDigits( 
+....................             timePtr->second, 
+....................             newTimeInDigits.second, 
+....................             Array_getArraySize(newTimeInDigits.second) 
+....................             ); 
+0730:  MOVLW  03
+0731:  BSF    03.6
+0732:  ADDWF  22,W
+0733:  MOVWF  04
+0734:  BCF    03.7
+0735:  BTFSC  23.0
+0736:  BSF    03.7
+0737:  MOVF   00,W
+0738:  MOVWF  2C
+0739:  CLRF   2E
+073A:  MOVF   2C,W
+073B:  MOVWF  2D
+073C:  MOVLW  01
+073D:  MOVWF  30
+073E:  MOVLW  29
+073F:  MOVWF  2F
+0740:  MOVLW  02
+0741:  MOVWF  31
+0742:  BCF    03.6
+0743:  CALL   699
+....................  
+....................     return newTimeInDigits; 
+0744:  MOVLW  25
+0745:  MOVWF  78
+0746:  MOVLW  01
+0747:  MOVWF  79
+0748:  RETURN
+.................... } 
+....................  
+.................... BOOLEAN Time_isTimeEqual(Time *timePtr1, Time *timePtr2) { 
+....................     return ( 
+....................             timePtr1->hour == timePtr2->hour)&&( 
+....................             timePtr1->minute == timePtr2->minute)&&( 
+....................             timePtr1->second == timePtr2->second); 
+.................... } 
+....................  
+.................... BOOLEAN Time_isANewDay(Time *timePtr) { 
+....................     return (timePtr->hour == 0)&&(timePtr->minute == 0); 
+.................... } 
+....................  
+.................... BOOLEAN Time_isTimeZero(Time *timePtr) { 
+....................     return (timePtr->hour == 0)&&(timePtr->minute == 0)&&(timePtr->second == 0); 
+*
+0930:  MOVLW  01
+0931:  ADDWF  10,W
+0932:  MOVWF  04
+0933:  BCF    03.7
+0934:  BTFSC  11.0
+0935:  BSF    03.7
+0936:  MOVF   00,F
+0937:  BTFSS  03.2
+0938:  GOTO   14B
+0939:  MOVLW  02
+093A:  ADDWF  10,W
+093B:  MOVWF  04
+093C:  BCF    03.7
+093D:  BTFSC  11.0
+093E:  BSF    03.7
+093F:  MOVF   00,F
+0940:  BTFSS  03.2
+0941:  GOTO   14B
+0942:  MOVLW  03
+0943:  ADDWF  10,W
+0944:  MOVWF  04
+0945:  BCF    03.7
+0946:  BTFSC  11.0
+0947:  BSF    03.7
+0948:  MOVF   00,F
+0949:  BTFSC  03.2
+094A:  GOTO   14D
+094B:  MOVLW  00
+094C:  GOTO   14E
+094D:  MOVLW  01
+094E:  MOVWF  78
+.................... } 
+....................  
+.................... Time Time_getInitialTime() { 
+....................     return Time_new(0, 0, 0); 
+.................... } 
+....................  
+.................... Time Time_getCountdownTime(Time *limitTimePtr, Time *currentTimePtr) { 
+....................     Time time; 
+....................     signed int16 hoursInSeconds; 
+....................     signed int16 minutesInSeconds; 
+....................     signed int16 seconds; 
+....................  
+....................     hoursInSeconds = ((signed int16)limitTimePtr->hour 
+....................             - (signed int16)currentTimePtr->hour)*3600; 
+....................     minutesInSeconds = ((signed int16)limitTimePtr->minute 
+....................             - (signed int16)currentTimePtr->minute)*60; 
+....................     seconds = (signed int16)(limitTimePtr->second) 
+....................             -(signed int16)(currentTimePtr->second); 
+....................  
+....................     seconds += hoursInSeconds + minutesInSeconds; 
+....................     seconds = seconds < 0 ? 0 : seconds; 
+....................  
+....................     time.hour = seconds / 3600; 
+....................     time.minute = (seconds % 3600) / 60; 
+....................     time.second = (seconds % 3600) % 60; 
+....................  
+....................     return time; 
+.................... } 
+....................  
+.................... void Time_increaseHours(Time *timePtr, int maximumHours) { 
+....................     timePtr->hour = timePtr->hour == maximumHours ? 0 : timePtr->hour + 1; 
+.................... } 
+....................  
+.................... void Time_increaseMinutes(Time *timePtr, int maximumMinutes) { 
+....................     timePtr->minute = timePtr->minute == maximumMinutes ? 0 : timePtr->minute + 1; 
+.................... } 
+....................  
+.................... void Time_increaseSeconds(Time *timePtr, int maximumSeconds) { 
+....................     timePtr->second = timePtr->second == maximumSeconds ? 0 : timePtr->second + 1; 
+.................... } 
+....................  
+.................... void Time_resetSeconds(Time *timePtr) { 
+....................     timePtr->second = 0; 
+.................... } 
+....................  
+.................... void Time_setClockTime(Time *timePtr) { 
+....................     setTime( 
+....................             timePtr->hour % (UPPER_BOUND_HOURS + 1), 
+....................             timePtr->minute % (UPPER_BOUND_MINUTES + 1), 
+....................             timePtr->second % (UPPER_BOUND_SECONDS + 1) 
+....................             ); 
+*
+0174:  MOVLW  01
+0175:  ADDWF  6E,W
+0176:  MOVWF  04
+0177:  BCF    03.7
+0178:  BTFSC  6F.0
+0179:  BSF    03.7
+017A:  MOVF   00,W
+017B:  BCF    03.5
+017C:  BSF    03.6
+017D:  MOVWF  1E
+017E:  MOVLW  18
+017F:  MOVWF  1F
+0180:  BCF    03.6
+0181:  CALL   02F
+0182:  MOVF   77,W
+0183:  BSF    03.6
+0184:  MOVWF  10
+0185:  MOVLW  02
+0186:  BSF    03.5
+0187:  BCF    03.6
+0188:  ADDWF  6E,W
+0189:  MOVWF  04
+018A:  BCF    03.7
+018B:  BTFSC  6F.0
+018C:  BSF    03.7
+018D:  MOVF   00,W
+018E:  BCF    03.5
+018F:  BSF    03.6
+0190:  MOVWF  1E
+0191:  MOVLW  3C
+0192:  MOVWF  1F
+0193:  BCF    03.6
+0194:  CALL   02F
+0195:  MOVF   77,W
+0196:  BSF    03.6
+0197:  MOVWF  11
+0198:  MOVLW  03
+0199:  BSF    03.5
+019A:  BCF    03.6
+019B:  ADDWF  6E,W
+019C:  MOVWF  04
+019D:  BCF    03.7
+019E:  BTFSC  6F.0
+019F:  BSF    03.7
+01A0:  MOVF   00,W
+01A1:  BCF    03.5
+01A2:  BSF    03.6
+01A3:  MOVWF  1E
+01A4:  MOVLW  3C
+01A5:  MOVWF  1F
+01A6:  BCF    03.6
+01A7:  CALL   02F
+01A8:  MOVF   77,W
+01A9:  BSF    03.6
+01AA:  MOVWF  12
+01AB:  MOVF   10,W
+01AC:  MOVWF  13
+01AD:  MOVF   11,W
+01AE:  MOVWF  14
+01AF:  MOVF   12,W
+01B0:  MOVWF  15
+01B1:  BCF    03.6
+01B2:  CALL   0ED
+.................... } 
+....................  
+.................... void Time_setClockTime(int hour, int minutes, int seconds) { 
+....................     setTime( 
+....................             hour % (UPPER_BOUND_HOURS + 1), 
+....................             minutes % (UPPER_BOUND_MINUTES + 1), 
+....................             seconds % (UPPER_BOUND_SECONDS + 1) 
+....................             ); 
+.................... } 
+....................  
+.................... int32 Time_changeTimeToSeconds(Time *timePtr) { 
+....................     int32 hoursInSeconds; 
+....................     int32 minutesInSeconds; 
+....................     int32 seconds; 
+....................  
+....................     hoursInSeconds = (int32) timePtr->hour * 3600; 
+*
+01E0:  MOVLW  01
+01E1:  BSF    03.6
+01E2:  ADDWF  26,W
+01E3:  MOVWF  04
+01E4:  BCF    03.7
+01E5:  BTFSC  27.0
+01E6:  BSF    03.7
+01E7:  MOVF   00,W
+01E8:  CLRF   37
+01E9:  CLRF   36
+01EA:  CLRF   35
+01EB:  MOVWF  34
+01EC:  CLRF   39
+01ED:  MOVF   04,W
+01EE:  MOVWF  38
+01EF:  BCF    39.0
+01F0:  BTFSC  03.7
+01F1:  BSF    39.0
+01F2:  MOVF   37,W
+01F3:  MOVWF  3D
+01F4:  MOVF   36,W
+01F5:  MOVWF  3C
+01F6:  MOVF   35,W
+01F7:  MOVWF  3B
+01F8:  MOVF   34,W
+01F9:  MOVWF  3A
+01FA:  CLRF   41
+01FB:  CLRF   40
+01FC:  MOVLW  0E
+01FD:  MOVWF  3F
+01FE:  MOVLW  10
+01FF:  MOVWF  3E
+0200:  BCF    03.6
+0201:  CALL   1B4
+0202:  BSF    03.6
+0203:  MOVF   38,W
+0204:  MOVWF  04
+0205:  BCF    03.7
+0206:  BTFSC  39.0
+0207:  BSF    03.7
+0208:  MOVF   7A,W
+0209:  MOVWF  2B
+020A:  MOVF   79,W
+020B:  MOVWF  2A
+020C:  MOVF   78,W
+020D:  MOVWF  29
+020E:  MOVF   77,W
+020F:  MOVWF  28
+....................     minutesInSeconds = (int32) timePtr->minute * 60; 
+0210:  MOVLW  02
+0211:  ADDWF  26,W
+0212:  MOVWF  04
+0213:  BCF    03.7
+0214:  BTFSC  27.0
+0215:  BSF    03.7
+0216:  MOVF   00,W
+0217:  CLRF   37
+0218:  CLRF   36
+0219:  CLRF   35
+021A:  MOVWF  34
+021B:  CLRF   39
+021C:  MOVF   04,W
+021D:  MOVWF  38
+021E:  BCF    39.0
+021F:  BTFSC  03.7
+0220:  BSF    39.0
+0221:  MOVF   37,W
+0222:  MOVWF  3D
+0223:  MOVF   36,W
+0224:  MOVWF  3C
+0225:  MOVF   35,W
+0226:  MOVWF  3B
+0227:  MOVF   34,W
+0228:  MOVWF  3A
+0229:  CLRF   41
+022A:  CLRF   40
+022B:  CLRF   3F
+022C:  MOVLW  3C
+022D:  MOVWF  3E
+022E:  BCF    03.6
+022F:  CALL   1B4
+0230:  BSF    03.6
+0231:  MOVF   38,W
+0232:  MOVWF  04
+0233:  BCF    03.7
+0234:  BTFSC  39.0
+0235:  BSF    03.7
+0236:  MOVF   7A,W
+0237:  MOVWF  2F
+0238:  MOVF   79,W
+0239:  MOVWF  2E
+023A:  MOVF   78,W
+023B:  MOVWF  2D
+023C:  MOVF   77,W
+023D:  MOVWF  2C
+....................     seconds = hoursInSeconds + minutesInSeconds + timePtr->second; 
+023E:  MOVF   2C,W
+023F:  ADDWF  28,W
+0240:  MOVWF  34
+0241:  MOVF   29,W
+0242:  MOVWF  35
+0243:  MOVF   2D,W
+0244:  BTFSC  03.0
+0245:  INCFSZ 2D,W
+0246:  ADDWF  35,F
+0247:  MOVF   2A,W
+0248:  MOVWF  36
+0249:  MOVF   2E,W
+024A:  BTFSC  03.0
+024B:  INCFSZ 2E,W
+024C:  ADDWF  36,F
+024D:  MOVF   2B,W
+024E:  MOVWF  37
+024F:  MOVF   2F,W
+0250:  BTFSC  03.0
+0251:  INCFSZ 2F,W
+0252:  ADDWF  37,F
+0253:  MOVLW  03
+0254:  ADDWF  26,W
+0255:  MOVWF  04
+0256:  BCF    03.7
+0257:  BTFSC  27.0
+0258:  BSF    03.7
+0259:  MOVF   00,W
+025A:  ADDWF  34,W
+025B:  MOVWF  30
+025C:  MOVF   35,W
+025D:  MOVWF  31
+025E:  MOVLW  00
+025F:  BTFSC  03.0
+0260:  MOVLW  01
+0261:  ADDWF  31,F
+0262:  MOVF   36,W
+0263:  MOVWF  32
+0264:  MOVLW  00
+0265:  BTFSC  03.0
+0266:  MOVLW  01
+0267:  ADDWF  32,F
+0268:  MOVF   37,W
+0269:  MOVWF  33
+026A:  MOVLW  00
+026B:  BTFSC  03.0
+026C:  MOVLW  01
+026D:  ADDWF  33,F
+....................  
+....................     return seconds; 
+026E:  MOVF   30,W
+026F:  MOVWF  77
+0270:  MOVF   31,W
+0271:  MOVWF  78
+0272:  MOVF   32,W
+0273:  MOVWF  79
+0274:  MOVF   33,W
+0275:  MOVWF  7A
+0276:  BCF    03.6
+0277:  RETURN
+.................... } 
+....................  
+.................... void Time_clearRtcTime() { 
+....................     setTime(0, 0, 0); 
+*
+0433:  BSF    03.6
+0434:  CLRF   13
+0435:  CLRF   14
+0436:  CLRF   15
+0437:  BCF    03.6
+0438:  CALL   0ED
+.................... } 
+....................  
+.................... void Time_saveRtcCurrentTime(int hourAddress, 
+....................         int minuteAddress, int secondAddress) { 
+....................     Time currentTime; 
+....................  
+....................     currentTime = Time_getCurrentTime(); 
+....................     write_eeprom(hourAddress, currentTime.hour); 
+....................     write_eeprom(minuteAddress, currentTime.minute); 
+....................     write_eeprom(secondAddress, currentTime.second); 
+.................... } 
+....................  
+.................... void Time_saveLimitTime(Time *limitTimePtr, int limitHourAddress, 
+....................         int limitMinuteAddress, int limitSecondAddress) { 
+....................  
+....................     write_eeprom(limitHourAddress, limitTimePtr->hour); 
+....................     write_eeprom(limitMinuteAddress, limitTimePtr->minute); 
+....................     write_eeprom(limitSecondAddress, limitTimePtr->second); 
+.................... } 
+....................  
+.................... int Time_getYear(void) { 
+....................     int date, month, year, dow; 
+....................     DS3231_get_Date(date, month, year, dow); 
+....................  
+....................     return year; 
+.................... } 
+....................  
+.................... void Time_fixTimeToSummerDayLightSavingTime(Time *timePtr) { 
+....................     timePtr->hour = 3; 
+....................     Time_setClockTime(timePtr); 
+.................... } 
+....................  
+.................... void Time_fixTimeToWinterDayLightSavingTime(Time *timePtr) { 
+....................     timePtr->hour = 1; 
+....................     Time_setClockTime(timePtr); 
+.................... } 
+....................  
+.................... BOOLEAN Time_isTimeToStartDayLightSavingTime(Time *timePtr) { 
+....................     return (timePtr->hour == 2)&& 
+....................             (timePtr->minute == 0)&& 
+....................             (timePtr->second == 0); 
+.................... } 
+....................  
+.................... void Time_showHoursMinutesRtc(BOOLEAN blink) { 
+....................     int timeToSend[4] = {0}; 
+....................     TimeInDigits timeInDigits; 
+....................     Time currentTime; 
+....................     currentTime = Time_getCurrentTime(); 
+....................  
+....................     int dayOfMonth; 
+....................     int month; 
+....................     int year; 
+....................     int dayOfWeek; 
+....................  
+....................     DS3231_get_Date(dayOfMonth, month, year, dayOfWeek); 
+....................     currentTime.hour += ((dayOfMonth - 1) % 5) * 24;  
+....................  
+....................     timeInDigits = Time_getTimeInDigits(&currentTime, FALSE); 
+....................     timeToSend[0] = timeInDigits.minute[0]; 
+....................     timeToSend[1] = timeInDigits.minute[1]; 
+....................     timeToSend[2] = timeInDigits.hour[0]; 
+....................     timeToSend[3] = timeInDigits.hour[1]; 
+....................  
+....................     if (blink) { 
+....................         blink = currentTime.second % 2; 
+....................     } else { 
+....................         blink = TRUE; 
+....................     } 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             blink 
+....................             ); 
+.................... } 
+....................  
+.................... void Time_showMinutesSecondsRtc(void) { 
+....................     int timeToSend[4] = {0}; 
+....................     TimeInDigits timeInDigits; 
+....................     Time currentTime; 
+....................     currentTime = Time_getCurrentTime(); 
+....................     currentTime.minute = (currentTime.minute + currentTime.hour * 60) % 100; 
+....................  
+....................     timeInDigits = Time_getTimeInDigits(&currentTime, FALSE); 
+....................     timeToSend[0] = timeInDigits.second[0]; 
+....................     timeToSend[1] = timeInDigits.second[1]; 
+....................     timeToSend[2] = timeInDigits.minute[0]; 
+....................     timeToSend[3] = timeInDigits.minute[1]; 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             TRUE 
+....................             ); 
+.................... } 
+....................  
+.................... #endif	/* TIME_H */ 
+....................  
+....................  
+.................... #include "sevensegmentdisplay.h" 
+.................... /*  
+....................  * File:   sevensegmentdisplay.h 
+....................  * Author: DISENO4 
+....................  * 
+....................  * Created on 2 de octubre de 2017, 09:12 AM 
+....................  */ 
+....................  
+.................... #ifndef SEVENSEGMENTDISPLAY_H 
+.................... #define   SEVENSEGMENTDISPLAY_H 
+....................  
+.................... #include "array.h" 
+.................... #include "shiftregister.h" 
+....................  
+.................... typedef enum { 
+....................     INDEX_SEVEN_SEGMENT_HYPHEN = 10, 
+....................     INDEX_SEVEN_SEGMENT_DOT, 
+....................     INDEX_CAPS_A, 
+....................     INDEX_CAPS_C, 
+....................     INDEX_CAPS_E, 
+....................     INDEX_CAPS_F, 
+....................     INDEX_CAPS_H, 
+....................     INDEX_LOWERCASE_B, 
+....................     INDEX_LOWERCASE_C, 
+....................     INDEX_LOWERCASE_D, 
+....................     INDEX_LOWERCASE_N, 
+....................     INDEX_LOWERCASE_U, 
+.................... } SEVEN_SEGMENT_DISPLAY_INDEX; 
+....................  
+.................... const int SevenSegmentDisplay_characters[] = { 
+....................     0b11110110, // 0    
+....................     0b01100000, // 1 
+....................     0b11010101, // 2 
+....................     0b11110001, // 3 
+....................     0b01100011, // 4 
+....................     0b10110011, // 5 
+....................     0b10110111, // 6 
+....................     0b11100000, // 7 
+....................     0b11110111, // 8 
+....................     0b11110011, // 9 
+....................     0b00000001, // - 
+....................     0b00001000, // .    
+....................     0b11100111, // A  
+....................     0b10010110, // C 
+....................     0b10010111, // E 
+....................     0b10000111, // F 
+....................     0b01100111, //H     
+....................     0b00110111, //b     
+....................     0b10010110, //c     
+....................     0b01110101, //d     
+....................     0b00100101, //n     
+....................     0b01110110, //u      
+....................     0b00010111, 
+....................     0b00000100, 
+....................     0b01100100, 
+....................     0b11000011, //°  
+....................     0b00110101, 
+.................... }; 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(int arrayOfNumbers[], int arraySize) { 
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(int arrayOfNumbers[], int arraySize) { 
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+....................         arrayOfNumbers[i] |= SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showArrayOfNumbers(int arrayOfNumbers[], int arraySize, BOOLEAN withDot) { 
+....................     if (withDot) { 
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(arrayOfNumbers, arraySize); 
+....................     } else { 
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayOfNumbers, arraySize); 
+....................     } 
+....................  
+....................     ShiftRegister_sendData(arrayOfNumbers, arraySize); 
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphens(void) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN] | 0b00001000; 
+....................     arrayToSend[2] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[3] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphensTwoDigits(void) { 
+....................     int arrayToSend[2] = {0}; 
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplay(void) { 
+....................     int charactersArray[4] = {0}; 
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplayTwoLines(void) { 
+....................     int charactersArray[8] = {0}; 
+....................  
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPin(int16 pin) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, arrayToSend, Array_getArraySize(arrayToSend)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayToSend, Array_getArraySize(arrayToSend)); 
+....................  
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPinTwoLines(int16 pin) { 
+....................     int pinDigits[4] = {0}; 
+....................     int arrayToSend[8] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, pinDigits, Array_getArraySize(pinDigits)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(pinDigits, Array_getArraySize(pinDigits)); 
+....................  
+....................     arrayToSend[4] = pinDigits[0]; 
+....................     arrayToSend[5] = pinDigits[1]; 
+....................     arrayToSend[6] = pinDigits[2]; 
+....................     arrayToSend[7] = pinDigits[3]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+.................... #endif   /* SEVENSEGMENTDISPLAY_H */ 
+....................  
+....................  
+....................  
+.................... typedef enum { 
+....................     FORMAT_MINUTES = 0, 
+....................     FORMAT_SECONDS, 
+....................     FORMAT_HOURS_MINUTES, 
+....................     FORMAT_MINUTES_SECONDS, 
+.................... } TimerFormat; 
+....................  
+.................... typedef enum { 
+....................     COUNTUP = 0, 
+....................     COUNTDOWN, 
+.................... } TypeOfCount; 
+....................  
+.................... typedef struct { 
+....................     Time countdownTime; 
+....................     Time currentTime; 
+....................     Time alarmTime; 
+....................     int hoursUpperBound; 
+....................     int minutesUpperBound; 
+....................     int secondsUpperBound; 
+.................... } Timer; 
+....................  
+.................... void Timer_updateCountdownTime(Timer *timerPtr) { 
+....................     signed int32 currentTimeInSeconds; 
+....................     signed int32 limitTimeInSeconds; 
+....................     signed int32 countdownTimeInSeconds; 
+....................      
+....................     currentTimeInSeconds = Time_changeTimeToSeconds(&timerPtr->currentTime); 
+*
+02F4:  MOVLW  04
+02F5:  BSF    03.5
+02F6:  ADDWF  6C,W
+02F7:  MOVWF  78
+02F8:  MOVF   6D,W
+02F9:  MOVWF  7A
+02FA:  BTFSC  03.0
+02FB:  INCF   7A,F
+02FC:  MOVF   78,W
+02FD:  BCF    03.5
+02FE:  BSF    03.6
+02FF:  MOVWF  24
+0300:  MOVF   7A,W
+0301:  MOVWF  25
+0302:  MOVWF  27
+0303:  MOVF   24,W
+0304:  MOVWF  26
+0305:  BCF    03.6
+0306:  CALL   1E0
+0307:  MOVF   7A,W
+0308:  BSF    03.6
+0309:  MOVWF  13
+030A:  MOVF   79,W
+030B:  MOVWF  12
+030C:  MOVF   78,W
+030D:  MOVWF  11
+030E:  MOVF   77,W
+030F:  MOVWF  10
+....................     limitTimeInSeconds = Time_changeTimeToSeconds(&timerPtr->alarmTime); 
+0310:  MOVLW  08
+0311:  BSF    03.5
+0312:  BCF    03.6
+0313:  ADDWF  6C,W
+0314:  MOVWF  78
+0315:  MOVF   6D,W
+0316:  MOVWF  7A
+0317:  BTFSC  03.0
+0318:  INCF   7A,F
+0319:  MOVF   78,W
+031A:  BCF    03.5
+031B:  BSF    03.6
+031C:  MOVWF  24
+031D:  MOVF   7A,W
+031E:  MOVWF  25
+031F:  MOVWF  27
+0320:  MOVF   24,W
+0321:  MOVWF  26
+0322:  BCF    03.6
+0323:  CALL   1E0
+0324:  MOVF   7A,W
+0325:  BSF    03.6
+0326:  MOVWF  17
+0327:  MOVF   79,W
+0328:  MOVWF  16
+0329:  MOVF   78,W
+032A:  MOVWF  15
+032B:  MOVF   77,W
+032C:  MOVWF  14
+....................     countdownTimeInSeconds = limitTimeInSeconds - currentTimeInSeconds; 
+032D:  MOVF   10,W
+032E:  SUBWF  14,W
+032F:  MOVWF  18
+0330:  MOVF   15,W
+0331:  MOVWF  19
+0332:  MOVF   11,W
+0333:  BTFSS  03.0
+0334:  INCFSZ 11,W
+0335:  SUBWF  19,F
+0336:  MOVF   16,W
+0337:  MOVWF  1A
+0338:  MOVF   12,W
+0339:  BTFSS  03.0
+033A:  INCFSZ 12,W
+033B:  SUBWF  1A,F
+033C:  MOVF   17,W
+033D:  MOVWF  1B
+033E:  MOVF   13,W
+033F:  BTFSS  03.0
+0340:  INCFSZ 13,W
+0341:  SUBWF  1B,F
+....................  
+....................     countdownTimeInSeconds = countdownTimeInSeconds < 0 ? 0 : countdownTimeInSeconds; 
+0342:  BTFSS  1B.7
+0343:  GOTO   349
+0344:  CLRF   77
+0345:  CLRF   78
+0346:  CLRF   79
+0347:  CLRF   7A
+0348:  GOTO   351
+0349:  MOVF   18,W
+034A:  MOVWF  77
+034B:  MOVF   19,W
+034C:  MOVWF  78
+034D:  MOVF   1A,W
+034E:  MOVWF  79
+034F:  MOVF   1B,W
+0350:  MOVWF  7A
+0351:  MOVF   7A,W
+0352:  MOVWF  1B
+0353:  MOVF   79,W
+0354:  MOVWF  1A
+0355:  MOVF   78,W
+0356:  MOVWF  19
+0357:  MOVF   77,W
+0358:  MOVWF  18
+....................  
+....................     int32 hour = (countdownTimeInSeconds / 3600); 
+....................     int32 minute = (countdownTimeInSeconds % 3600) / 60; 
+0359:  BCF    03.1
+035A:  MOVF   1B,W
+035B:  MOVWF  39
+035C:  MOVF   1A,W
+035D:  MOVWF  38
+035E:  MOVF   19,W
+035F:  MOVWF  37
+0360:  MOVF   18,W
+0361:  MOVWF  36
+0362:  CLRF   3D
+0363:  CLRF   3C
+0364:  MOVLW  0E
+0365:  MOVWF  3B
+0366:  MOVLW  10
+0367:  MOVWF  3A
+0368:  BCF    03.6
+0369:  CALL   278
+036A:  MOVF   7A,W
+036B:  BSF    03.6
+036C:  MOVWF  1F
+036D:  MOVF   79,W
+036E:  MOVWF  1E
+036F:  MOVF   78,W
+0370:  MOVWF  1D
+0371:  MOVF   77,W
+0372:  MOVWF  1C
+0373:  BSF    03.1
+0374:  MOVLW  24
+0375:  MOVWF  04
+0376:  BSF    03.7
+0377:  MOVF   1B,W
+0378:  MOVWF  39
+0379:  MOVF   1A,W
+037A:  MOVWF  38
+037B:  MOVF   19,W
+037C:  MOVWF  37
+037D:  MOVF   18,W
+037E:  MOVWF  36
+037F:  CLRF   3D
+0380:  CLRF   3C
+0381:  MOVLW  0E
+0382:  MOVWF  3B
+0383:  MOVLW  10
+0384:  MOVWF  3A
+0385:  BCF    03.6
+0386:  CALL   278
+0387:  BSF    03.6
+0388:  MOVF   27,W
+0389:  MOVWF  2B
+038A:  MOVF   26,W
+038B:  MOVWF  2A
+038C:  MOVF   25,W
+038D:  MOVWF  29
+038E:  MOVF   24,W
+038F:  MOVWF  28
+0390:  CLRF   2D
+0391:  MOVF   04,W
+0392:  MOVWF  2C
+0393:  BCF    2D.0
+0394:  BTFSC  03.7
+0395:  BSF    2D.0
+0396:  BCF    03.1
+0397:  MOVF   27,W
+0398:  MOVWF  39
+0399:  MOVF   26,W
+039A:  MOVWF  38
+039B:  MOVF   25,W
+039C:  MOVWF  37
+039D:  MOVF   24,W
+039E:  MOVWF  36
+039F:  CLRF   3D
+03A0:  CLRF   3C
+03A1:  CLRF   3B
+03A2:  MOVLW  3C
+03A3:  MOVWF  3A
+03A4:  BCF    03.6
+03A5:  CALL   278
+03A6:  BSF    03.6
+03A7:  MOVF   2C,W
+03A8:  MOVWF  04
+03A9:  BCF    03.7
+03AA:  BTFSC  2D.0
+03AB:  BSF    03.7
+03AC:  MOVF   7A,W
+03AD:  MOVWF  23
+03AE:  MOVF   79,W
+03AF:  MOVWF  22
+03B0:  MOVF   78,W
+03B1:  MOVWF  21
+03B2:  MOVF   77,W
+03B3:  MOVWF  20
+....................     timerPtr->countdownTime.second = (countdownTimeInSeconds % 3600) % 60; 
+03B4:  MOVLW  03
+03B5:  BSF    03.5
+03B6:  BCF    03.6
+03B7:  ADDWF  6C,W
+03B8:  MOVWF  78
+03B9:  MOVF   6D,W
+03BA:  MOVWF  7A
+03BB:  BTFSC  03.0
+03BC:  INCF   7A,F
+03BD:  MOVF   78,W
+03BE:  BCF    03.5
+03BF:  BSF    03.6
+03C0:  MOVWF  24
+03C1:  MOVF   7A,W
+03C2:  MOVWF  25
+03C3:  CLRF   27
+03C4:  MOVF   04,W
+03C5:  MOVWF  26
+03C6:  BCF    27.0
+03C7:  BTFSC  03.7
+03C8:  BSF    27.0
+03C9:  BSF    03.1
+03CA:  MOVLW  28
+03CB:  MOVWF  04
+03CC:  BSF    03.7
+03CD:  MOVF   1B,W
+03CE:  MOVWF  39
+03CF:  MOVF   1A,W
+03D0:  MOVWF  38
+03D1:  MOVF   19,W
+03D2:  MOVWF  37
+03D3:  MOVF   18,W
+03D4:  MOVWF  36
+03D5:  CLRF   3D
+03D6:  CLRF   3C
+03D7:  MOVLW  0E
+03D8:  MOVWF  3B
+03D9:  MOVLW  10
+03DA:  MOVWF  3A
+03DB:  BCF    03.6
+03DC:  CALL   278
+03DD:  BSF    03.6
+03DE:  MOVF   28,W
+03DF:  MOVWF  77
+03E0:  MOVF   29,W
+03E1:  MOVWF  78
+03E2:  MOVF   2A,W
+03E3:  MOVWF  79
+03E4:  MOVF   2B,W
+03E5:  MOVWF  7A
+03E6:  MOVF   26,W
+03E7:  MOVWF  04
+03E8:  BCF    03.7
+03E9:  BTFSC  27.0
+03EA:  BSF    03.7
+03EB:  MOVF   2B,W
+03EC:  MOVWF  2F
+03ED:  MOVF   2A,W
+03EE:  MOVWF  2E
+03EF:  MOVF   29,W
+03F0:  MOVWF  2D
+03F1:  MOVF   28,W
+03F2:  MOVWF  2C
+03F3:  CLRF   31
+03F4:  MOVF   04,W
+03F5:  MOVWF  30
+03F6:  BCF    31.0
+03F7:  BTFSC  03.7
+03F8:  BSF    31.0
+03F9:  BSF    03.1
+03FA:  MOVLW  32
+03FB:  MOVWF  04
+03FC:  BSF    03.7
+03FD:  MOVF   2B,W
+03FE:  MOVWF  39
+03FF:  MOVF   2A,W
+0400:  MOVWF  38
+0401:  MOVF   29,W
+0402:  MOVWF  37
+0403:  MOVF   28,W
+0404:  MOVWF  36
+0405:  CLRF   3D
+0406:  CLRF   3C
+0407:  CLRF   3B
+0408:  MOVLW  3C
+0409:  MOVWF  3A
+040A:  BCF    03.6
+040B:  CALL   278
+040C:  BSF    03.6
+040D:  MOVF   30,W
+040E:  MOVWF  04
+040F:  BCF    03.7
+0410:  BTFSC  31.0
+0411:  BSF    03.7
+0412:  MOVF   24,W
+0413:  MOVWF  04
+0414:  BCF    03.7
+0415:  BTFSC  25.0
+0416:  BSF    03.7
+0417:  MOVF   32,W
+0418:  MOVWF  00
+....................  
+....................     timerPtr->countdownTime.hour = hour; 
+0419:  MOVLW  01
+041A:  BSF    03.5
+041B:  BCF    03.6
+041C:  ADDWF  6C,W
+041D:  MOVWF  04
+041E:  BCF    03.7
+041F:  BTFSC  6D.0
+0420:  BSF    03.7
+0421:  BCF    03.5
+0422:  BSF    03.6
+0423:  MOVF   1C,W
+0424:  MOVWF  00
+....................     timerPtr->countdownTime.minute = minute; 
+0425:  MOVLW  02
+0426:  BSF    03.5
+0427:  BCF    03.6
+0428:  ADDWF  6C,W
+0429:  MOVWF  04
+042A:  BCF    03.7
+042B:  BTFSC  6D.0
+042C:  BSF    03.7
+042D:  BCF    03.5
+042E:  BSF    03.6
+042F:  MOVF   20,W
+0430:  MOVWF  00
+0431:  BCF    03.6
+0432:  RETURN
+.................... } 
+....................  
+.................... void Timer_updateCountdownTimeOnlySeconds(Timer *timerPtr) { 
+....................     signed int32 currentTimeInSeconds; 
+....................     signed int32 limitTimeInSeconds; 
+....................     signed int32 countdownTimeInSeconds; 
+....................  
+....................     currentTimeInSeconds = Time_changeTimeToSeconds(&timerPtr->currentTime); 
+....................     limitTimeInSeconds = Time_changeTimeToSeconds(&timerPtr->alarmTime); 
+....................     countdownTimeInSeconds = limitTimeInSeconds - currentTimeInSeconds; 
+....................  
+....................     countdownTimeInSeconds = countdownTimeInSeconds < 0 ? 0 : countdownTimeInSeconds; 
+....................  
+....................     int32 hour = (countdownTimeInSeconds / 3600); 
+....................     int32 minute = (countdownTimeInSeconds % 3600) / 60; 
+....................     timerPtr->countdownTime.second = (countdownTimeInSeconds % 3600) % 60; 
+....................  
+....................     timerPtr->countdownTime.hour = hour; 
+....................     timerPtr->countdownTime.minute = minute; 
+.................... } 
+....................  
+.................... Timer Timer_newHoursMinutes(int hoursUpperBound, int minutesUpperBound) { 
+....................     Timer newTimer; 
+....................  
+....................     newTimer.hoursUpperBound = hoursUpperBound; 
+....................     newTimer.minutesUpperBound = minutesUpperBound; 
+....................     newTimer.secondsUpperBound = 59; 
+....................     return newTimer; 
+.................... } 
+....................  
+.................... Timer Timer_newMinutesSeconds(int minutesUpperBound) { 
+....................     Timer newTimer; 
+....................  
+....................     newTimer.hoursUpperBound = 0; 
+....................     newTimer.minutesUpperBound = minutesUpperBound; 
+....................     newTimer.secondsUpperBound = 59; 
+....................  
+....................     return newTimer; 
+.................... } 
+....................  
+.................... Timer Timer_newMinutes(int minutesUpperBound) { 
+....................     Timer newTimer; 
+....................  
+....................     newTimer.hoursUpperBound = 0; 
+*
+0A56:  BCF    03.5
+0A57:  BSF    03.6
+0A58:  CLRF   1C
+....................     newTimer.minutesUpperBound = minutesUpperBound; 
+0A59:  BSF    03.5
+0A5A:  BCF    03.6
+0A5B:  MOVF   6E,W
+0A5C:  BCF    03.5
+0A5D:  BSF    03.6
+0A5E:  MOVWF  1D
+....................     newTimer.secondsUpperBound = 59; 
+0A5F:  MOVLW  3B
+0A60:  MOVWF  1E
+....................     return newTimer; 
+0A61:  MOVLW  10
+0A62:  MOVWF  78
+0A63:  MOVLW  01
+0A64:  MOVWF  79
+.................... } 
+....................  
+.................... Timer Timer_newSeconds(int secondsUpperBound) { 
+....................     Timer newTimer; 
+....................  
+....................     newTimer.hoursUpperBound = 0; 
+*
+0AA8:  BCF    03.5
+0AA9:  BSF    03.6
+0AAA:  CLRF   1C
+....................     newTimer.minutesUpperBound = 0; 
+0AAB:  CLRF   1D
+....................     newTimer.secondsUpperBound = secondsUpperBound; 
+0AAC:  BSF    03.5
+0AAD:  BCF    03.6
+0AAE:  MOVF   6E,W
+0AAF:  BCF    03.5
+0AB0:  BSF    03.6
+0AB1:  MOVWF  1E
+....................  
+....................     return newTimer; 
+0AB2:  MOVLW  10
+0AB3:  MOVWF  78
+0AB4:  MOVLW  01
+0AB5:  MOVWF  79
+.................... } 
+....................  
+.................... void Timer_setRtc(Timer *timerPtr) { 
+....................     Time_setClockTime(&timerPtr->currentTime); 
+.................... } 
+....................  
+.................... void Timer_updateTimerFromEeprom(Timer *timerPtr, 
+....................         __EEADDRESS__ addressRtcHours, __EEADDRESS__ addressRtcMinutes, 
+....................         __EEADDRESS__ addressRtcSeconds) { 
+....................  
+....................     timerPtr->currentTime.hour = 
+....................             read_eeprom(addressRtcHours) % (timerPtr->hoursUpperBound + 1); 
+*
+0B0F:  MOVLW  05
+0B10:  ADDWF  68,W
+0B11:  MOVWF  78
+0B12:  MOVF   69,W
+0B13:  MOVWF  7A
+0B14:  BTFSC  03.0
+0B15:  INCF   7A,F
+0B16:  MOVF   78,W
+0B17:  BCF    03.5
+0B18:  BSF    03.6
+0B19:  MOVWF  10
+0B1A:  MOVF   7A,W
+0B1B:  MOVWF  11
+0B1C:  BSF    03.5
+0B1D:  BCF    03.6
+0B1E:  MOVF   6A,W
+0B1F:  BCF    03.5
+0B20:  BSF    03.6
+0B21:  MOVWF  0D
+0B22:  BSF    03.5
+0B23:  BCF    0C.7
+0B24:  BSF    0C.0
+0B25:  BCF    03.5
+0B26:  MOVF   0C,W
+0B27:  MOVWF  12
+0B28:  MOVLW  0C
+0B29:  BSF    03.5
+0B2A:  BCF    03.6
+0B2B:  ADDWF  68,W
+0B2C:  MOVWF  04
+0B2D:  BCF    03.7
+0B2E:  BTFSC  69.0
+0B2F:  BSF    03.7
+0B30:  MOVLW  01
+0B31:  ADDWF  00,W
+0B32:  BCF    03.5
+0B33:  BSF    03.6
+0B34:  MOVWF  13
+0B35:  MOVF   12,W
+0B36:  MOVWF  1E
+0B37:  MOVF   13,W
+0B38:  MOVWF  1F
+0B39:  BCF    0A.3
+0B3A:  BCF    03.6
+0B3B:  CALL   02F
+0B3C:  BSF    0A.3
+0B3D:  MOVF   77,W
+0B3E:  BSF    03.6
+0B3F:  MOVWF  12
+0B40:  MOVF   10,W
+0B41:  MOVWF  04
+0B42:  BCF    03.7
+0B43:  BTFSC  11.0
+0B44:  BSF    03.7
+0B45:  MOVF   12,W
+0B46:  MOVWF  00
+....................     timerPtr->currentTime.minute = 
+....................             read_eeprom(addressRtcMinutes) % (timerPtr->minutesUpperBound + 1); 
+0B47:  MOVLW  06
+0B48:  BSF    03.5
+0B49:  BCF    03.6
+0B4A:  ADDWF  68,W
+0B4B:  MOVWF  78
+0B4C:  MOVF   69,W
+0B4D:  MOVWF  7A
+0B4E:  BTFSC  03.0
+0B4F:  INCF   7A,F
+0B50:  MOVF   78,W
+0B51:  BCF    03.5
+0B52:  BSF    03.6
+0B53:  MOVWF  10
+0B54:  MOVF   7A,W
+0B55:  MOVWF  11
+0B56:  BSF    03.5
+0B57:  BCF    03.6
+0B58:  MOVF   6C,W
+0B59:  BCF    03.5
+0B5A:  BSF    03.6
+0B5B:  MOVWF  0D
+0B5C:  BSF    03.5
+0B5D:  BCF    0C.7
+0B5E:  BSF    0C.0
+0B5F:  BCF    03.5
+0B60:  MOVF   0C,W
+0B61:  MOVWF  12
+0B62:  MOVLW  0D
+0B63:  BSF    03.5
+0B64:  BCF    03.6
+0B65:  ADDWF  68,W
+0B66:  MOVWF  04
+0B67:  BCF    03.7
+0B68:  BTFSC  69.0
+0B69:  BSF    03.7
+0B6A:  MOVLW  01
+0B6B:  ADDWF  00,W
+0B6C:  BCF    03.5
+0B6D:  BSF    03.6
+0B6E:  MOVWF  13
+0B6F:  MOVF   12,W
+0B70:  MOVWF  1E
+0B71:  MOVF   13,W
+0B72:  MOVWF  1F
+0B73:  BCF    0A.3
+0B74:  BCF    03.6
+0B75:  CALL   02F
+0B76:  BSF    0A.3
+0B77:  MOVF   77,W
+0B78:  BSF    03.6
+0B79:  MOVWF  12
+0B7A:  MOVF   10,W
+0B7B:  MOVWF  04
+0B7C:  BCF    03.7
+0B7D:  BTFSC  11.0
+0B7E:  BSF    03.7
+0B7F:  MOVF   12,W
+0B80:  MOVWF  00
+....................     timerPtr->currentTime.second = 
+....................             read_eeprom(addressRtcSeconds) % (timerPtr->secondsUpperBound + 1); 
+0B81:  MOVLW  07
+0B82:  BSF    03.5
+0B83:  BCF    03.6
+0B84:  ADDWF  68,W
+0B85:  MOVWF  78
+0B86:  MOVF   69,W
+0B87:  MOVWF  7A
+0B88:  BTFSC  03.0
+0B89:  INCF   7A,F
+0B8A:  MOVF   78,W
+0B8B:  BCF    03.5
+0B8C:  BSF    03.6
+0B8D:  MOVWF  10
+0B8E:  MOVF   7A,W
+0B8F:  MOVWF  11
+0B90:  BSF    03.5
+0B91:  BCF    03.6
+0B92:  MOVF   6E,W
+0B93:  BCF    03.5
+0B94:  BSF    03.6
+0B95:  MOVWF  0D
+0B96:  BSF    03.5
+0B97:  BCF    0C.7
+0B98:  BSF    0C.0
+0B99:  BCF    03.5
+0B9A:  MOVF   0C,W
+0B9B:  MOVWF  12
+0B9C:  MOVLW  0E
+0B9D:  BSF    03.5
+0B9E:  BCF    03.6
+0B9F:  ADDWF  68,W
+0BA0:  MOVWF  04
+0BA1:  BCF    03.7
+0BA2:  BTFSC  69.0
+0BA3:  BSF    03.7
+0BA4:  MOVLW  01
+0BA5:  ADDWF  00,W
+0BA6:  BCF    03.5
+0BA7:  BSF    03.6
+0BA8:  MOVWF  13
+0BA9:  MOVF   12,W
+0BAA:  MOVWF  1E
+0BAB:  MOVF   13,W
+0BAC:  MOVWF  1F
+0BAD:  BCF    0A.3
+0BAE:  BCF    03.6
+0BAF:  CALL   02F
+0BB0:  BSF    0A.3
+0BB1:  MOVF   77,W
+0BB2:  BSF    03.6
+0BB3:  MOVWF  12
+0BB4:  MOVF   10,W
+0BB5:  MOVWF  04
+0BB6:  BCF    03.7
+0BB7:  BTFSC  11.0
+0BB8:  BSF    03.7
+0BB9:  MOVF   12,W
+0BBA:  MOVWF  00
+....................  
+.................... } 
+....................  
+.................... //void Timer_updateTimer(Timer *timerPtr) { 
+.................... //    timerPtr->currentTime = Time_getCurrentTime(); 
+.................... //    Timer_updateCountdownTime(timerPtr); 
+.................... //} 
+....................  
+.................... BOOLEAN Timer_hasTimerChanged(Timer *timerPtr) { 
+....................     Time currentTime; 
+....................     currentTime = Time_getCurrentTime(); 
+....................  
+....................     return (timerPtr->currentTime.second != currentTime.second); 
+.................... } 
+....................  
+.................... void Timer_increaseTimerHours(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.hour = 
+....................             timerPtr->alarmTime.hour == timerPtr->hoursUpperBound ? 
+....................             0 : timerPtr->alarmTime.hour + 1; 
+.................... } 
+....................  
+.................... void Timer_decreaseTimerHours(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.hour = 
+....................             timerPtr->alarmTime.hour == 0 ? 
+....................             timerPtr->hoursUpperBound : timerPtr->alarmTime.hour - 1; 
+.................... } 
+....................  
+.................... void Timer_increaseTimerMinutes(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.minute = 
+....................             timerPtr->alarmTime.minute == timerPtr->minutesUpperBound ? 
+....................             0 : timerPtr->alarmTime.minute + 1; 
+*
+1042:  MOVLW  0A
+1043:  ADDWF  54,W
+1044:  MOVWF  78
+1045:  MOVF   55,W
+1046:  MOVWF  7A
+1047:  BTFSC  03.0
+1048:  INCF   7A,F
+1049:  MOVF   78,W
+104A:  MOVWF  56
+104B:  MOVF   7A,W
+104C:  MOVWF  57
+104D:  MOVLW  0A
+104E:  ADDWF  54,W
+104F:  MOVWF  04
+1050:  BCF    03.7
+1051:  BTFSC  55.0
+1052:  BSF    03.7
+1053:  MOVF   00,W
+1054:  MOVWF  58
+1055:  MOVLW  0D
+1056:  ADDWF  54,W
+1057:  MOVWF  04
+1058:  BCF    03.7
+1059:  BTFSC  55.0
+105A:  BSF    03.7
+105B:  MOVF   00,W
+105C:  SUBWF  58,W
+105D:  BTFSS  03.2
+105E:  GOTO   061
+105F:  MOVLW  00
+1060:  GOTO   069
+1061:  MOVLW  0A
+1062:  ADDWF  54,W
+1063:  MOVWF  04
+1064:  BCF    03.7
+1065:  BTFSC  55.0
+1066:  BSF    03.7
+1067:  MOVLW  01
+1068:  ADDWF  00,W
+1069:  MOVWF  58
+106A:  MOVF   56,W
+106B:  MOVWF  04
+106C:  BCF    03.7
+106D:  BTFSC  57.0
+106E:  BSF    03.7
+106F:  MOVF   58,W
+1070:  MOVWF  00
+.................... } 
+....................  
+.................... void Timer_decreaseTimerMinutes(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.minute = 
+....................             timerPtr->alarmTime.minute == 0 ? 
+....................             timerPtr->minutesUpperBound : timerPtr->alarmTime.minute - 1; 
+.................... } 
+....................  
+.................... void Timer_increaseTimerSeconds(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.second = 
+....................             timerPtr->alarmTime.second == timerPtr->secondsUpperBound ? 
+....................             0 : timerPtr->alarmTime.second + 1; 
+*
+1086:  MOVLW  0B
+1087:  ADDWF  54,W
+1088:  MOVWF  78
+1089:  MOVF   55,W
+108A:  MOVWF  7A
+108B:  BTFSC  03.0
+108C:  INCF   7A,F
+108D:  MOVF   78,W
+108E:  MOVWF  56
+108F:  MOVF   7A,W
+1090:  MOVWF  57
+1091:  MOVLW  0B
+1092:  ADDWF  54,W
+1093:  MOVWF  04
+1094:  BCF    03.7
+1095:  BTFSC  55.0
+1096:  BSF    03.7
+1097:  MOVF   00,W
+1098:  MOVWF  58
+1099:  MOVLW  0E
+109A:  ADDWF  54,W
+109B:  MOVWF  04
+109C:  BCF    03.7
+109D:  BTFSC  55.0
+109E:  BSF    03.7
+109F:  MOVF   00,W
+10A0:  SUBWF  58,W
+10A1:  BTFSS  03.2
+10A2:  GOTO   0A5
+10A3:  MOVLW  00
+10A4:  GOTO   0AD
+10A5:  MOVLW  0B
+10A6:  ADDWF  54,W
+10A7:  MOVWF  04
+10A8:  BCF    03.7
+10A9:  BTFSC  55.0
+10AA:  BSF    03.7
+10AB:  MOVLW  01
+10AC:  ADDWF  00,W
+10AD:  MOVWF  58
+10AE:  MOVF   56,W
+10AF:  MOVWF  04
+10B0:  BCF    03.7
+10B1:  BTFSC  57.0
+10B2:  BSF    03.7
+10B3:  MOVF   58,W
+10B4:  MOVWF  00
+.................... } 
+....................  
+.................... void Timer_decreaseTimerSeconds(Timer *timerPtr) { 
+....................     timerPtr->alarmTime.second = 
+....................             timerPtr->alarmTime.second == 0 ? 
+....................             timerPtr->secondsUpperBound : timerPtr->alarmTime.second - 1; 
+.................... } 
+....................  
+.................... BOOLEAN Timer_isTimerFinished(Timer *timerPtr) { 
+....................     return Time_isTimeZero(&timerPtr->countdownTime); 
+*
+091E:  MOVF   6C,W
+091F:  MOVWF  78
+0920:  MOVF   6D,W
+0921:  MOVWF  7A
+0922:  MOVF   78,W
+0923:  MOVWF  6E
+0924:  MOVF   7A,W
+0925:  MOVWF  6F
+0926:  MOVF   6F,W
+0927:  BCF    03.5
+0928:  BSF    03.6
+0929:  MOVWF  11
+092A:  BSF    03.5
+092B:  BCF    03.6
+092C:  MOVF   6E,W
+092D:  BCF    03.5
+092E:  BSF    03.6
+092F:  MOVWF  10
+*
+094F:  MOVF   78,W
+.................... } 
+....................  
+.................... BOOLEAN Timer_isLimitTimeZero(Timer *timerPtr) { 
+....................     return (timerPtr->alarmTime.hour == 0)&& (timerPtr->alarmTime.minute == 0); 
+.................... } 
+....................  
+.................... void Timer_showHoursAndMinutesOfCountdownTime(Timer *timerPtr, BOOLEAN blink) { 
+....................     int timeToSend[4] = {0}; 
+....................     TimeInDigits timeInDigits; 
+....................  
+....................     timeInDigits = Time_getTimeInDigits(&timerPtr->countdownTime, FALSE); 
+....................     timeToSend[0] = timeInDigits.minute[0]; 
+....................     timeToSend[1] = timeInDigits.minute[1]; 
+....................     timeToSend[2] = timeInDigits.hour[0]; 
+....................     timeToSend[3] = timeInDigits.hour[1]; 
+....................  
+....................     if (blink) { 
+....................         blink = timerPtr->currentTime.second % 2; 
+....................     } else { 
+....................         blink = TRUE; 
+....................     } 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             blink 
+....................             ); 
+.................... } 
+....................  
+.................... void Timer_showMinutesAndSecondsOfCountdownTime(Timer *timerPtr) { 
+....................     int timeToSend[4] = {0}; 
+....................     TimeInDigits timeInDigits; 
+....................     Time time; 
+....................  
+....................     time = timerPtr->countdownTime; 
+....................     time.minute = (time.minute + time.hour * 60) % 100; 
+....................     timeInDigits = Time_getTimeInDigits(&time, FALSE); 
+....................     timeToSend[0] = timeInDigits.second[0]; 
+....................     timeToSend[1] = timeInDigits.second[1]; 
+....................     timeToSend[2] = timeInDigits.minute[0]; 
+....................     timeToSend[3] = timeInDigits.minute[1]; 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             TRUE 
+....................             ); 
+.................... } 
+....................  
+.................... void Timer_showMinutesOfCountdownTime(Timer *timerPtr, BOOLEAN blink) { 
+....................     int timeToSend[2] = {0}; 
+*
+0814:  BCF    03.5
+0815:  BSF    03.6
+0816:  CLRF   10
+0817:  CLRF   11
+....................     TimeInDigits timeInDigits; 
+....................     Time time; 
+....................  
+....................     time = timerPtr->countdownTime; 
+0818:  BSF    03.5
+0819:  BCF    03.6
+081A:  MOVF   6D,W
+081B:  MOVWF  04
+081C:  BCF    03.7
+081D:  BTFSC  6E.0
+081E:  BSF    03.7
+081F:  MOVF   00,W
+0820:  MOVWF  77
+0821:  INCF   04,F
+0822:  MOVF   00,W
+0823:  MOVWF  78
+0824:  INCF   04,F
+0825:  MOVF   00,W
+0826:  MOVWF  79
+0827:  INCF   04,F
+0828:  MOVF   00,W
+0829:  MOVWF  7A
+082A:  MOVF   77,W
+082B:  BCF    03.5
+082C:  BSF    03.6
+082D:  MOVWF  18
+082E:  MOVF   78,W
+082F:  MOVWF  19
+0830:  MOVF   79,W
+0831:  MOVWF  1A
+0832:  MOVF   7A,W
+0833:  MOVWF  1B
+....................     time.minute = (time.minute + time.hour * 60) % 100; 
+0834:  MOVF   19,W
+0835:  MOVWF  1C
+0836:  MOVLW  3C
+0837:  MOVWF  1D
+0838:  BCF    0A.3
+0839:  BCF    03.6
+083A:  CALL   549
+083B:  BSF    0A.3
+083C:  MOVF   78,W
+083D:  BSF    03.6
+083E:  ADDWF  1A,W
+083F:  MOVWF  1D
+0840:  MOVWF  1E
+0841:  MOVLW  64
+0842:  MOVWF  1F
+0843:  BCF    0A.3
+0844:  BCF    03.6
+0845:  CALL   02F
+0846:  BSF    0A.3
+0847:  MOVF   77,W
+0848:  BSF    03.6
+0849:  MOVWF  1A
+....................     timeInDigits = Time_getTimeInDigits(&time, FALSE); 
+084A:  MOVLW  01
+084B:  MOVWF  23
+084C:  MOVLW  18
+084D:  MOVWF  22
+084E:  CLRF   24
+084F:  BCF    0A.3
+0850:  BCF    03.6
+0851:  CALL   6DC
+0852:  BSF    0A.3
+0853:  MOVF   79,W
+0854:  MOVWF  7A
+0855:  MOVF   78,W
+0856:  BSF    03.6
+0857:  MOVWF  1C
+0858:  MOVF   7A,W
+0859:  MOVWF  1D
+085A:  MOVLW  01
+085B:  MOVWF  1F
+085C:  MOVLW  12
+085D:  MOVWF  1E
+085E:  MOVLW  06
+085F:  MOVWF  78
+0860:  MOVF   1C,W
+0861:  MOVWF  04
+0862:  BCF    03.7
+0863:  BTFSC  1D.0
+0864:  BSF    03.7
+0865:  MOVF   00,W
+0866:  MOVWF  77
+0867:  MOVF   1E,W
+0868:  MOVWF  04
+0869:  BCF    03.7
+086A:  BTFSC  1F.0
+086B:  BSF    03.7
+086C:  MOVF   77,W
+086D:  MOVWF  00
+086E:  INCF   1E,F
+086F:  BTFSC  03.2
+0870:  INCF   1F,F
+0871:  INCF   1C,F
+0872:  BTFSC  03.2
+0873:  INCF   1D,F
+0874:  DECFSZ 78,F
+0875:  GOTO   060
+....................     timeToSend[0] = timeInDigits.minute[0]; 
+0876:  MOVF   14,W
+0877:  MOVWF  10
+....................     timeToSend[1] = timeInDigits.minute[1]; 
+0878:  MOVF   15,W
+0879:  MOVWF  11
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             blink 
+....................             ); 
+087A:  MOVLW  01
+087B:  MOVWF  1D
+087C:  MOVLW  10
+087D:  MOVWF  1C
+087E:  MOVLW  02
+087F:  MOVWF  1E
+0880:  BSF    03.5
+0881:  BCF    03.6
+0882:  MOVF   6F,W
+0883:  BCF    03.5
+0884:  BSF    03.6
+0885:  MOVWF  1F
+0886:  BCF    0A.3
+0887:  BCF    03.6
+0888:  CALL   790
+0889:  BSF    0A.3
+.................... } 
+....................  
+.................... void Timer_showSecondsOfCountdownTime(Timer *timerPtr) { 
+....................     int timeToSend[2] = {0}; 
+*
+089C:  BCF    03.5
+089D:  BSF    03.6
+089E:  CLRF   10
+089F:  CLRF   11
+....................     TimeInDigits timeInDigits; 
+....................     Time countdownTime; 
+....................  
+....................     countdownTime = timerPtr->countdownTime; 
+08A0:  BSF    03.5
+08A1:  BCF    03.6
+08A2:  MOVF   6D,W
+08A3:  MOVWF  04
+08A4:  BCF    03.7
+08A5:  BTFSC  6E.0
+08A6:  BSF    03.7
+08A7:  MOVF   00,W
+08A8:  MOVWF  77
+08A9:  INCF   04,F
+08AA:  MOVF   00,W
+08AB:  MOVWF  78
+08AC:  INCF   04,F
+08AD:  MOVF   00,W
+08AE:  MOVWF  79
+08AF:  INCF   04,F
+08B0:  MOVF   00,W
+08B1:  MOVWF  7A
+08B2:  MOVF   77,W
+08B3:  BCF    03.5
+08B4:  BSF    03.6
+08B5:  MOVWF  18
+08B6:  MOVF   78,W
+08B7:  MOVWF  19
+08B8:  MOVF   79,W
+08B9:  MOVWF  1A
+08BA:  MOVF   7A,W
+08BB:  MOVWF  1B
+....................     countdownTime.second = (countdownTime.second + countdownTime.minute * 60) % 100; 
+08BC:  MOVF   1A,W
+08BD:  MOVWF  1C
+08BE:  MOVLW  3C
+08BF:  MOVWF  1D
+08C0:  BCF    0A.3
+08C1:  BCF    03.6
+08C2:  CALL   549
+08C3:  BSF    0A.3
+08C4:  MOVF   78,W
+08C5:  BSF    03.6
+08C6:  ADDWF  1B,W
+08C7:  MOVWF  1D
+08C8:  MOVWF  1E
+08C9:  MOVLW  64
+08CA:  MOVWF  1F
+08CB:  BCF    0A.3
+08CC:  BCF    03.6
+08CD:  CALL   02F
+08CE:  BSF    0A.3
+08CF:  MOVF   77,W
+08D0:  BSF    03.6
+08D1:  MOVWF  1B
+....................     timeInDigits = Time_getTimeInDigits(&countdownTime, FALSE); 
+08D2:  MOVLW  01
+08D3:  MOVWF  23
+08D4:  MOVLW  18
+08D5:  MOVWF  22
+08D6:  CLRF   24
+08D7:  BCF    0A.3
+08D8:  BCF    03.6
+08D9:  CALL   6DC
+08DA:  BSF    0A.3
+08DB:  MOVF   79,W
+08DC:  MOVWF  7A
+08DD:  MOVF   78,W
+08DE:  BSF    03.6
+08DF:  MOVWF  1C
+08E0:  MOVF   7A,W
+08E1:  MOVWF  1D
+08E2:  MOVLW  01
+08E3:  MOVWF  1F
+08E4:  MOVLW  12
+08E5:  MOVWF  1E
+08E6:  MOVLW  06
+08E7:  MOVWF  78
+08E8:  MOVF   1C,W
+08E9:  MOVWF  04
+08EA:  BCF    03.7
+08EB:  BTFSC  1D.0
+08EC:  BSF    03.7
+08ED:  MOVF   00,W
+08EE:  MOVWF  77
+08EF:  MOVF   1E,W
+08F0:  MOVWF  04
+08F1:  BCF    03.7
+08F2:  BTFSC  1F.0
+08F3:  BSF    03.7
+08F4:  MOVF   77,W
+08F5:  MOVWF  00
+08F6:  INCF   1E,F
+08F7:  BTFSC  03.2
+08F8:  INCF   1F,F
+08F9:  INCF   1C,F
+08FA:  BTFSC  03.2
+08FB:  INCF   1D,F
+08FC:  DECFSZ 78,F
+08FD:  GOTO   0E8
+....................     timeToSend[0] = timeInDigits.second[0]; 
+08FE:  MOVF   16,W
+08FF:  MOVWF  10
+....................     timeToSend[1] = timeInDigits.second[1]; 
+0900:  MOVF   17,W
+0901:  MOVWF  11
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             timeToSend, 
+....................             Array_getArraySize(timeToSend), 
+....................             TRUE 
+....................             ); 
+0902:  MOVLW  01
+0903:  MOVWF  1D
+0904:  MOVLW  10
+0905:  MOVWF  1C
+0906:  MOVLW  02
+0907:  MOVWF  1E
+0908:  MOVLW  01
+0909:  MOVWF  1F
+090A:  BCF    0A.3
+090B:  BCF    03.6
+090C:  CALL   790
+090D:  BSF    0A.3
+090E:  BSF    03.5
+.................... } 
+....................  
+.................... void Timer_hideHoursAndShowMinutesOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[0] = SevenSegmentDisplay_characters[displayableTime.minute[0]]; 
+....................     numbersToSend[1] = SevenSegmentDisplay_characters[displayableTime.minute[1]] | 
+....................             SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+....................  
+.................... } 
+....................  
+.................... void Timer_hideMinutesAndShowSecondsOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[0] = SevenSegmentDisplay_characters[displayableTime.second[0]]; 
+....................     numbersToSend[1] = SevenSegmentDisplay_characters[displayableTime.second[1]] | 
+....................             SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+.................... } 
+....................  
+.................... void Timer_showHoursAndMinutesOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[0] = displayableTime.minute[0]; 
+....................     numbersToSend[1] = displayableTime.minute[1]; 
+....................     numbersToSend[2] = displayableTime.hour[0]; 
+....................     numbersToSend[3] = displayableTime.hour[1]; 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             numbersToSend, 
+....................             Array_getArraySize(numbersToSend), 
+....................             TRUE); 
+.................... } 
+....................  
+.................... void Timer_showMinutesAndSecondsOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[0] = displayableTime.second[0]; 
+....................     numbersToSend[1] = displayableTime.second[1]; 
+....................     numbersToSend[2] = displayableTime.minute[0]; 
+....................     numbersToSend[3] = displayableTime.minute[1]; 
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             numbersToSend, 
+....................             Array_getArraySize(numbersToSend), 
+....................             TRUE); 
+.................... } 
+....................  
+.................... void Timer_showMinutesOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[2] = {0}; 
+*
+0E22:  CLRF   56
+0E23:  CLRF   57
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+0E24:  MOVLW  08
+0E25:  ADDWF  54,W
+0E26:  MOVWF  78
+0E27:  MOVF   55,W
+0E28:  MOVWF  7A
+0E29:  BTFSC  03.0
+0E2A:  INCF   7A,F
+0E2B:  MOVF   78,W
+0E2C:  MOVWF  5E
+0E2D:  MOVF   7A,W
+0E2E:  MOVWF  5F
+0E2F:  BCF    03.5
+0E30:  BSF    03.6
+0E31:  MOVWF  23
+0E32:  BSF    03.5
+0E33:  BCF    03.6
+0E34:  MOVF   5E,W
+0E35:  BCF    03.5
+0E36:  BSF    03.6
+0E37:  MOVWF  22
+0E38:  CLRF   24
+0E39:  BCF    0A.3
+0E3A:  BCF    03.6
+0E3B:  CALL   6DC
+0E3C:  BSF    0A.3
+0E3D:  MOVF   79,W
+0E3E:  MOVWF  7A
+0E3F:  MOVF   78,W
+0E40:  BSF    03.5
+0E41:  MOVWF  5E
+0E42:  MOVF   7A,W
+0E43:  MOVWF  5F
+0E44:  CLRF   61
+0E45:  MOVLW  D8
+0E46:  MOVWF  60
+0E47:  MOVLW  06
+0E48:  MOVWF  78
+0E49:  MOVF   5E,W
+0E4A:  MOVWF  04
+0E4B:  BCF    03.7
+0E4C:  BTFSC  5F.0
+0E4D:  BSF    03.7
+0E4E:  MOVF   00,W
+0E4F:  MOVWF  77
+0E50:  MOVF   60,W
+0E51:  MOVWF  04
+0E52:  BCF    03.7
+0E53:  BTFSC  61.0
+0E54:  BSF    03.7
+0E55:  MOVF   77,W
+0E56:  MOVWF  00
+0E57:  INCF   60,F
+0E58:  BTFSC  03.2
+0E59:  INCF   61,F
+0E5A:  INCF   5E,F
+0E5B:  BTFSC  03.2
+0E5C:  INCF   5F,F
+0E5D:  DECFSZ 78,F
+0E5E:  GOTO   649
+....................  
+....................     numbersToSend[0] = displayableTime.minute[0]; 
+0E5F:  MOVF   5A,W
+0E60:  MOVWF  56
+....................     numbersToSend[1] = displayableTime.minute[1]; 
+0E61:  MOVF   5B,W
+0E62:  MOVWF  57
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             numbersToSend, 
+....................             Array_getArraySize(numbersToSend), 
+....................             TRUE); 
+0E63:  BCF    03.5
+0E64:  BSF    03.6
+0E65:  CLRF   1D
+0E66:  MOVLW  D6
+0E67:  MOVWF  1C
+0E68:  MOVLW  02
+0E69:  MOVWF  1E
+0E6A:  MOVLW  01
+0E6B:  MOVWF  1F
+0E6C:  BCF    0A.3
+0E6D:  BCF    03.6
+0E6E:  CALL   790
+0E6F:  BSF    0A.3
+.................... } 
+....................  
+.................... void Timer_showSecondsOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[2] = {0}; 
+*
+0E86:  CLRF   56
+0E87:  CLRF   57
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+0E88:  MOVLW  08
+0E89:  ADDWF  54,W
+0E8A:  MOVWF  78
+0E8B:  MOVF   55,W
+0E8C:  MOVWF  7A
+0E8D:  BTFSC  03.0
+0E8E:  INCF   7A,F
+0E8F:  MOVF   78,W
+0E90:  MOVWF  5E
+0E91:  MOVF   7A,W
+0E92:  MOVWF  5F
+0E93:  BCF    03.5
+0E94:  BSF    03.6
+0E95:  MOVWF  23
+0E96:  BSF    03.5
+0E97:  BCF    03.6
+0E98:  MOVF   5E,W
+0E99:  BCF    03.5
+0E9A:  BSF    03.6
+0E9B:  MOVWF  22
+0E9C:  CLRF   24
+0E9D:  BCF    0A.3
+0E9E:  BCF    03.6
+0E9F:  CALL   6DC
+0EA0:  BSF    0A.3
+0EA1:  MOVF   79,W
+0EA2:  MOVWF  7A
+0EA3:  MOVF   78,W
+0EA4:  BSF    03.5
+0EA5:  MOVWF  5E
+0EA6:  MOVF   7A,W
+0EA7:  MOVWF  5F
+0EA8:  CLRF   61
+0EA9:  MOVLW  D8
+0EAA:  MOVWF  60
+0EAB:  MOVLW  06
+0EAC:  MOVWF  78
+0EAD:  MOVF   5E,W
+0EAE:  MOVWF  04
+0EAF:  BCF    03.7
+0EB0:  BTFSC  5F.0
+0EB1:  BSF    03.7
+0EB2:  MOVF   00,W
+0EB3:  MOVWF  77
+0EB4:  MOVF   60,W
+0EB5:  MOVWF  04
+0EB6:  BCF    03.7
+0EB7:  BTFSC  61.0
+0EB8:  BSF    03.7
+0EB9:  MOVF   77,W
+0EBA:  MOVWF  00
+0EBB:  INCF   60,F
+0EBC:  BTFSC  03.2
+0EBD:  INCF   61,F
+0EBE:  INCF   5E,F
+0EBF:  BTFSC  03.2
+0EC0:  INCF   5F,F
+0EC1:  DECFSZ 78,F
+0EC2:  GOTO   6AD
+....................  
+....................     numbersToSend[0] = displayableTime.second[0]; 
+0EC3:  MOVF   5C,W
+0EC4:  MOVWF  56
+....................     numbersToSend[1] = displayableTime.second[1]; 
+0EC5:  MOVF   5D,W
+0EC6:  MOVWF  57
+....................  
+....................     SevenSegmentDisplay_showArrayOfNumbers( 
+....................             numbersToSend, 
+....................             Array_getArraySize(numbersToSend), 
+....................             TRUE); 
+0EC7:  BCF    03.5
+0EC8:  BSF    03.6
+0EC9:  CLRF   1D
+0ECA:  MOVLW  D6
+0ECB:  MOVWF  1C
+0ECC:  MOVLW  02
+0ECD:  MOVWF  1E
+0ECE:  MOVLW  01
+0ECF:  MOVWF  1F
+0ED0:  BCF    0A.3
+0ED1:  BCF    03.6
+0ED2:  CALL   790
+0ED3:  BSF    0A.3
+0ED4:  BSF    03.5
+.................... } 
+....................  
+.................... void Timer_hideMinutesAndShowHoursOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................     numbersToSend[2] = SevenSegmentDisplay_characters[displayableTime.hour[0]]; 
+....................     numbersToSend[3] = SevenSegmentDisplay_characters[displayableTime.hour[1]]; 
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+.................... } 
+....................  
+.................... void Timer_hideSecondsAndShowMinutesOfLimitTime(Timer *timerPtr) { 
+....................     int numbersToSend[4] = {0}; 
+....................     TimeInDigits displayableTime; 
+....................  
+....................     displayableTime = Time_getTimeInDigits(&timerPtr->alarmTime, FALSE); 
+....................  
+....................     numbersToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................     numbersToSend[2] = SevenSegmentDisplay_characters[displayableTime.minute[0]]; 
+....................     numbersToSend[3] = SevenSegmentDisplay_characters[displayableTime.minute[1]]; 
+....................  
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+.................... } 
+....................  
+.................... void Timer_showFormatMinutes(void) { 
+....................     int numbersToSend[2] = {0}; 
+*
+1128:  CLRF   52
+1129:  CLRF   53
+....................  
+....................     numbersToSend[0] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N];   
+112A:  MOVLW  25
+112B:  MOVWF  52
+....................     numbersToSend[1] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N];   
+112C:  MOVWF  53
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+112D:  BCF    03.5
+112E:  BSF    03.6
+112F:  CLRF   21
+1130:  MOVLW  D2
+1131:  MOVWF  20
+1132:  MOVLW  02
+1133:  MOVWF  22
+1134:  BCF    0A.4
+1135:  BCF    03.6
+1136:  CALL   749
+1137:  BSF    0A.4
+.................... } 
+....................  
+.................... void Timer_showFormatSeconds(void) { 
+....................     int numbersToSend[2] = {0}; 
+*
+1142:  CLRF   52
+1143:  CLRF   53
+....................  
+....................     numbersToSend[0] = SevenSegmentDisplay_characters[5]; 
+1144:  MOVLW  B3
+1145:  MOVWF  52
+....................  
+....................     ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+1146:  BCF    03.5
+1147:  BSF    03.6
+1148:  CLRF   21
+1149:  MOVLW  D2
+114A:  MOVWF  20
+114B:  MOVLW  02
+114C:  MOVWF  22
+114D:  BCF    0A.4
+114E:  BCF    03.6
+114F:  CALL   749
+1150:  BSF    0A.4
+1151:  BSF    03.5
+.................... } 
+....................  
+.................... //void Timer_showFormatMinutes(Timer *timerPtr) { 
+.................... //    int numbersToSend[4] = {0}; 
+.................... //    int numbersToSend[2] = {0}; 
+.................... // 
+.................... //    if (timerPtr.->format == FORMAT_HOURS_MINUTES) { 
+.................... //        numbersToSend[0] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N]; 
+.................... //        numbersToSend[1] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N] | 
+.................... //                SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+.................... //        numbersToSend[2] = SevenSegmentDisplay_characters[INDEX_CAPS_H]; 
+.................... //        numbersToSend[3] = SevenSegmentDisplay_characters[INDEX_CAPS_H]; 
+.................... // 
+.................... //    } else if (polyoneDisplayPtr->format == FORMAT_SECONDS) { 
+.................... //        numbersToSend[0] = SevenSegmentDisplay_characters[5]; 
+.................... //        numbersToSend[1] = SevenSegmentDisplay_characters[5] | 
+.................... //                SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+.................... //        numbersToSend[2] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N]; 
+.................... //        numbersToSend[3] = SevenSegmentDisplay_characters[INDEX_LOWERCASE_N]; 
+.................... //    } 
+.................... // 
+.................... //    ShiftRegister_sendData(numbersToSend, Array_getArraySize(numbersToSend)); 
+.................... //} 
+.................... #endif	/* TIMER_H */ 
+....................  
+....................  
+.................... #include "buttons.h" 
+.................... /*  
+....................  * File:   buttons.h 
+....................  * Author: Joaquín Alan Alvidrez Soto 
+....................  * 
+....................  * Created on 29 de septiembre de 2017, 04:53 PM 
+....................  */ 
+....................  
+.................... #ifndef BUTTONS_H 
+.................... #define   BUTTONS_H 
+....................  
+.................... typedef enum { 
+....................     BUTTON_STATE_HELD, 
+....................     BUTTON_STATE_NOT_PUSHED    
+.................... } ButtonState; 
+....................  
+.................... #endif   /* BUTTONS_H */ 
+....................  
+....................  
+.................... #include "sevensegmentdisplay.h" 
+.................... /*  
+....................  * File:   sevensegmentdisplay.h 
+....................  * Author: DISENO4 
+....................  * 
+....................  * Created on 2 de octubre de 2017, 09:12 AM 
+....................  */ 
+....................  
+.................... #ifndef SEVENSEGMENTDISPLAY_H 
+.................... #define   SEVENSEGMENTDISPLAY_H 
+....................  
+.................... #include "array.h" 
+.................... #include "shiftregister.h" 
+....................  
+.................... typedef enum { 
+....................     INDEX_SEVEN_SEGMENT_HYPHEN = 10, 
+....................     INDEX_SEVEN_SEGMENT_DOT, 
+....................     INDEX_CAPS_A, 
+....................     INDEX_CAPS_C, 
+....................     INDEX_CAPS_E, 
+....................     INDEX_CAPS_F, 
+....................     INDEX_CAPS_H, 
+....................     INDEX_LOWERCASE_B, 
+....................     INDEX_LOWERCASE_C, 
+....................     INDEX_LOWERCASE_D, 
+....................     INDEX_LOWERCASE_N, 
+....................     INDEX_LOWERCASE_U, 
+.................... } SEVEN_SEGMENT_DISPLAY_INDEX; 
+....................  
+.................... const int SevenSegmentDisplay_characters[] = { 
+....................     0b11110110, // 0    
+....................     0b01100000, // 1 
+....................     0b11010101, // 2 
+....................     0b11110001, // 3 
+....................     0b01100011, // 4 
+....................     0b10110011, // 5 
+....................     0b10110111, // 6 
+....................     0b11100000, // 7 
+....................     0b11110111, // 8 
+....................     0b11110011, // 9 
+....................     0b00000001, // - 
+....................     0b00001000, // .    
+....................     0b11100111, // A  
+....................     0b10010110, // C 
+....................     0b10010111, // E 
+....................     0b10000111, // F 
+....................     0b01100111, //H     
+....................     0b00110111, //b     
+....................     0b10010110, //c     
+....................     0b01110101, //d     
+....................     0b00100101, //n     
+....................     0b01110110, //u      
+....................     0b00010111, 
+....................     0b00000100, 
+....................     0b01100100, 
+....................     0b11000011, //°  
+....................     0b00110101, 
+.................... }; 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(int arrayOfNumbers[], int arraySize) { 
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(int arrayOfNumbers[], int arraySize) { 
+....................     int i = 0; 
+....................     for (i = 0; i < arraySize; i++) { 
+....................         arrayOfNumbers[i] = SevenSegmentDisplay_characters[arrayOfNumbers[i]]; 
+....................         arrayOfNumbers[i] |= SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_DOT]; 
+....................     } 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showArrayOfNumbers(int arrayOfNumbers[], int arraySize, BOOLEAN withDot) { 
+....................     if (withDot) { 
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbersWithDot(arrayOfNumbers, arraySize); 
+....................     } else { 
+....................         SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayOfNumbers, arraySize); 
+....................     } 
+....................  
+....................     ShiftRegister_sendData(arrayOfNumbers, arraySize); 
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphens(void) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN] | 0b00001000; 
+....................     arrayToSend[2] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[3] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SeventSegmentDisplay_showHyphensTwoDigits(void) { 
+....................     int arrayToSend[2] = {0}; 
+....................  
+....................     arrayToSend[0] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     arrayToSend[1] = SevenSegmentDisplay_characters[INDEX_SEVEN_SEGMENT_HYPHEN]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplay(void) { 
+....................     int charactersArray[4] = {0}; 
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_clearDisplayTwoLines(void) { 
+....................     int charactersArray[8] = {0}; 
+....................  
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+....................     ShiftRegister_sendData(charactersArray, Array_getArraySize(charactersArray)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPin(int16 pin) { 
+....................     int arrayToSend[4] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, arrayToSend, Array_getArraySize(arrayToSend)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(arrayToSend, Array_getArraySize(arrayToSend)); 
+....................  
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+....................  
+.................... void SevenSegmentDisplay_showPinTwoLines(int16 pin) { 
+....................     int pinDigits[4] = {0}; 
+....................     int arrayToSend[8] = {0}; 
+....................  
+....................     Array_splitNumberIntoDigits(pin, pinDigits, Array_getArraySize(pinDigits)); 
+....................     SevenSegmentDisplay_changeNumbersIntoDisplayableNumbers(pinDigits, Array_getArraySize(pinDigits)); 
+....................  
+....................     arrayToSend[4] = pinDigits[0]; 
+....................     arrayToSend[5] = pinDigits[1]; 
+....................     arrayToSend[6] = pinDigits[2]; 
+....................     arrayToSend[7] = pinDigits[3]; 
+....................     ShiftRegister_sendData(arrayToSend, Array_getArraySize(arrayToSend)); 
+.................... } 
+.................... #endif   /* SEVENSEGMENTDISPLAY_H */ 
+....................  
+....................  
+....................  
+.................... typedef enum { 
+....................     EEPROM_CURRENT_STATE = 0, 
+....................     EEPROM_PREVIOUS_STATE, 
+....................     EEPROM_FORMAT, 
+....................     EEPROM_ALARM, 
+....................     EEPROM_RTC_HOURS, 
+....................     EEPROM_RTC_MINUTES, 
+....................     EEPROM_RTC_SECONDS 
+.................... } EEPROM_ADDRESS; 
+....................  
+.................... typedef enum { 
+....................     STATE_IDLE = 0, 
+....................     STATE_READY, 
+....................     STATE_COUNTING_DOWN, 
+....................     UPPER_BOUND_STATE, 
+....................     STATE_INIT, 
+....................     STATE_RESETTING, 
+....................     STATE_SETTING_ALARM, 
+....................     STATE_SETTING_SECOND_NUMBER, 
+....................     STATE_SETTING_FORMAT, 
+....................     STATE_WAITING_FOR_BUTTON_BEING_RELEASED, 
+....................     NUMBER_OF_STATES 
+.................... } DisplayState; 
+....................  
+.................... typedef struct { 
+....................     Timer timer; 
+....................     TimerFormat format; 
+....................     DisplayState currentState; 
+....................     DisplayState previousState; 
+.................... } JoseDisplay; 
+....................  
+.................... void Display_updateRtc(JoseDisplay *displayPtr) { 
+....................     Time time; 
+....................     time = displayPtr->timer.currentTime; 
+*
+0118:  MOVLW  04
+0119:  BSF    03.5
+011A:  ADDWF  68,W
+011B:  MOVWF  04
+011C:  BCF    03.7
+011D:  BTFSC  69.0
+011E:  BSF    03.7
+011F:  MOVF   00,W
+0120:  MOVWF  77
+0121:  INCF   04,F
+0122:  MOVF   00,W
+0123:  MOVWF  78
+0124:  INCF   04,F
+0125:  MOVF   00,W
+0126:  MOVWF  79
+0127:  INCF   04,F
+0128:  MOVF   00,W
+0129:  MOVWF  7A
+012A:  MOVF   77,W
+012B:  MOVWF  6A
+012C:  MOVF   78,W
+012D:  MOVWF  6B
+012E:  MOVF   79,W
+012F:  MOVWF  6C
+0130:  MOVF   7A,W
+0131:  MOVWF  6D
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+0132:  MOVLW  0F
+0133:  ADDWF  68,W
+0134:  MOVWF  04
+0135:  BCF    03.7
+0136:  BTFSC  69.0
+0137:  BSF    03.7
+0138:  MOVF   00,F
+0139:  BTFSS  03.2
+013A:  GOTO   152
+....................         time.hour = time.minute / 60; 
+013B:  MOVF   6C,W
+013C:  BCF    03.5
+013D:  BSF    03.6
+013E:  MOVWF  1E
+013F:  MOVLW  3C
+0140:  MOVWF  1F
+0141:  BCF    03.6
+0142:  CALL   02F
+0143:  MOVF   78,W
+0144:  BSF    03.5
+0145:  MOVWF  6B
+....................         time.minute %= 60; 
+0146:  MOVF   6C,W
+0147:  BCF    03.5
+0148:  BSF    03.6
+0149:  MOVWF  1E
+014A:  MOVLW  3C
+014B:  MOVWF  1F
+014C:  BCF    03.6
+014D:  CALL   02F
+014E:  MOVF   77,W
+014F:  BSF    03.5
+0150:  MOVWF  6C
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+0151:  GOTO   171
+0152:  MOVLW  0F
+0153:  ADDWF  68,W
+0154:  MOVWF  04
+0155:  BCF    03.7
+0156:  BTFSC  69.0
+0157:  BSF    03.7
+0158:  DECFSZ 00,W
+0159:  GOTO   171
+....................         time.hour = 0; 
+015A:  CLRF   6B
+....................         time.minute = time.second / 60; 
+015B:  MOVF   6D,W
+015C:  BCF    03.5
+015D:  BSF    03.6
+015E:  MOVWF  1E
+015F:  MOVLW  3C
+0160:  MOVWF  1F
+0161:  BCF    03.6
+0162:  CALL   02F
+0163:  MOVF   78,W
+0164:  BSF    03.5
+0165:  MOVWF  6C
+....................         time.second %= 60; 
+0166:  MOVF   6D,W
+0167:  BCF    03.5
+0168:  BSF    03.6
+0169:  MOVWF  1E
+016A:  MOVLW  3C
+016B:  MOVWF  1F
+016C:  BCF    03.6
+016D:  CALL   02F
+016E:  MOVF   77,W
+016F:  BSF    03.5
+0170:  MOVWF  6D
+....................     } 
+....................     Time_setClockTime(&time); 
+0171:  CLRF   6F
+0172:  MOVLW  EA
+0173:  MOVWF  6E
+*
+01B3:  RETURN
+.................... } 
+....................  
+.................... void Display_updateTimer(JoseDisplay *displayPtr) { 
+....................     displayPtr->timer.currentTime = Time_getCurrentTime(); 
+*
+0587:  MOVLW  04
+0588:  BSF    03.5
+0589:  ADDWF  68,W
+058A:  MOVWF  78
+058B:  MOVF   69,W
+058C:  MOVWF  7A
+058D:  BTFSC  03.0
+058E:  INCF   7A,F
+058F:  MOVF   78,W
+0590:  MOVWF  6A
+0591:  MOVF   7A,W
+0592:  MOVWF  6B
+*
+05E8:  MOVF   6A,W
+05E9:  MOVWF  04
+05EA:  BCF    03.7
+05EB:  BTFSC  6B.0
+05EC:  BSF    03.7
+05ED:  MOVF   77,W
+05EE:  MOVWF  00
+05EF:  INCF   04,F
+05F0:  MOVF   78,W
+05F1:  MOVWF  00
+05F2:  INCF   04,F
+05F3:  MOVF   79,W
+05F4:  MOVWF  00
+05F5:  INCF   04,F
+05F6:  MOVF   7A,W
+05F7:  MOVWF  00
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+05F8:  MOVLW  0F
+05F9:  ADDWF  68,W
+05FA:  MOVWF  04
+05FB:  BCF    03.7
+05FC:  BTFSC  69.0
+05FD:  BSF    03.7
+05FE:  MOVF   00,F
+05FF:  BTFSS  03.2
+0600:  GOTO   62F
+....................         displayPtr->timer.currentTime.minute += (displayPtr->timer.currentTime.hour % 2) * 60; 
+0601:  MOVLW  06
+0602:  ADDWF  68,W
+0603:  MOVWF  78
+0604:  MOVF   69,W
+0605:  MOVWF  7A
+0606:  BTFSC  03.0
+0607:  INCF   7A,F
+0608:  MOVF   78,W
+0609:  MOVWF  6A
+060A:  MOVF   7A,W
+060B:  MOVWF  6B
+060C:  MOVF   6A,W
+060D:  MOVWF  04
+060E:  BCF    03.7
+060F:  BTFSC  6B.0
+0610:  BSF    03.7
+0611:  MOVF   00,W
+0612:  MOVWF  6C
+0613:  MOVLW  05
+0614:  ADDWF  68,W
+0615:  MOVWF  04
+0616:  BCF    03.7
+0617:  BTFSC  69.0
+0618:  BSF    03.7
+0619:  MOVF   00,W
+061A:  ANDLW  01
+061B:  MOVWF  6E
+061C:  BCF    03.5
+061D:  BSF    03.6
+061E:  MOVWF  1C
+061F:  MOVLW  3C
+0620:  MOVWF  1D
+0621:  BCF    03.6
+0622:  CALL   549
+0623:  MOVF   78,W
+0624:  BSF    03.5
+0625:  ADDWF  6C,W
+0626:  MOVWF  6C
+0627:  MOVF   6A,W
+0628:  MOVWF  04
+0629:  BCF    03.7
+062A:  BTFSC  6B.0
+062B:  BSF    03.7
+062C:  MOVF   6C,W
+062D:  MOVWF  00
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+062E:  GOTO   664
+062F:  MOVLW  0F
+0630:  ADDWF  68,W
+0631:  MOVWF  04
+0632:  BCF    03.7
+0633:  BTFSC  69.0
+0634:  BSF    03.7
+0635:  DECFSZ 00,W
+0636:  GOTO   664
+....................         displayPtr->timer.currentTime.second += (displayPtr->timer.currentTime.minute % 2) * 60; 
+0637:  MOVLW  07
+0638:  ADDWF  68,W
+0639:  MOVWF  78
+063A:  MOVF   69,W
+063B:  MOVWF  7A
+063C:  BTFSC  03.0
+063D:  INCF   7A,F
+063E:  MOVF   78,W
+063F:  MOVWF  6A
+0640:  MOVF   7A,W
+0641:  MOVWF  6B
+0642:  MOVF   6A,W
+0643:  MOVWF  04
+0644:  BCF    03.7
+0645:  BTFSC  6B.0
+0646:  BSF    03.7
+0647:  MOVF   00,W
+0648:  MOVWF  6C
+0649:  MOVLW  06
+064A:  ADDWF  68,W
+064B:  MOVWF  04
+064C:  BCF    03.7
+064D:  BTFSC  69.0
+064E:  BSF    03.7
+064F:  MOVF   00,W
+0650:  ANDLW  01
+0651:  MOVWF  6E
+0652:  BCF    03.5
+0653:  BSF    03.6
+0654:  MOVWF  1C
+0655:  MOVLW  3C
+0656:  MOVWF  1D
+0657:  BCF    03.6
+0658:  CALL   549
+0659:  MOVF   78,W
+065A:  BSF    03.5
+065B:  ADDWF  6C,W
+065C:  MOVWF  6C
+065D:  MOVF   6A,W
+065E:  MOVWF  04
+065F:  BCF    03.7
+0660:  BTFSC  6B.0
+0661:  BSF    03.7
+0662:  MOVF   6C,W
+0663:  MOVWF  00
+....................     } 
+....................     Timer_updateCountdownTime(&displayPtr->timer); 
+0664:  MOVF   68,W
+0665:  MOVWF  78
+0666:  MOVF   69,W
+0667:  MOVWF  7A
+0668:  MOVF   68,W
+0669:  MOVWF  6A
+066A:  MOVF   69,W
+066B:  MOVWF  6B
+066C:  MOVWF  6D
+066D:  MOVF   68,W
+066E:  MOVWF  6C
+066F:  BCF    03.5
+0670:  CALL   2F4
+0671:  RETURN
+.................... } 
+....................  
+.................... void Display_clearRtc(void) { 
+....................     Time_clearRtcTime(); 
+....................     setDate(1, 1, 1, 1); 
+*
+0439:  MOVLW  01
+043A:  BSF    03.5
+043B:  MOVWF  68
+043C:  MOVWF  69
+043D:  MOVWF  6A
+043E:  MOVWF  6B
+*
+0496:  RETURN
+.................... } 
+....................  
+.................... void Display_showCount(JoseDisplay *displayPtr, BOOLEAN withBlink) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+0800:  MOVLW  0F
+0801:  BSF    03.5
+0802:  ADDWF  68,W
+0803:  MOVWF  04
+0804:  BCF    03.7
+0805:  BTFSC  69.0
+0806:  BSF    03.7
+0807:  MOVF   00,F
+0808:  BTFSS  03.2
+0809:  GOTO   08C
+....................         Timer_showMinutesOfCountdownTime(&displayPtr->timer, withBlink); 
+080A:  MOVF   68,W
+080B:  MOVWF  6B
+080C:  MOVF   69,W
+080D:  MOVWF  6C
+080E:  MOVF   6C,W
+080F:  MOVWF  6E
+0810:  MOVF   6B,W
+0811:  MOVWF  6D
+0812:  MOVF   6A,W
+0813:  MOVWF  6F
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+*
+088A:  GOTO   10E
+088B:  BSF    03.5
+088C:  MOVLW  0F
+088D:  ADDWF  68,W
+088E:  MOVWF  04
+088F:  BCF    03.7
+0890:  BTFSC  69.0
+0891:  BSF    03.7
+0892:  DECFSZ 00,W
+0893:  GOTO   10F
+....................         Timer_showSecondsOfCountdownTime(&displayPtr->timer); 
+0894:  MOVF   68,W
+0895:  MOVWF  6B
+0896:  MOVF   69,W
+0897:  MOVWF  6C
+0898:  MOVF   6C,W
+0899:  MOVWF  6E
+089A:  MOVF   6B,W
+089B:  MOVWF  6D
+....................     } 
+*
+090F:  BCF    03.5
+0910:  RETURN
+.................... } 
+....................  
+.................... void Display_showFormat(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+111F:  MOVLW  0F
+1120:  ADDWF  50,W
+1121:  MOVWF  04
+1122:  BCF    03.7
+1123:  BTFSC  51.0
+1124:  BSF    03.7
+1125:  MOVF   00,F
+1126:  BTFSS  03.2
+1127:  GOTO   13A
+....................         Timer_showFormatMinutes(); 
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+*
+1138:  GOTO   151
+1139:  BSF    03.5
+113A:  MOVLW  0F
+113B:  ADDWF  50,W
+113C:  MOVWF  04
+113D:  BCF    03.7
+113E:  BTFSC  51.0
+113F:  BSF    03.7
+1140:  DECFSZ 00,W
+1141:  GOTO   152
+....................         Timer_showFormatSeconds(); 
+....................     } 
+.................... } 
+....................  
+.................... void Display_resume(JoseDisplay *displayPtr) { 
+....................     displayPtr->previousState = displayPtr->currentState; 
+*
+0C41:  MOVLW  11
+0C42:  ADDWF  50,W
+0C43:  MOVWF  78
+0C44:  MOVF   51,W
+0C45:  MOVWF  7A
+0C46:  BTFSC  03.0
+0C47:  INCF   7A,F
+0C48:  MOVF   78,W
+0C49:  MOVWF  52
+0C4A:  MOVF   7A,W
+0C4B:  MOVWF  53
+0C4C:  MOVLW  10
+0C4D:  ADDWF  50,W
+0C4E:  MOVWF  04
+0C4F:  BCF    03.7
+0C50:  BTFSC  51.0
+0C51:  BSF    03.7
+0C52:  MOVF   00,W
+0C53:  MOVWF  54
+0C54:  MOVF   52,W
+0C55:  MOVWF  04
+0C56:  BCF    03.7
+0C57:  BTFSC  53.0
+0C58:  BSF    03.7
+0C59:  MOVF   54,W
+0C5A:  MOVWF  00
+....................     displayPtr->currentState = STATE_COUNTING_DOWN; 
+0C5B:  MOVLW  10
+0C5C:  ADDWF  50,W
+0C5D:  MOVWF  04
+0C5E:  BCF    03.7
+0C5F:  BTFSC  51.0
+0C60:  BSF    03.7
+0C61:  MOVLW  02
+0C62:  MOVWF  00
+.................... } 
+....................  
+.................... void Display_saveState(JoseDisplay *displayPtr) { 
+....................     write_eeprom(EEPROM_CURRENT_STATE, displayPtr->currentState); 
+*
+0978:  MOVLW  10
+0979:  BSF    03.5
+097A:  ADDWF  68,W
+097B:  MOVWF  04
+097C:  BCF    03.7
+097D:  BTFSC  69.0
+097E:  BSF    03.7
+097F:  MOVF   00,W
+0980:  MOVWF  6A
+0981:  BCF    03.5
+0982:  MOVF   0B,W
+0983:  MOVWF  77
+0984:  BCF    0B.7
+0985:  BSF    03.6
+0986:  CLRF   0D
+0987:  BSF    03.5
+0988:  BCF    03.6
+0989:  MOVF   6A,W
+098A:  BCF    03.5
+098B:  BSF    03.6
+098C:  MOVWF  0C
+098D:  BSF    03.5
+098E:  BCF    0C.7
+098F:  BSF    0C.2
+0990:  MOVLW  55
+0991:  MOVWF  0D
+0992:  MOVLW  AA
+0993:  MOVWF  0D
+0994:  BSF    0C.1
+0995:  BTFSC  0C.1
+0996:  GOTO   195
+0997:  BCF    0C.2
+0998:  MOVF   77,W
+0999:  BCF    03.5
+099A:  BCF    03.6
+099B:  IORWF  0B,F
+....................     write_eeprom(EEPROM_PREVIOUS_STATE, displayPtr->previousState); 
+099C:  MOVLW  11
+099D:  BSF    03.5
+099E:  ADDWF  68,W
+099F:  MOVWF  04
+09A0:  BCF    03.7
+09A1:  BTFSC  69.0
+09A2:  BSF    03.7
+09A3:  MOVF   00,W
+09A4:  MOVWF  6A
+09A5:  BCF    03.5
+09A6:  MOVF   0B,W
+09A7:  MOVWF  77
+09A8:  BCF    0B.7
+09A9:  MOVLW  01
+09AA:  BSF    03.6
+09AB:  MOVWF  0D
+09AC:  BSF    03.5
+09AD:  BCF    03.6
+09AE:  MOVF   6A,W
+09AF:  BCF    03.5
+09B0:  BSF    03.6
+09B1:  MOVWF  0C
+09B2:  BSF    03.5
+09B3:  BCF    0C.7
+09B4:  BSF    0C.2
+09B5:  MOVLW  55
+09B6:  MOVWF  0D
+09B7:  MOVLW  AA
+09B8:  MOVWF  0D
+09B9:  BSF    0C.1
+09BA:  BTFSC  0C.1
+09BB:  GOTO   1BA
+09BC:  BCF    0C.2
+09BD:  MOVF   77,W
+09BE:  BCF    03.5
+09BF:  BCF    03.6
+09C0:  IORWF  0B,F
+09C1:  RETURN
+.................... } 
+....................  
+.................... void Display_setState(JoseDisplay *displayPtr, 
+....................         DisplayState displayState) { 
+....................     displayPtr->previousState = displayPtr->currentState; 
+*
+0953:  MOVLW  11
+0954:  BSF    03.5
+0955:  ADDWF  68,W
+0956:  MOVWF  78
+0957:  MOVF   69,W
+0958:  MOVWF  7A
+0959:  BTFSC  03.0
+095A:  INCF   7A,F
+095B:  MOVF   78,W
+095C:  MOVWF  6B
+095D:  MOVF   7A,W
+095E:  MOVWF  6C
+095F:  MOVLW  10
+0960:  ADDWF  68,W
+0961:  MOVWF  04
+0962:  BCF    03.7
+0963:  BTFSC  69.0
+0964:  BSF    03.7
+0965:  MOVF   00,W
+0966:  MOVWF  6D
+0967:  MOVF   6B,W
+0968:  MOVWF  04
+0969:  BCF    03.7
+096A:  BTFSC  6C.0
+096B:  BSF    03.7
+096C:  MOVF   6D,W
+096D:  MOVWF  00
+....................     displayPtr->currentState = displayState; 
+096E:  MOVLW  10
+096F:  ADDWF  68,W
+0970:  MOVWF  04
+0971:  BCF    03.7
+0972:  BTFSC  69.0
+0973:  BSF    03.7
+0974:  MOVF   6A,W
+0975:  MOVWF  00
+0976:  BCF    03.5
+0977:  RETURN
+.................... } 
+....................  
+.................... void Display_stop(JoseDisplay *displayPtr) { 
+....................     displayPtr->previousState = displayPtr->currentState; 
+*
+0CAA:  MOVLW  11
+0CAB:  ADDWF  50,W
+0CAC:  MOVWF  78
+0CAD:  MOVF   51,W
+0CAE:  MOVWF  7A
+0CAF:  BTFSC  03.0
+0CB0:  INCF   7A,F
+0CB1:  MOVF   78,W
+0CB2:  MOVWF  52
+0CB3:  MOVF   7A,W
+0CB4:  MOVWF  53
+0CB5:  MOVLW  10
+0CB6:  ADDWF  50,W
+0CB7:  MOVWF  04
+0CB8:  BCF    03.7
+0CB9:  BTFSC  51.0
+0CBA:  BSF    03.7
+0CBB:  MOVF   00,W
+0CBC:  MOVWF  54
+0CBD:  MOVF   52,W
+0CBE:  MOVWF  04
+0CBF:  BCF    03.7
+0CC0:  BTFSC  53.0
+0CC1:  BSF    03.7
+0CC2:  MOVF   54,W
+0CC3:  MOVWF  00
+....................     displayPtr->currentState = STATE_IDLE; 
+0CC4:  MOVLW  10
+0CC5:  ADDWF  50,W
+0CC6:  MOVWF  04
+0CC7:  BCF    03.7
+0CC8:  BTFSC  51.0
+0CC9:  BSF    03.7
+0CCA:  CLRF   00
+.................... } 
+....................  
+.................... void Display_saveRtcCurrentTime(JoseDisplay *displayPtr) { 
+....................     write_eeprom(EEPROM_RTC_HOURS, displayPtr->timer.currentTime.hour); 
+*
+0CCE:  MOVLW  05
+0CCF:  ADDWF  50,W
+0CD0:  MOVWF  04
+0CD1:  BCF    03.7
+0CD2:  BTFSC  51.0
+0CD3:  BSF    03.7
+0CD4:  MOVF   00,W
+0CD5:  MOVWF  52
+0CD6:  BCF    03.5
+0CD7:  MOVF   0B,W
+0CD8:  MOVWF  77
+0CD9:  BCF    0B.7
+0CDA:  MOVLW  04
+0CDB:  BSF    03.6
+0CDC:  MOVWF  0D
+0CDD:  BSF    03.5
+0CDE:  BCF    03.6
+0CDF:  MOVF   52,W
+0CE0:  BCF    03.5
+0CE1:  BSF    03.6
+0CE2:  MOVWF  0C
+0CE3:  BSF    03.5
+0CE4:  BCF    0C.7
+0CE5:  BSF    0C.2
+0CE6:  MOVLW  55
+0CE7:  MOVWF  0D
+0CE8:  MOVLW  AA
+0CE9:  MOVWF  0D
+0CEA:  BSF    0C.1
+0CEB:  BTFSC  0C.1
+0CEC:  GOTO   4EB
+0CED:  BCF    0C.2
+0CEE:  MOVF   77,W
+0CEF:  BCF    03.5
+0CF0:  BCF    03.6
+0CF1:  IORWF  0B,F
+....................     write_eeprom(EEPROM_RTC_MINUTES, displayPtr->timer.currentTime.minute); 
+0CF2:  MOVLW  06
+0CF3:  BSF    03.5
+0CF4:  ADDWF  50,W
+0CF5:  MOVWF  04
+0CF6:  BCF    03.7
+0CF7:  BTFSC  51.0
+0CF8:  BSF    03.7
+0CF9:  MOVF   00,W
+0CFA:  MOVWF  52
+0CFB:  BCF    03.5
+0CFC:  MOVF   0B,W
+0CFD:  MOVWF  77
+0CFE:  BCF    0B.7
+0CFF:  MOVLW  05
+0D00:  BSF    03.6
+0D01:  MOVWF  0D
+0D02:  BSF    03.5
+0D03:  BCF    03.6
+0D04:  MOVF   52,W
+0D05:  BCF    03.5
+0D06:  BSF    03.6
+0D07:  MOVWF  0C
+0D08:  BSF    03.5
+0D09:  BCF    0C.7
+0D0A:  BSF    0C.2
+0D0B:  MOVLW  55
+0D0C:  MOVWF  0D
+0D0D:  MOVLW  AA
+0D0E:  MOVWF  0D
+0D0F:  BSF    0C.1
+0D10:  BTFSC  0C.1
+0D11:  GOTO   510
+0D12:  BCF    0C.2
+0D13:  MOVF   77,W
+0D14:  BCF    03.5
+0D15:  BCF    03.6
+0D16:  IORWF  0B,F
+....................     write_eeprom(EEPROM_RTC_SECONDS, displayPtr->timer.currentTime.second); 
+0D17:  MOVLW  07
+0D18:  BSF    03.5
+0D19:  ADDWF  50,W
+0D1A:  MOVWF  04
+0D1B:  BCF    03.7
+0D1C:  BTFSC  51.0
+0D1D:  BSF    03.7
+0D1E:  MOVF   00,W
+0D1F:  MOVWF  52
+0D20:  BCF    03.5
+0D21:  MOVF   0B,W
+0D22:  MOVWF  77
+0D23:  BCF    0B.7
+0D24:  MOVLW  06
+0D25:  BSF    03.6
+0D26:  MOVWF  0D
+0D27:  BSF    03.5
+0D28:  BCF    03.6
+0D29:  MOVF   52,W
+0D2A:  BCF    03.5
+0D2B:  BSF    03.6
+0D2C:  MOVWF  0C
+0D2D:  BSF    03.5
+0D2E:  BCF    0C.7
+0D2F:  BSF    0C.2
+0D30:  MOVLW  55
+0D31:  MOVWF  0D
+0D32:  MOVLW  AA
+0D33:  MOVWF  0D
+0D34:  BSF    0C.1
+0D35:  BTFSC  0C.1
+0D36:  GOTO   535
+0D37:  BCF    0C.2
+0D38:  MOVF   77,W
+0D39:  BCF    03.5
+0D3A:  BCF    03.6
+0D3B:  IORWF  0B,F
+.................... } 
+....................  
+.................... BOOLEAN Display_isTimerDone(JoseDisplay *displayPtr) { 
+....................     return Timer_isTimerFinished(&displayPtr->timer); 
+*
+0911:  BSF    03.5
+0912:  MOVF   68,W
+0913:  MOVWF  78
+0914:  MOVF   69,W
+0915:  MOVWF  7A
+0916:  MOVF   78,W
+0917:  MOVWF  6A
+0918:  MOVF   7A,W
+0919:  MOVWF  6B
+091A:  MOVF   6B,W
+091B:  MOVWF  6D
+091C:  MOVF   6A,W
+091D:  MOVWF  6C
+*
+0950:  MOVF   78,W
+0951:  BCF    03.6
+0952:  RETURN
+.................... } 
+....................  
+.................... void Display_swapFormat(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+1164:  MOVLW  0F
+1165:  ADDWF  50,W
+1166:  MOVWF  04
+1167:  BCF    03.7
+1168:  BTFSC  51.0
+1169:  BSF    03.7
+116A:  MOVF   00,F
+116B:  BTFSS  03.2
+116C:  GOTO   1B4
+....................         displayPtr->format = FORMAT_SECONDS; 
+116D:  MOVLW  0F
+116E:  ADDWF  50,W
+116F:  MOVWF  04
+1170:  BCF    03.7
+1171:  BTFSC  51.0
+1172:  BSF    03.7
+1173:  MOVLW  01
+1174:  MOVWF  00
+....................         displayPtr->timer.alarmTime.second = displayPtr->timer.alarmTime.minute; 
+1175:  MOVLW  0B
+1176:  ADDWF  50,W
+1177:  MOVWF  78
+1178:  MOVF   51,W
+1179:  MOVWF  7A
+117A:  BTFSC  03.0
+117B:  INCF   7A,F
+117C:  MOVF   78,W
+117D:  MOVWF  52
+117E:  MOVF   7A,W
+117F:  MOVWF  53
+1180:  MOVLW  0A
+1181:  ADDWF  50,W
+1182:  MOVWF  04
+1183:  BCF    03.7
+1184:  BTFSC  51.0
+1185:  BSF    03.7
+1186:  MOVF   00,W
+1187:  MOVWF  54
+1188:  MOVF   52,W
+1189:  MOVWF  04
+118A:  BCF    03.7
+118B:  BTFSC  53.0
+118C:  BSF    03.7
+118D:  MOVF   54,W
+118E:  MOVWF  00
+....................         displayPtr->timer.alarmTime.minute = 0; 
+118F:  MOVLW  0A
+1190:  ADDWF  50,W
+1191:  MOVWF  04
+1192:  BCF    03.7
+1193:  BTFSC  51.0
+1194:  BSF    03.7
+1195:  CLRF   00
+....................         displayPtr->timer.alarmTime.hour = 0; 
+1196:  MOVLW  09
+1197:  ADDWF  50,W
+1198:  MOVWF  04
+1199:  BCF    03.7
+119A:  BTFSC  51.0
+119B:  BSF    03.7
+119C:  CLRF   00
+....................         displayPtr->timer.hoursUpperBound = 0; 
+119D:  MOVLW  0C
+119E:  ADDWF  50,W
+119F:  MOVWF  04
+11A0:  BCF    03.7
+11A1:  BTFSC  51.0
+11A2:  BSF    03.7
+11A3:  CLRF   00
+....................         displayPtr->timer.minutesUpperBound = 0; 
+11A4:  MOVLW  0D
+11A5:  ADDWF  50,W
+11A6:  MOVWF  04
+11A7:  BCF    03.7
+11A8:  BTFSC  51.0
+11A9:  BSF    03.7
+11AA:  CLRF   00
+....................         displayPtr->timer.secondsUpperBound = ALARM_UPPER_BOUND; 
+11AB:  MOVLW  0E
+11AC:  ADDWF  50,W
+11AD:  MOVWF  04
+11AE:  BCF    03.7
+11AF:  BTFSC  51.0
+11B0:  BSF    03.7
+11B1:  MOVLW  63
+11B2:  MOVWF  00
+....................  
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+11B3:  GOTO   202
+11B4:  MOVLW  0F
+11B5:  ADDWF  50,W
+11B6:  MOVWF  04
+11B7:  BCF    03.7
+11B8:  BTFSC  51.0
+11B9:  BSF    03.7
+11BA:  DECFSZ 00,W
+11BB:  GOTO   202
+....................         displayPtr->format = FORMAT_MINUTES; 
+11BC:  MOVLW  0F
+11BD:  ADDWF  50,W
+11BE:  MOVWF  04
+11BF:  BCF    03.7
+11C0:  BTFSC  51.0
+11C1:  BSF    03.7
+11C2:  CLRF   00
+....................         displayPtr->timer.alarmTime.hour = 0; 
+11C3:  MOVLW  09
+11C4:  ADDWF  50,W
+11C5:  MOVWF  04
+11C6:  BCF    03.7
+11C7:  BTFSC  51.0
+11C8:  BSF    03.7
+11C9:  CLRF   00
+....................         displayPtr->timer.alarmTime.minute = displayPtr->timer.alarmTime.second; 
+11CA:  MOVLW  0A
+11CB:  ADDWF  50,W
+11CC:  MOVWF  78
+11CD:  MOVF   51,W
+11CE:  MOVWF  7A
+11CF:  BTFSC  03.0
+11D0:  INCF   7A,F
+11D1:  MOVF   78,W
+11D2:  MOVWF  52
+11D3:  MOVF   7A,W
+11D4:  MOVWF  53
+11D5:  MOVLW  0B
+11D6:  ADDWF  50,W
+11D7:  MOVWF  04
+11D8:  BCF    03.7
+11D9:  BTFSC  51.0
+11DA:  BSF    03.7
+11DB:  MOVF   00,W
+11DC:  MOVWF  54
+11DD:  MOVF   52,W
+11DE:  MOVWF  04
+11DF:  BCF    03.7
+11E0:  BTFSC  53.0
+11E1:  BSF    03.7
+11E2:  MOVF   54,W
+11E3:  MOVWF  00
+....................         displayPtr->timer.alarmTime.second = 0; 
+11E4:  MOVLW  0B
+11E5:  ADDWF  50,W
+11E6:  MOVWF  04
+11E7:  BCF    03.7
+11E8:  BTFSC  51.0
+11E9:  BSF    03.7
+11EA:  CLRF   00
+....................         displayPtr->timer.hoursUpperBound = 0; 
+11EB:  MOVLW  0C
+11EC:  ADDWF  50,W
+11ED:  MOVWF  04
+11EE:  BCF    03.7
+11EF:  BTFSC  51.0
+11F0:  BSF    03.7
+11F1:  CLRF   00
+....................         displayPtr->timer.minutesUpperBound = ALARM_UPPER_BOUND; 
+11F2:  MOVLW  0D
+11F3:  ADDWF  50,W
+11F4:  MOVWF  04
+11F5:  BCF    03.7
+11F6:  BTFSC  51.0
+11F7:  BSF    03.7
+11F8:  MOVLW  63
+11F9:  MOVWF  00
+....................         displayPtr->timer.secondsUpperBound = SECOND_NUMBER_UPPER_BOUND; 
+11FA:  MOVLW  0E
+11FB:  ADDWF  50,W
+11FC:  MOVWF  04
+11FD:  BCF    03.7
+11FE:  BTFSC  51.0
+11FF:  BSF    03.7
+1200:  MOVLW  3B
+1201:  MOVWF  00
+1202:  BCF    03.5
+....................     } 
+.................... } 
+....................  
+.................... void Display_saveFormat(JoseDisplay *displayPtr) { 
+....................     write_eeprom(EEPROM_FORMAT, displayPtr->format); 
+*
+126D:  MOVLW  0F
+126E:  ADDWF  50,W
+126F:  MOVWF  04
+1270:  BCF    03.7
+1271:  BTFSC  51.0
+1272:  BSF    03.7
+1273:  MOVF   00,W
+1274:  MOVWF  52
+1275:  BCF    03.5
+1276:  MOVF   0B,W
+1277:  MOVWF  77
+1278:  BCF    0B.7
+1279:  MOVLW  02
+127A:  BSF    03.6
+127B:  MOVWF  0D
+127C:  BSF    03.5
+127D:  BCF    03.6
+127E:  MOVF   52,W
+127F:  BCF    03.5
+1280:  BSF    03.6
+1281:  MOVWF  0C
+1282:  BSF    03.5
+1283:  BCF    0C.7
+1284:  BSF    0C.2
+1285:  MOVLW  55
+1286:  MOVWF  0D
+1287:  MOVLW  AA
+1288:  MOVWF  0D
+1289:  BSF    0C.1
+128A:  BTFSC  0C.1
+128B:  GOTO   28A
+128C:  BCF    0C.2
+128D:  MOVF   77,W
+128E:  BCF    03.5
+128F:  BCF    03.6
+1290:  IORWF  0B,F
+.................... } 
+....................  
+.................... void Display_saveAlarm(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+120E:  MOVLW  0F
+120F:  ADDWF  50,W
+1210:  MOVWF  04
+1211:  BCF    03.7
+1212:  BTFSC  51.0
+1213:  BSF    03.7
+1214:  MOVF   00,F
+1215:  BTFSS  03.2
+1216:  GOTO   23D
+....................         write_eeprom(EEPROM_ALARM, displayPtr->timer.alarmTime.minute); 
+1217:  MOVLW  0A
+1218:  ADDWF  50,W
+1219:  MOVWF  04
+121A:  BCF    03.7
+121B:  BTFSC  51.0
+121C:  BSF    03.7
+121D:  MOVF   00,W
+121E:  MOVWF  52
+121F:  BCF    03.5
+1220:  MOVF   0B,W
+1221:  MOVWF  77
+1222:  BCF    0B.7
+1223:  MOVLW  03
+1224:  BSF    03.6
+1225:  MOVWF  0D
+1226:  BSF    03.5
+1227:  BCF    03.6
+1228:  MOVF   52,W
+1229:  BCF    03.5
+122A:  BSF    03.6
+122B:  MOVWF  0C
+122C:  BSF    03.5
+122D:  BCF    0C.7
+122E:  BSF    0C.2
+122F:  MOVLW  55
+1230:  MOVWF  0D
+1231:  MOVLW  AA
+1232:  MOVWF  0D
+1233:  BSF    0C.1
+1234:  BTFSC  0C.1
+1235:  GOTO   234
+1236:  BCF    0C.2
+1237:  MOVF   77,W
+1238:  BCF    03.5
+1239:  BCF    03.6
+123A:  IORWF  0B,F
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+123B:  GOTO   269
+123C:  BSF    03.5
+123D:  MOVLW  0F
+123E:  ADDWF  50,W
+123F:  MOVWF  04
+1240:  BCF    03.7
+1241:  BTFSC  51.0
+1242:  BSF    03.7
+1243:  DECFSZ 00,W
+1244:  GOTO   26A
+....................         write_eeprom(EEPROM_ALARM, displayPtr->timer.alarmTime.second); 
+1245:  MOVLW  0B
+1246:  ADDWF  50,W
+1247:  MOVWF  04
+1248:  BCF    03.7
+1249:  BTFSC  51.0
+124A:  BSF    03.7
+124B:  MOVF   00,W
+124C:  MOVWF  52
+124D:  BCF    03.5
+124E:  MOVF   0B,W
+124F:  MOVWF  77
+1250:  BCF    0B.7
+1251:  MOVLW  03
+1252:  BSF    03.6
+1253:  MOVWF  0D
+1254:  BSF    03.5
+1255:  BCF    03.6
+1256:  MOVF   52,W
+1257:  BCF    03.5
+1258:  BSF    03.6
+1259:  MOVWF  0C
+125A:  BSF    03.5
+125B:  BCF    0C.7
+125C:  BSF    0C.2
+125D:  MOVLW  55
+125E:  MOVWF  0D
+125F:  MOVLW  AA
+1260:  MOVWF  0D
+1261:  BSF    0C.1
+1262:  BTFSC  0C.1
+1263:  GOTO   262
+1264:  BCF    0C.2
+1265:  MOVF   77,W
+1266:  BCF    03.5
+1267:  BCF    03.6
+1268:  IORWF  0B,F
+1269:  BSF    03.5
+....................     } 
+.................... } 
+....................  
+.................... void Display_showLimitTime(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+0E0C:  MOVLW  0F
+0E0D:  BSF    03.5
+0E0E:  ADDWF  50,W
+0E0F:  MOVWF  04
+0E10:  BCF    03.7
+0E11:  BTFSC  51.0
+0E12:  BSF    03.7
+0E13:  MOVF   00,F
+0E14:  BTFSS  03.2
+0E15:  GOTO   672
+....................         Timer_showMinutesOfLimitTime(&displayPtr->timer); 
+0E16:  MOVF   50,W
+0E17:  MOVWF  78
+0E18:  MOVF   51,W
+0E19:  MOVWF  7A
+0E1A:  MOVF   78,W
+0E1B:  MOVWF  52
+0E1C:  MOVF   7A,W
+0E1D:  MOVWF  53
+0E1E:  MOVF   53,W
+0E1F:  MOVWF  55
+0E20:  MOVF   52,W
+0E21:  MOVWF  54
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+*
+0E70:  GOTO   6D4
+0E71:  BSF    03.5
+0E72:  MOVLW  0F
+0E73:  ADDWF  50,W
+0E74:  MOVWF  04
+0E75:  BCF    03.7
+0E76:  BTFSC  51.0
+0E77:  BSF    03.7
+0E78:  DECFSZ 00,W
+0E79:  GOTO   6D5
+....................         Timer_showSecondsOfLimitTime(&displayPtr->timer); 
+0E7A:  MOVF   50,W
+0E7B:  MOVWF  78
+0E7C:  MOVF   51,W
+0E7D:  MOVWF  7A
+0E7E:  MOVF   78,W
+0E7F:  MOVWF  52
+0E80:  MOVF   7A,W
+0E81:  MOVWF  53
+0E82:  MOVF   53,W
+0E83:  MOVWF  55
+0E84:  MOVF   52,W
+0E85:  MOVWF  54
+....................     } 
+*
+0ED5:  BCF    03.5
+0ED6:  RETURN
+.................... } 
+....................  
+.................... void Display_increaseAlarm(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+102D:  MOVLW  0F
+102E:  ADDWF  50,W
+102F:  MOVWF  04
+1030:  BCF    03.7
+1031:  BTFSC  51.0
+1032:  BSF    03.7
+1033:  MOVF   00,F
+1034:  BTFSS  03.2
+1035:  GOTO   072
+....................         Timer_increaseTimerMinutes(&displayPtr->timer); 
+1036:  MOVF   50,W
+1037:  MOVWF  78
+1038:  MOVF   51,W
+1039:  MOVWF  7A
+103A:  MOVF   78,W
+103B:  MOVWF  52
+103C:  MOVF   7A,W
+103D:  MOVWF  53
+103E:  MOVF   53,W
+103F:  MOVWF  55
+1040:  MOVF   52,W
+1041:  MOVWF  54
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+*
+1071:  GOTO   0B5
+1072:  MOVLW  0F
+1073:  ADDWF  50,W
+1074:  MOVWF  04
+1075:  BCF    03.7
+1076:  BTFSC  51.0
+1077:  BSF    03.7
+1078:  DECFSZ 00,W
+1079:  GOTO   0B5
+....................         Timer_increaseTimerSeconds(&displayPtr->timer); 
+107A:  MOVF   50,W
+107B:  MOVWF  78
+107C:  MOVF   51,W
+107D:  MOVWF  7A
+107E:  MOVF   78,W
+107F:  MOVWF  52
+1080:  MOVF   7A,W
+1081:  MOVWF  53
+1082:  MOVF   53,W
+1083:  MOVWF  55
+1084:  MOVF   52,W
+1085:  MOVWF  54
+....................     } 
+.................... } 
+....................  
+.................... BOOLEAN Display_isAlarmOkay(JoseDisplay *displayPtr) { 
+....................     if (displayPtr->format == FORMAT_MINUTES) { 
+*
+10E4:  MOVLW  0F
+10E5:  ADDWF  50,W
+10E6:  MOVWF  04
+10E7:  BCF    03.7
+10E8:  BTFSC  51.0
+10E9:  BSF    03.7
+10EA:  MOVF   00,F
+10EB:  BTFSS  03.2
+10EC:  GOTO   0FC
+....................         return (displayPtr->timer.alarmTime.minute != 0); 
+10ED:  MOVLW  0A
+10EE:  ADDWF  50,W
+10EF:  MOVWF  04
+10F0:  BCF    03.7
+10F1:  BTFSC  51.0
+10F2:  BSF    03.7
+10F3:  MOVF   00,F
+10F4:  BTFSS  03.2
+10F5:  GOTO   0F8
+10F6:  MOVLW  00
+10F7:  GOTO   0F9
+10F8:  MOVLW  01
+10F9:  MOVWF  78
+10FA:  GOTO   111
+....................     } else if (displayPtr->format == FORMAT_SECONDS) { 
+10FB:  GOTO   111
+10FC:  MOVLW  0F
+10FD:  ADDWF  50,W
+10FE:  MOVWF  04
+10FF:  BCF    03.7
+1100:  BTFSC  51.0
+1101:  BSF    03.7
+1102:  DECFSZ 00,W
+1103:  GOTO   111
+....................         return (displayPtr->timer.alarmTime.second != 0); 
+1104:  MOVLW  0B
+1105:  ADDWF  50,W
+1106:  MOVWF  04
+1107:  BCF    03.7
+1108:  BTFSC  51.0
+1109:  BSF    03.7
+110A:  MOVF   00,F
+110B:  BTFSS  03.2
+110C:  GOTO   10F
+110D:  MOVLW  00
+110E:  GOTO   110
+110F:  MOVLW  01
+1110:  MOVWF  78
+....................     } 
+.................... } 
+....................  
+.................... JoseDisplay Display_new(void) { 
+....................     JoseDisplay erickaDisplay; 
+....................  
+....................     erickaDisplay.format = read_eeprom(EEPROM_FORMAT) % 2; 
+*
+0A05:  MOVLW  02
+0A06:  BSF    03.6
+0A07:  MOVWF  0D
+0A08:  BSF    03.5
+0A09:  BCF    0C.7
+0A0A:  BSF    0C.0
+0A0B:  BCF    03.5
+0A0C:  MOVF   0C,W
+0A0D:  ANDLW  01
+0A0E:  BSF    03.5
+0A0F:  BCF    03.6
+0A10:  MOVWF  65
+....................     erickaDisplay.currentState = read_eeprom(EEPROM_CURRENT_STATE) % UPPER_BOUND_STATE; 
+0A11:  BCF    03.5
+0A12:  BSF    03.6
+0A13:  CLRF   0D
+0A14:  BSF    03.5
+0A15:  BCF    0C.7
+0A16:  BSF    0C.0
+0A17:  BCF    03.5
+0A18:  MOVF   0C,W
+0A19:  BSF    03.5
+0A1A:  BCF    03.6
+0A1B:  MOVWF  69
+0A1C:  MOVF   69,W
+0A1D:  BCF    03.5
+0A1E:  BSF    03.6
+0A1F:  MOVWF  1E
+0A20:  MOVLW  03
+0A21:  MOVWF  1F
+0A22:  BCF    0A.3
+0A23:  BCF    03.6
+0A24:  CALL   02F
+0A25:  BSF    0A.3
+0A26:  MOVF   77,W
+0A27:  BSF    03.5
+0A28:  MOVWF  66
+....................     erickaDisplay.previousState = read_eeprom(EEPROM_PREVIOUS_STATE) % UPPER_BOUND_STATE; 
+0A29:  MOVLW  01
+0A2A:  BCF    03.5
+0A2B:  BSF    03.6
+0A2C:  MOVWF  0D
+0A2D:  BSF    03.5
+0A2E:  BCF    0C.7
+0A2F:  BSF    0C.0
+0A30:  BCF    03.5
+0A31:  MOVF   0C,W
+0A32:  BSF    03.5
+0A33:  BCF    03.6
+0A34:  MOVWF  69
+0A35:  MOVF   69,W
+0A36:  BCF    03.5
+0A37:  BSF    03.6
+0A38:  MOVWF  1E
+0A39:  MOVLW  03
+0A3A:  MOVWF  1F
+0A3B:  BCF    0A.3
+0A3C:  BCF    03.6
+0A3D:  CALL   02F
+0A3E:  BSF    0A.3
+0A3F:  MOVF   77,W
+0A40:  BSF    03.5
+0A41:  MOVWF  67
+....................  
+....................     if ((erickaDisplay.previousState == STATE_IDLE) 
+....................             && (erickaDisplay.currentState == STATE_IDLE)) { 
+0A42:  MOVF   67,F
+0A43:  BTFSS  03.2
+0A44:  GOTO   24A
+0A45:  MOVF   66,F
+0A46:  BTFSS  03.2
+0A47:  GOTO   24A
+....................         erickaDisplay.previousState = STATE_COUNTING_DOWN; 
+0A48:  MOVLW  02
+0A49:  MOVWF  67
+....................     } 
+....................  
+....................     switch (erickaDisplay.format) { 
+0A4A:  MOVF   65,W
+0A4B:  XORLW  00
+0A4C:  BCF    03.5
+0A4D:  BTFSC  03.2
+0A4E:  GOTO   253
+0A4F:  XORLW  01
+0A50:  BTFSC  03.2
+0A51:  GOTO   2A5
+0A52:  GOTO   2F5
+....................         case FORMAT_MINUTES: 
+....................             erickaDisplay.timer = Timer_newMinutes(ALARM_UPPER_BOUND); 
+0A53:  MOVLW  63
+0A54:  BSF    03.5
+0A55:  MOVWF  6E
+*
+0A65:  MOVF   79,W
+0A66:  MOVWF  7A
+0A67:  MOVF   78,W
+0A68:  BSF    03.5
+0A69:  BCF    03.6
+0A6A:  MOVWF  68
+0A6B:  MOVF   7A,W
+0A6C:  MOVWF  69
+0A6D:  CLRF   6B
+0A6E:  MOVLW  D6
+0A6F:  MOVWF  6A
+0A70:  MOVLW  0F
+0A71:  MOVWF  78
+0A72:  MOVF   68,W
+0A73:  MOVWF  04
+0A74:  BCF    03.7
+0A75:  BTFSC  69.0
+0A76:  BSF    03.7
+0A77:  MOVF   00,W
+0A78:  MOVWF  77
+0A79:  MOVF   6A,W
+0A7A:  MOVWF  04
+0A7B:  BCF    03.7
+0A7C:  BTFSC  6B.0
+0A7D:  BSF    03.7
+0A7E:  MOVF   77,W
+0A7F:  MOVWF  00
+0A80:  INCF   6A,F
+0A81:  BTFSC  03.2
+0A82:  INCF   6B,F
+0A83:  INCF   68,F
+0A84:  BTFSC  03.2
+0A85:  INCF   69,F
+0A86:  DECFSZ 78,F
+0A87:  GOTO   272
+....................  
+....................             erickaDisplay.timer.alarmTime.hour = 0; 
+0A88:  CLRF   5F
+....................             erickaDisplay.timer.alarmTime.minute = read_eeprom( 
+....................                     EEPROM_ALARM) % (ALARM_UPPER_BOUND + 1); 
+0A89:  MOVLW  03
+0A8A:  BCF    03.5
+0A8B:  BSF    03.6
+0A8C:  MOVWF  0D
+0A8D:  BSF    03.5
+0A8E:  BCF    0C.7
+0A8F:  BSF    0C.0
+0A90:  BCF    03.5
+0A91:  MOVF   0C,W
+0A92:  BSF    03.5
+0A93:  BCF    03.6
+0A94:  MOVWF  69
+0A95:  MOVF   69,W
+0A96:  BCF    03.5
+0A97:  BSF    03.6
+0A98:  MOVWF  1E
+0A99:  MOVLW  64
+0A9A:  MOVWF  1F
+0A9B:  BCF    0A.3
+0A9C:  BCF    03.6
+0A9D:  CALL   02F
+0A9E:  BSF    0A.3
+0A9F:  MOVF   77,W
+0AA0:  BSF    03.5
+0AA1:  MOVWF  60
+....................             erickaDisplay.timer.alarmTime.second = 0; 
+0AA2:  CLRF   61
+....................             break; 
+0AA3:  BCF    03.5
+0AA4:  GOTO   2F5
+....................         case FORMAT_SECONDS: 
+....................             erickaDisplay.timer = Timer_newSeconds(ALARM_UPPER_BOUND); 
+0AA5:  MOVLW  63
+0AA6:  BSF    03.5
+0AA7:  MOVWF  6E
+*
+0AB6:  MOVF   79,W
+0AB7:  MOVWF  7A
+0AB8:  MOVF   78,W
+0AB9:  BSF    03.5
+0ABA:  BCF    03.6
+0ABB:  MOVWF  68
+0ABC:  MOVF   7A,W
+0ABD:  MOVWF  69
+0ABE:  CLRF   6B
+0ABF:  MOVLW  D6
+0AC0:  MOVWF  6A
+0AC1:  MOVLW  0F
+0AC2:  MOVWF  78
+0AC3:  MOVF   68,W
+0AC4:  MOVWF  04
+0AC5:  BCF    03.7
+0AC6:  BTFSC  69.0
+0AC7:  BSF    03.7
+0AC8:  MOVF   00,W
+0AC9:  MOVWF  77
+0ACA:  MOVF   6A,W
+0ACB:  MOVWF  04
+0ACC:  BCF    03.7
+0ACD:  BTFSC  6B.0
+0ACE:  BSF    03.7
+0ACF:  MOVF   77,W
+0AD0:  MOVWF  00
+0AD1:  INCF   6A,F
+0AD2:  BTFSC  03.2
+0AD3:  INCF   6B,F
+0AD4:  INCF   68,F
+0AD5:  BTFSC  03.2
+0AD6:  INCF   69,F
+0AD7:  DECFSZ 78,F
+0AD8:  GOTO   2C3
+....................             erickaDisplay.timer.alarmTime.hour = 0; 
+0AD9:  CLRF   5F
+....................             erickaDisplay.timer.alarmTime.minute = 0; 
+0ADA:  CLRF   60
+....................             erickaDisplay.timer.alarmTime.second = read_eeprom( 
+....................                     EEPROM_ALARM) % (ALARM_UPPER_BOUND + 1); 
+0ADB:  MOVLW  03
+0ADC:  BCF    03.5
+0ADD:  BSF    03.6
+0ADE:  MOVWF  0D
+0ADF:  BSF    03.5
+0AE0:  BCF    0C.7
+0AE1:  BSF    0C.0
+0AE2:  BCF    03.5
+0AE3:  MOVF   0C,W
+0AE4:  BSF    03.5
+0AE5:  BCF    03.6
+0AE6:  MOVWF  69
+0AE7:  MOVF   69,W
+0AE8:  BCF    03.5
+0AE9:  BSF    03.6
+0AEA:  MOVWF  1E
+0AEB:  MOVLW  64
+0AEC:  MOVWF  1F
+0AED:  BCF    0A.3
+0AEE:  BCF    03.6
+0AEF:  CALL   02F
+0AF0:  BSF    0A.3
+0AF1:  MOVF   77,W
+0AF2:  BSF    03.5
+0AF3:  MOVWF  61
+....................  
+....................             break; 
+0AF4:  BCF    03.5
+....................     } 
+....................  
+....................     switch (erickaDisplay.currentState) { 
+0AF5:  BSF    03.5
+0AF6:  MOVF   66,W
+0AF7:  XORLW  00
+0AF8:  BCF    03.5
+0AF9:  BTFSC  03.2
+0AFA:  GOTO   302
+0AFB:  XORLW  01
+0AFC:  BTFSC  03.2
+0AFD:  GOTO   3CD
+0AFE:  XORLW  03
+0AFF:  BTFSC  03.2
+0B00:  GOTO   3E0
+0B01:  GOTO   40A
+....................         case STATE_IDLE: 
+....................             Timer_updateTimerFromEeprom( 
+....................                     &erickaDisplay.timer, 
+....................                     EEPROM_RTC_HOURS, 
+....................                     EEPROM_RTC_MINUTES, 
+....................                     EEPROM_RTC_SECONDS 
+....................                     ); 
+0B02:  BSF    03.5
+0B03:  CLRF   69
+0B04:  MOVLW  D6
+0B05:  MOVWF  68
+0B06:  CLRF   6B
+0B07:  MOVLW  04
+0B08:  MOVWF  6A
+0B09:  CLRF   6D
+0B0A:  MOVLW  05
+0B0B:  MOVWF  6C
+0B0C:  CLRF   6F
+0B0D:  MOVLW  06
+0B0E:  MOVWF  6E
+....................             Display_updateRtc(&erickaDisplay); 
+*
+0BBB:  BSF    03.5
+0BBC:  BCF    03.6
+0BBD:  CLRF   69
+0BBE:  MOVLW  D6
+0BBF:  MOVWF  68
+0BC0:  BCF    0A.3
+0BC1:  BCF    03.5
+0BC2:  CALL   118
+0BC3:  BSF    0A.3
+....................             Timer_updateCountdownTime(&erickaDisplay); 
+0BC4:  BSF    03.5
+0BC5:  CLRF   6D
+0BC6:  MOVLW  D6
+0BC7:  MOVWF  6C
+0BC8:  BCF    0A.3
+0BC9:  BCF    03.5
+0BCA:  CALL   2F4
+0BCB:  BSF    0A.3
+....................             break; 
+0BCC:  GOTO   40A
+....................         case STATE_READY: 
+....................             Display_clearRtc(); 
+0BCD:  BCF    0A.3
+0BCE:  CALL   433
+0BCF:  BSF    0A.3
+....................             Display_updateTimer(&erickaDisplay); 
+0BD0:  BSF    03.5
+0BD1:  CLRF   69
+0BD2:  MOVLW  D6
+0BD3:  MOVWF  68
+0BD4:  BCF    0A.3
+0BD5:  BCF    03.5
+0BD6:  CALL   587
+0BD7:  BSF    0A.3
+....................             Display_showCount(&erickaDisplay, FALSE); 
+0BD8:  BSF    03.5
+0BD9:  CLRF   69
+0BDA:  MOVLW  D6
+0BDB:  MOVWF  68
+0BDC:  CLRF   6A
+0BDD:  BCF    03.5
+0BDE:  CALL   000
+....................             break; 
+0BDF:  GOTO   40A
+....................  
+....................         case STATE_COUNTING_DOWN: 
+....................             Display_updateTimer(&erickaDisplay); 
+0BE0:  BSF    03.5
+0BE1:  CLRF   69
+0BE2:  MOVLW  D6
+0BE3:  MOVWF  68
+0BE4:  BCF    0A.3
+0BE5:  BCF    03.5
+0BE6:  CALL   587
+0BE7:  BSF    0A.3
+....................             if (Display_isTimerDone(&erickaDisplay)) { 
+0BE8:  BSF    03.5
+0BE9:  CLRF   69
+0BEA:  MOVLW  D6
+0BEB:  MOVWF  68
+0BEC:  BCF    03.5
+0BED:  CALL   111
+0BEE:  MOVF   78,F
+0BEF:  BTFSC  03.2
+0BF0:  GOTO   40A
+....................                 Display_clearRtc(); 
+0BF1:  BCF    0A.3
+0BF2:  CALL   433
+0BF3:  BSF    0A.3
+....................                 Display_updateTimer(&erickaDisplay); 
+0BF4:  BSF    03.5
+0BF5:  CLRF   69
+0BF6:  MOVLW  D6
+0BF7:  MOVWF  68
+0BF8:  BCF    0A.3
+0BF9:  BCF    03.5
+0BFA:  CALL   587
+0BFB:  BSF    0A.3
+....................                 Display_setState(&erickaDisplay, STATE_READY); 
+0BFC:  BSF    03.5
+0BFD:  CLRF   69
+0BFE:  MOVLW  D6
+0BFF:  MOVWF  68
+0C00:  MOVLW  01
+0C01:  MOVWF  6A
+0C02:  BCF    03.5
+0C03:  CALL   153
+....................                 Display_saveState(&erickaDisplay); 
+0C04:  BSF    03.5
+0C05:  CLRF   69
+0C06:  MOVLW  D6
+0C07:  MOVWF  68
+0C08:  BCF    03.5
+0C09:  CALL   178
+....................             } 
+....................             break; 
+....................     } 
+....................  
+....................     return erickaDisplay; 
+0C0A:  MOVLW  D6
+0C0B:  MOVWF  78
+0C0C:  CLRF   79
+.................... } 
+....................  
+.................... #endif	/* JOSEDISPLAY_H */ 
+....................  
+....................  
+....................  
+.................... // Pinout 
+.................... #define PIN_BUTTON_MENU     PIN_B0 
+.................... #define PIN_BUTTON_NEXT     PIN_B1 
+.................... #define PIN_BUTTON_START    PIN_B4 
+.................... #define PIN_LED             PIN_B3 
+....................  
+.................... // Timeouts 
+.................... #define TIMEOUT_MENU_BUTTON_MILISECONDS 2000 
+.................... #define TIMEOUT_RESET_TIMER_MILISECONDS 3000 
+.................... #define TIMEOUT_HYPHENS_MILISECONDS     2000 
+.................... #define TIMEOUT_OVERFLOW                3000 
+....................  
+.................... #define DELAY_INCREASE_NUMBER_MILISECONDS   200 
+.................... #define DELAY_AFTER_TIMER_OVERFLOWED        500 
+....................  
+.................... // -------------------------FUNCTION PROTOTYPE---------------------------------- 
+.................... void setupHardware(void); 
+.................... void blinkDisplay(void); 
+.................... // -------------------------RTOS TASKS------------------------------------------ 
+.................... #task(rate=50ms, max=1ms) 
+.................... void Task_checkIfStartStopResetButtonIsHeld(void); 
+....................  
+.................... #task(rate=50ms, max=1ms) 
+.................... void Task_checkIfMenuButtonIsHeld(void); 
+....................  
+.................... #task(rate=5ms, max=5ms) 
+.................... void Task_runStateMachine(void); 
+....................  
+.................... #task(rate=25ms, max=1ms) 
+.................... void Task_blinkDisplay(void); 
+.................... // ----------------------------GLOBAL VARIABLES--------------------------------- 
+.................... BOOLEAN showDisplayCompletely = TRUE; 
+.................... ButtonState buttonStateStart = BUTTON_STATE_NOT_PUSHED; 
+.................... ButtonState buttonStateMenu = BUTTON_STATE_NOT_PUSHED; 
+.................... JoseDisplay myDisplay; 
+....................  
+.................... BOOLEAN startButtonState = TRUE; 
+.................... BOOLEAN menuButtonState = TRUE; 
+.................... BOOLEAN nextButtonState = TRUE; 
+.................... DisplayState nextStateAfterWaitingForButtonBeingReleased; 
+.................... int numberOfMenuButtonHasBeenReleased = 0; 
+....................  
+.................... void main(void) { 
+*
+0F43:  MOVF   03,W
+0F44:  ANDLW  1F
+0F45:  MOVWF  03
+0F46:  MOVLW  FF
+0F47:  MOVWF  20
+0F48:  BSF    3E.0
+0F49:  BSF    3E.1
+0F4A:  BSF    3E.2
+0F4B:  BSF    3E.3
+0F4C:  BSF    3E.4
+0F4D:  BSF    3E.5
+0F4E:  CLRF   52
+0F4F:  CLRF   53
+0F50:  CLRF   54
+0F51:  BSF    03.5
+0F52:  BSF    03.6
+0F53:  MOVF   09,W
+0F54:  ANDLW  C0
+0F55:  MOVWF  09
+0F56:  BCF    03.6
+0F57:  BCF    1F.4
+0F58:  BCF    1F.5
+0F59:  MOVLW  00
+0F5A:  BSF    03.6
+0F5B:  MOVWF  08
+0F5C:  BCF    03.5
+0F5D:  CLRF   07
+0F5E:  CLRF   08
+0F5F:  CLRF   09
+0F60:  BCF    03.7
+....................     setupHardware(); 
+....................     myDisplay.currentState = STATE_INIT; 
+*
+0F6C:  MOVLW  04
+0F6D:  BCF    03.5
+0F6E:  MOVWF  4F
+....................     rtos_run(); 
+0F6F:  CLRF   22
+0F70:  CLRF   24
+0F71:  MOVLW  0A
+0F72:  MOVWF  23
+0F73:  CLRF   26
+0F74:  MOVLW  01
+0F75:  MOVWF  25
+0F76:  MOVLW  F6
+0F77:  MOVWF  27
+0F78:  MOVLW  0E
+0F79:  MOVWF  28
+0F7A:  CLRF   29
+0F7B:  CLRF   2B
+0F7C:  MOVLW  0A
+0F7D:  MOVWF  2A
+0F7E:  CLRF   2D
+0F7F:  MOVLW  02
+0F80:  MOVWF  2C
+0F81:  MOVLW  14
+0F82:  MOVWF  2E
+0F83:  MOVLW  0F
+0F84:  MOVWF  2F
+0F85:  CLRF   30
+0F86:  CLRF   32
+0F87:  MOVLW  01
+0F88:  MOVWF  31
+0F89:  CLRF   34
+0F8A:  CLRF   33
+0F8B:  MOVLW  00
+0F8C:  MOVWF  35
+0F8D:  MOVLW  10
+0F8E:  MOVWF  36
+0F8F:  CLRF   37
+0F90:  CLRF   39
+0F91:  MOVLW  05
+0F92:  MOVWF  38
+0F93:  CLRF   3B
+0F94:  CLRF   3A
+0F95:  MOVLW  32
+0F96:  MOVWF  3C
+0F97:  MOVLW  0F
+0F98:  MOVWF  3D
+0F99:  CLRF   21
+0F9A:  BSF    03.5
+0F9B:  MOVF   01,W
+0F9C:  ANDLW  C0
+0F9D:  IORLW  06
+0F9E:  MOVWF  01
+0F9F:  MOVLW  3D
+0FA0:  BCF    03.5
+0FA1:  MOVWF  01
+0FA2:  BCF    0B.2
+0FA3:  BCF    03.0
+0FA4:  RLF    21,W
+0FA5:  MOVWF  77
+0FA6:  BCF    0A.3
+0FA7:  CALL   023
+0FA8:  BSF    0A.3
+0FA9:  MOVWF  79
+0FAA:  MOVLW  01
+0FAB:  ADDWF  77,W
+0FAC:  BCF    0A.3
+0FAD:  CALL   023
+0FAE:  BSF    0A.3
+0FAF:  MOVWF  7A
+0FB0:  MOVF   79,W
+0FB1:  MOVWF  04
+0FB2:  BCF    03.7
+0FB3:  BTFSC  7A.0
+0FB4:  BSF    03.7
+0FB5:  MOVF   00,W
+0FB6:  MOVWF  79
+0FB7:  INCF   04,F
+0FB8:  MOVF   00,W
+0FB9:  MOVWF  77
+0FBA:  INCF   04,F
+0FBB:  MOVF   00,W
+0FBC:  MOVWF  78
+0FBD:  INCF   04,F
+0FBE:  INCF   00,F
+0FBF:  MOVF   00,W
+0FC0:  MOVWF  7A
+0FC1:  BTFSS  03.2
+0FC2:  GOTO   7C6
+0FC3:  INCF   04,F
+0FC4:  INCF   00,F
+0FC5:  DECF   04,F
+0FC6:  INCF   04,F
+0FC7:  MOVF   00,W
+0FC8:  SUBWF  78,W
+0FC9:  BTFSS  03.2
+0FCA:  GOTO   7DE
+0FCB:  MOVF   77,W
+0FCC:  SUBWF  7A,W
+0FCD:  BTFSS  03.2
+0FCE:  GOTO   7DE
+0FCF:  DECF   04,F
+0FD0:  CLRF   00
+0FD1:  INCF   04,F
+0FD2:  CLRF   00
+0FD3:  INCF   04,F
+0FD4:  BTFSC  79.7
+0FD5:  GOTO   7DE
+0FD6:  INCF   04,F
+0FD7:  MOVF   00,W
+0FD8:  MOVWF  0A
+0FD9:  DECF   04,F
+0FDA:  MOVF   00,W
+0FDB:  MOVWF  02
+0FDC:  BCF    03.5
+0FDD:  BCF    03.6
+0FDE:  INCF   21,F
+0FDF:  MOVLW  04
+0FE0:  SUBWF  21,W
+0FE1:  BTFSS  03.2
+0FE2:  GOTO   7A3
+0FE3:  CLRF   21
+0FE4:  MOVF   01,W
+0FE5:  BTFSS  0B.2
+0FE6:  GOTO   7E9
+0FE7:  BSF    03.5
+0FE8:  GOTO   79F
+0FE9:  GOTO   7E4
+0FEA:  MOVLW  FF
+0FEB:  MOVWF  21
+.................... } 
+....................  
+0FEC:  SLEEP
+.................... void runStateMachinePart1(void) { 
+....................     switch (myDisplay.currentState) { 
+*
+09FF:  MOVF   4F,W
+0A00:  ADDLW  F6
+0A01:  BTFSC  03.0
+0A02:  GOTO   5F6
+0A03:  ADDLW  0A
+0A04:  GOTO   5F9
+....................         case STATE_INIT: 
+....................             myDisplay = Display_new(); 
+*
+0C0D:  MOVF   79,W
+0C0E:  MOVWF  7A
+0C0F:  MOVF   78,W
+0C10:  BSF    03.5
+0C11:  MOVWF  50
+0C12:  MOVF   7A,W
+0C13:  MOVWF  51
+0C14:  CLRF   53
+0C15:  MOVLW  3F
+0C16:  MOVWF  52
+0C17:  MOVLW  12
+0C18:  MOVWF  78
+0C19:  MOVF   50,W
+0C1A:  MOVWF  04
+0C1B:  BCF    03.7
+0C1C:  BTFSC  51.0
+0C1D:  BSF    03.7
+0C1E:  MOVF   00,W
+0C1F:  MOVWF  77
+0C20:  MOVF   52,W
+0C21:  MOVWF  04
+0C22:  BCF    03.7
+0C23:  BTFSC  53.0
+0C24:  BSF    03.7
+0C25:  MOVF   77,W
+0C26:  MOVWF  00
+0C27:  INCF   52,F
+0C28:  BTFSC  03.2
+0C29:  INCF   53,F
+0C2A:  INCF   50,F
+0C2B:  BTFSC  03.2
+0C2C:  INCF   51,F
+0C2D:  DECFSZ 78,F
+0C2E:  GOTO   419
+....................             Display_showCount(&myDisplay, FALSE); 
+0C2F:  CLRF   69
+0C30:  MOVLW  3F
+0C31:  MOVWF  68
+0C32:  CLRF   6A
+0C33:  BCF    03.5
+0C34:  CALL   000
+....................             break; 
+0C35:  GOTO   5F6
+....................  
+....................         case STATE_IDLE: 
+....................             if (input(PIN_BUTTON_START) && (!startButtonState)) { 
+0C36:  BSF    03.5
+0C37:  BSF    06.4
+0C38:  BCF    03.5
+0C39:  BTFSS  06.4
+0C3A:  GOTO   478
+0C3B:  BTFSC  3E.3
+0C3C:  GOTO   478
+....................                 Display_resume(&myDisplay); 
+0C3D:  BSF    03.5
+0C3E:  CLRF   51
+0C3F:  MOVLW  3F
+0C40:  MOVWF  50
+....................                 Display_saveState(&myDisplay); 
+*
+0C63:  CLRF   69
+0C64:  MOVLW  3F
+0C65:  MOVWF  68
+0C66:  BCF    03.5
+0C67:  CALL   178
+....................                 Display_updateRtc(&myDisplay); 
+0C68:  BSF    03.5
+0C69:  CLRF   69
+0C6A:  MOVLW  3F
+0C6B:  MOVWF  68
+0C6C:  BCF    0A.3
+0C6D:  BCF    03.5
+0C6E:  CALL   118
+0C6F:  BSF    0A.3
+....................                 blinkDisplay(); 
+0C70:  CALL   1D6
+....................                 Display_showCount(&myDisplay, FALSE); 
+0C71:  BSF    03.5
+0C72:  CLRF   69
+0C73:  MOVLW  3F
+0C74:  MOVWF  68
+0C75:  CLRF   6A
+0C76:  BCF    03.5
+0C77:  CALL   000
+....................             } 
+....................             if (buttonStateStart == BUTTON_STATE_HELD) { 
+0C78:  BTFSC  3E.1
+0C79:  GOTO   483
+....................                 buttonStateStart = BUTTON_STATE_NOT_PUSHED; 
+0C7A:  BSF    3E.1
+....................                 Display_setState(&myDisplay, STATE_RESETTING); 
+0C7B:  BSF    03.5
+0C7C:  CLRF   69
+0C7D:  MOVLW  3F
+0C7E:  MOVWF  68
+0C7F:  MOVLW  05
+0C80:  MOVWF  6A
+0C81:  BCF    03.5
+0C82:  CALL   153
+....................             } 
+....................             break; 
+0C83:  GOTO   5F6
+....................  
+....................         case STATE_COUNTING_DOWN: 
+....................             Display_updateTimer(&myDisplay); 
+0C84:  BSF    03.5
+0C85:  CLRF   69
+0C86:  MOVLW  3F
+0C87:  MOVWF  68
+0C88:  BCF    0A.3
+0C89:  BCF    03.5
+0C8A:  CALL   587
+0C8B:  BSF    0A.3
+....................             Display_showCount(&myDisplay, TRUE); 
+0C8C:  BSF    03.5
+0C8D:  CLRF   69
+0C8E:  MOVLW  3F
+0C8F:  MOVWF  68
+0C90:  MOVLW  01
+0C91:  MOVWF  6A
+0C92:  BCF    03.5
+0C93:  CALL   000
+....................             if (buttonStateStart == BUTTON_STATE_HELD) { 
+0C94:  BTFSC  3E.1
+0C95:  GOTO   49F
+....................                 buttonStateStart = BUTTON_STATE_NOT_PUSHED; 
+0C96:  BSF    3E.1
+....................                 Display_setState(&myDisplay, STATE_RESETTING); 
+0C97:  BSF    03.5
+0C98:  CLRF   69
+0C99:  MOVLW  3F
+0C9A:  MOVWF  68
+0C9B:  MOVLW  05
+0C9C:  MOVWF  6A
+0C9D:  BCF    03.5
+0C9E:  CALL   153
+....................             } 
+....................             if (input(PIN_BUTTON_START) && (!startButtonState)) { 
+0C9F:  BSF    03.5
+0CA0:  BSF    06.4
+0CA1:  BCF    03.5
+0CA2:  BTFSS  06.4
+0CA3:  GOTO   54A
+0CA4:  BTFSC  3E.3
+0CA5:  GOTO   54A
+....................                 Display_stop(&myDisplay); 
+0CA6:  BSF    03.5
+0CA7:  CLRF   51
+0CA8:  MOVLW  3F
+0CA9:  MOVWF  50
+....................                 Display_saveRtcCurrentTime(&myDisplay); 
+*
+0CCB:  CLRF   51
+0CCC:  MOVLW  3F
+0CCD:  MOVWF  50
+....................                 Display_saveState(&myDisplay); 
+*
+0D3C:  BSF    03.5
+0D3D:  CLRF   69
+0D3E:  MOVLW  3F
+0D3F:  MOVWF  68
+0D40:  BCF    03.5
+0D41:  CALL   178
+....................                 blinkDisplay(); 
+0D42:  CALL   1D6
+....................                 Display_showCount(&myDisplay, FALSE); 
+0D43:  BSF    03.5
+0D44:  CLRF   69
+0D45:  MOVLW  3F
+0D46:  MOVWF  68
+0D47:  CLRF   6A
+0D48:  BCF    03.5
+0D49:  CALL   000
+....................             } 
+....................             if (Display_isTimerDone(&myDisplay)) { 
+0D4A:  BSF    03.5
+0D4B:  CLRF   69
+0D4C:  MOVLW  3F
+0D4D:  MOVWF  68
+0D4E:  BCF    03.5
+0D4F:  CALL   111
+0D50:  MOVF   78,F
+0D51:  BTFSC  03.2
+0D52:  GOTO   56E
+....................                 blinkDisplay(); 
+0D53:  CALL   1D6
+....................                 blinkDisplay();                 
+0D54:  CALL   1D6
+....................                 Display_clearRtc(); 
+0D55:  BCF    0A.3
+0D56:  CALL   433
+0D57:  BSF    0A.3
+....................                 Display_updateTimer(&myDisplay); 
+0D58:  BSF    03.5
+0D59:  CLRF   69
+0D5A:  MOVLW  3F
+0D5B:  MOVWF  68
+0D5C:  BCF    0A.3
+0D5D:  BCF    03.5
+0D5E:  CALL   587
+0D5F:  BSF    0A.3
+....................                 Display_setState(&myDisplay, STATE_READY); 
+0D60:  BSF    03.5
+0D61:  CLRF   69
+0D62:  MOVLW  3F
+0D63:  MOVWF  68
+0D64:  MOVLW  01
+0D65:  MOVWF  6A
+0D66:  BCF    03.5
+0D67:  CALL   153
+....................                 Display_saveState(&myDisplay); 
+0D68:  BSF    03.5
+0D69:  CLRF   69
+0D6A:  MOVLW  3F
+0D6B:  MOVWF  68
+0D6C:  BCF    03.5
+0D6D:  CALL   178
+....................             } 
+....................             break; 
+0D6E:  GOTO   5F6
+....................  
+....................         case STATE_RESETTING: 
+....................             Display_clearRtc(); 
+0D6F:  BCF    0A.3
+0D70:  CALL   433
+0D71:  BSF    0A.3
+....................             SeventSegmentDisplay_showHyphensTwoDigits(); 
+....................             delay_ms(TIMEOUT_HYPHENS_MILISECONDS); 
+*
+0D83:  MOVLW  08
+0D84:  BSF    03.5
+0D85:  MOVWF  50
+0D86:  MOVLW  FA
+0D87:  MOVWF  51
+0D88:  BCF    03.5
+0D89:  CALL   1C2
+0D8A:  BSF    03.5
+0D8B:  DECFSZ 50,F
+0D8C:  GOTO   586
+....................             Display_setState(&myDisplay, STATE_WAITING_FOR_BUTTON_BEING_RELEASED); 
+0D8D:  CLRF   69
+0D8E:  MOVLW  3F
+0D8F:  MOVWF  68
+0D90:  MOVLW  09
+0D91:  MOVWF  6A
+0D92:  BCF    03.5
+0D93:  CALL   153
+....................             nextStateAfterWaitingForButtonBeingReleased = STATE_READY; 
+0D94:  MOVLW  01
+0D95:  MOVWF  51
+....................             Display_clearRtc(); 
+0D96:  BCF    0A.3
+0D97:  CALL   433
+0D98:  BSF    0A.3
+....................             Display_updateTimer(&myDisplay); 
+0D99:  BSF    03.5
+0D9A:  CLRF   69
+0D9B:  MOVLW  3F
+0D9C:  MOVWF  68
+0D9D:  BCF    0A.3
+0D9E:  BCF    03.5
+0D9F:  CALL   587
+0DA0:  BSF    0A.3
+....................             Display_showCount(&myDisplay, FALSE); 
+0DA1:  BSF    03.5
+0DA2:  CLRF   69
+0DA3:  MOVLW  3F
+0DA4:  MOVWF  68
+0DA5:  CLRF   6A
+0DA6:  BCF    03.5
+0DA7:  CALL   000
+....................             break; 
+0DA8:  GOTO   5F6
+....................  
+....................         case STATE_WAITING_FOR_BUTTON_BEING_RELEASED: 
+....................             if (input(PIN_BUTTON_START) && 
+....................                     input(PIN_BUTTON_MENU) && 
+....................                     input(PIN_BUTTON_NEXT)) { 
+0DA9:  BSF    03.5
+0DAA:  BSF    06.4
+0DAB:  BCF    03.5
+0DAC:  BTFSS  06.4
+0DAD:  GOTO   5C8
+0DAE:  BSF    03.5
+0DAF:  BSF    06.0
+0DB0:  BCF    03.5
+0DB1:  BTFSS  06.0
+0DB2:  GOTO   5C8
+0DB3:  BSF    03.5
+0DB4:  BSF    06.1
+0DB5:  BCF    03.5
+0DB6:  BTFSS  06.1
+0DB7:  GOTO   5C8
+....................                 Display_setState(&myDisplay, nextStateAfterWaitingForButtonBeingReleased); 
+0DB8:  BSF    03.5
+0DB9:  CLRF   69
+0DBA:  MOVLW  3F
+0DBB:  MOVWF  68
+0DBC:  BCF    03.5
+0DBD:  MOVF   51,W
+0DBE:  BSF    03.5
+0DBF:  MOVWF  6A
+0DC0:  BCF    03.5
+0DC1:  CALL   153
+....................                 Display_saveState(&myDisplay); 
+0DC2:  BSF    03.5
+0DC3:  CLRF   69
+0DC4:  MOVLW  3F
+0DC5:  MOVWF  68
+0DC6:  BCF    03.5
+0DC7:  CALL   178
+....................             } 
+....................             break; 
+0DC8:  GOTO   5F6
+....................  
+....................         case STATE_READY: 
+....................             rtos_disable(Task_checkIfStartStopResetButtonIsHeld); 
+0DC9:  BSF    22.7
+....................             Display_showCount(&myDisplay, FALSE); 
+0DCA:  BSF    03.5
+0DCB:  CLRF   69
+0DCC:  MOVLW  3F
+0DCD:  MOVWF  68
+0DCE:  CLRF   6A
+0DCF:  BCF    03.5
+0DD0:  CALL   000
+....................             if (input(PIN_BUTTON_START) && (!startButtonState)) { 
+0DD1:  BSF    03.5
+0DD2:  BSF    06.4
+0DD3:  BCF    03.5
+0DD4:  BTFSS  06.4
+0DD5:  GOTO   5EB
+0DD6:  BTFSC  3E.3
+0DD7:  GOTO   5EB
+....................                 blinkDisplay(); 
+0DD8:  CALL   1D6
+....................                 Display_setState(&myDisplay, STATE_COUNTING_DOWN); 
+0DD9:  BSF    03.5
+0DDA:  CLRF   69
+0DDB:  MOVLW  3F
+0DDC:  MOVWF  68
+0DDD:  MOVLW  02
+0DDE:  MOVWF  6A
+0DDF:  BCF    03.5
+0DE0:  CALL   153
+....................                 Display_saveState(&myDisplay); 
+0DE1:  BSF    03.5
+0DE2:  CLRF   69
+0DE3:  MOVLW  3F
+0DE4:  MOVWF  68
+0DE5:  BCF    03.5
+0DE6:  CALL   178
+....................                 Display_clearRtc(); 
+0DE7:  BCF    0A.3
+0DE8:  CALL   433
+0DE9:  BSF    0A.3
+....................                 rtos_enable(Task_checkIfStartStopResetButtonIsHeld); 
+0DEA:  BCF    22.7
+....................             } 
+....................             if (buttonStateMenu == BUTTON_STATE_HELD) { 
+0DEB:  BTFSC  3E.2
+0DEC:  GOTO   5F6
+....................                 buttonStateMenu = BUTTON_STATE_NOT_PUSHED; 
+0DED:  BSF    3E.2
+....................                 Display_setState(&myDisplay, STATE_SETTING_ALARM); 
+0DEE:  BSF    03.5
+0DEF:  CLRF   69
+0DF0:  MOVLW  3F
+0DF1:  MOVWF  68
+0DF2:  MOVLW  06
+0DF3:  MOVWF  6A
+0DF4:  BCF    03.5
+0DF5:  CALL   153
+....................             } 
+....................             break; 
+....................     } 
+0DF6:  BCF    0A.3
+0DF7:  BSF    0A.4
+0DF8:  GOTO   003 (RETURN)
+.................... } 
+....................  
+.................... void Task_runStateMachine(void) { 
+....................     runStateMachinePart1(); 
+*
+1000:  BCF    0A.4
+1001:  BSF    0A.3
+1002:  GOTO   1FF
+1003:  BSF    0A.4
+1004:  BCF    0A.3
+....................     switch (myDisplay.currentState) { 
+1005:  MOVF   4F,W
+1006:  XORLW  06
+1007:  BTFSC  03.2
+1008:  GOTO   00D
+1009:  XORLW  0E
+100A:  BTFSC  03.2
+100B:  GOTO   119
+100C:  GOTO   2B2
+....................         case STATE_SETTING_ALARM: 
+....................             if (showDisplayCompletely) { 
+100D:  BTFSS  3E.0
+100E:  GOTO   01A
+....................                 Display_showLimitTime(&myDisplay); 
+100F:  BSF    03.5
+1010:  CLRF   51
+1011:  MOVLW  3F
+1012:  MOVWF  50
+1013:  BCF    0A.4
+1014:  BSF    0A.3
+1015:  BCF    03.5
+1016:  CALL   60C
+1017:  BSF    0A.4
+1018:  BCF    0A.3
+....................             } else { 
+1019:  GOTO   01F
+....................                 SevenSegmentDisplay_clearDisplayTwoLines(); 
+101A:  BCF    0A.4
+101B:  BSF    0A.3
+101C:  CALL   6D7
+101D:  BSF    0A.4
+101E:  BCF    0A.3
+....................             } 
+....................             if (!input(PIN_BUTTON_NEXT)) { 
+101F:  BSF    03.5
+1020:  BSF    06.1
+1021:  BCF    03.5
+1022:  BTFSC  06.1
+1023:  GOTO   0C8
+....................                 while (!input(PIN_BUTTON_NEXT)) { 
+1024:  BSF    03.5
+1025:  BSF    06.1
+1026:  BCF    03.5
+1027:  BTFSC  06.1
+1028:  GOTO   0C8
+....................                     Display_increaseAlarm(&myDisplay); 
+1029:  BSF    03.5
+102A:  CLRF   51
+102B:  MOVLW  3F
+102C:  MOVWF  50
+....................                     Display_showLimitTime(&myDisplay); 
+*
+10B5:  CLRF   51
+10B6:  MOVLW  3F
+10B7:  MOVWF  50
+10B8:  BCF    0A.4
+10B9:  BSF    0A.3
+10BA:  BCF    03.5
+10BB:  CALL   60C
+10BC:  BSF    0A.4
+10BD:  BCF    0A.3
+....................                     delay_ms(DELAY_INCREASE_NUMBER_MILISECONDS); 
+10BE:  MOVLW  C8
+10BF:  BSF    03.5
+10C0:  MOVWF  51
+10C1:  BCF    0A.4
+10C2:  BSF    0A.3
+10C3:  BCF    03.5
+10C4:  CALL   1C2
+10C5:  BSF    0A.4
+10C6:  BCF    0A.3
+10C7:  GOTO   024
+....................                 } 
+....................             } 
+....................             if (numberOfMenuButtonHasBeenReleased >= 2) { 
+10C8:  MOVF   52,W
+10C9:  SUBLW  01
+10CA:  BTFSC  03.0
+10CB:  GOTO   0D9
+....................                 numberOfMenuButtonHasBeenReleased = 0; 
+10CC:  CLRF   52
+....................                 Display_setState(&myDisplay, STATE_SETTING_FORMAT); 
+10CD:  BSF    03.5
+10CE:  CLRF   69
+10CF:  MOVLW  3F
+10D0:  MOVWF  68
+10D1:  MOVLW  08
+10D2:  MOVWF  6A
+10D3:  BCF    0A.4
+10D4:  BSF    0A.3
+10D5:  BCF    03.5
+10D6:  CALL   153
+10D7:  BSF    0A.4
+10D8:  BCF    0A.3
+....................             } 
+....................             if (!menuButtonState && input(PIN_BUTTON_MENU) && 
+....................                     Display_isAlarmOkay(&myDisplay)) { 
+10D9:  BTFSC  3E.4
+10DA:  GOTO   118
+10DB:  BSF    03.5
+10DC:  BSF    06.0
+10DD:  BCF    03.5
+10DE:  BTFSS  06.0
+10DF:  GOTO   118
+10E0:  BSF    03.5
+10E1:  CLRF   51
+10E2:  MOVLW  3F
+10E3:  MOVWF  50
+*
+1111:  MOVF   78,F
+1112:  BTFSS  03.2
+1113:  GOTO   116
+1114:  BCF    03.5
+1115:  GOTO   118
+....................                 numberOfMenuButtonHasBeenReleased++; 
+1116:  BCF    03.5
+1117:  INCF   52,F
+....................  
+....................             } 
+....................  
+....................             break; 
+1118:  GOTO   2B2
+....................  
+....................         case STATE_SETTING_FORMAT: 
+....................             if (showDisplayCompletely) { 
+1119:  BTFSS  3E.0
+111A:  GOTO   154
+....................                 Display_showFormat(&myDisplay); 
+111B:  BSF    03.5
+111C:  CLRF   51
+111D:  MOVLW  3F
+111E:  MOVWF  50
+....................             } else { 
+*
+1152:  GOTO   15A
+1153:  BCF    03.5
+....................                 SevenSegmentDisplay_clearDisplayTwoLines(); 
+1154:  BCF    0A.4
+1155:  BSF    0A.3
+1156:  CALL   6D7
+1157:  BSF    0A.4
+1158:  BCF    0A.3
+1159:  BSF    03.5
+....................             } 
+....................  
+....................             if (input(PIN_BUTTON_NEXT) && (!nextButtonState)) { 
+115A:  BSF    06.1
+115B:  BCF    03.5
+115C:  BTFSS  06.1
+115D:  GOTO   203
+115E:  BTFSC  3E.5
+115F:  GOTO   203
+....................                 Display_swapFormat(&myDisplay); 
+1160:  BSF    03.5
+1161:  CLRF   51
+1162:  MOVLW  3F
+1163:  MOVWF  50
+....................             } 
+....................             if (!menuButtonState && input(PIN_BUTTON_MENU)) { 
+*
+1203:  BTFSC  3E.4
+1204:  GOTO   2B2
+1205:  BSF    03.5
+1206:  BSF    06.0
+1207:  BCF    03.5
+1208:  BTFSS  06.0
+1209:  GOTO   2B2
+....................                 Display_saveAlarm(&myDisplay); 
+120A:  BSF    03.5
+120B:  CLRF   51
+120C:  MOVLW  3F
+120D:  MOVWF  50
+....................                 Display_saveFormat(&myDisplay); 
+*
+126A:  CLRF   51
+126B:  MOVLW  3F
+126C:  MOVWF  50
+....................                 Display_clearRtc(); 
+*
+1291:  BCF    0A.4
+1292:  CALL   433
+1293:  BSF    0A.4
+....................                 Display_updateTimer(&myDisplay); 
+1294:  BSF    03.5
+1295:  CLRF   69
+1296:  MOVLW  3F
+1297:  MOVWF  68
+1298:  BCF    0A.4
+1299:  BCF    03.5
+129A:  CALL   587
+129B:  BSF    0A.4
+....................                 Display_setState(&myDisplay, STATE_READY); 
+129C:  BSF    03.5
+129D:  CLRF   69
+129E:  MOVLW  3F
+129F:  MOVWF  68
+12A0:  MOVLW  01
+12A1:  MOVWF  6A
+12A2:  BCF    0A.4
+12A3:  BSF    0A.3
+12A4:  BCF    03.5
+12A5:  CALL   153
+12A6:  BSF    0A.4
+12A7:  BCF    0A.3
+....................                 Display_saveState(&myDisplay); 
+12A8:  BSF    03.5
+12A9:  CLRF   69
+12AA:  MOVLW  3F
+12AB:  MOVWF  68
+12AC:  BCF    0A.4
+12AD:  BSF    0A.3
+12AE:  BCF    03.5
+12AF:  CALL   178
+12B0:  BSF    0A.4
+12B1:  BCF    0A.3
+....................             } 
+....................             break; 
+....................     } 
+....................  
+....................     startButtonState = input(PIN_BUTTON_START); 
+12B2:  BSF    03.5
+12B3:  BSF    06.4
+12B4:  BCF    03.5
+12B5:  BCF    3E.3
+12B6:  BTFSC  06.4
+12B7:  BSF    3E.3
+....................     menuButtonState = input(PIN_BUTTON_MENU); 
+12B8:  BSF    03.5
+12B9:  BSF    06.0
+12BA:  BCF    03.5
+12BB:  BCF    3E.4
+12BC:  BTFSC  06.0
+12BD:  BSF    3E.4
+....................     nextButtonState = input(PIN_BUTTON_NEXT); 
+12BE:  BSF    03.5
+12BF:  BSF    06.1
+12C0:  BCF    03.5
+12C1:  BCF    3E.5
+12C2:  BTFSC  06.1
+12C3:  BSF    3E.5
+....................     rtos_yield(); 
+12C4:  MOVLW  CB
+12C5:  MOVWF  35
+12C6:  MOVLW  12
+12C7:  MOVWF  36
+12C8:  BSF    0A.3
+12C9:  BCF    0A.4
+12CA:  GOTO   7DC
+12CB:  MOVLW  00
+12CC:  MOVWF  35
+12CD:  MOVLW  10
+12CE:  MOVWF  36
+12CF:  BSF    0A.3
+12D0:  BCF    0A.4
+12D1:  GOTO   7DC
+12D2:  RETURN
+.................... } 
+....................  
+.................... void Task_checkIfStartStopResetButtonIsHeld(void) { 
+....................     static int nextUpButtonCounter = 0; 
+....................     if (!input(PIN_BUTTON_START)) { 
+*
+0EF6:  BSF    03.5
+0EF7:  BSF    06.4
+0EF8:  BCF    03.5
+0EF9:  BTFSC  06.4
+0EFA:  GOTO   6FD
+....................         nextUpButtonCounter++; 
+0EFB:  INCF   53,F
+....................     } else { 
+0EFC:  GOTO   6FF
+....................         nextUpButtonCounter = 0; 
+0EFD:  CLRF   53
+....................         buttonStateStart = BUTTON_STATE_NOT_PUSHED; 
+0EFE:  BSF    3E.1
+....................     } 
+....................     if (nextUpButtonCounter >= (TIMEOUT_RESET_TIMER_MILISECONDS / 50 / 3)) { 
+0EFF:  MOVF   53,W
+0F00:  SUBLW  13
+0F01:  BTFSC  03.0
+0F02:  GOTO   705
+....................         buttonStateStart = BUTTON_STATE_HELD; 
+0F03:  BCF    3E.1
+....................         nextUpButtonCounter = 0; 
+0F04:  CLRF   53
+....................     } 
+....................     rtos_yield(); 
+0F05:  MOVLW  0C
+0F06:  MOVWF  27
+0F07:  MOVLW  0F
+0F08:  MOVWF  28
+0F09:  BSF    0A.3
+0F0A:  BCF    0A.4
+0F0B:  GOTO   7DC
+0F0C:  MOVLW  F6
+0F0D:  MOVWF  27
+0F0E:  MOVLW  0E
+0F0F:  MOVWF  28
+0F10:  BSF    0A.3
+0F11:  BCF    0A.4
+0F12:  GOTO   7DC
+0F13:  RETURN
+.................... } 
+....................  
+.................... void Task_checkIfMenuButtonIsHeld(void) { 
+....................     static int menuButtonCounter = 0; 
+....................  
+....................     if (!input(PIN_BUTTON_MENU)) { 
+0F14:  BSF    03.5
+0F15:  BSF    06.0
+0F16:  BCF    03.5
+0F17:  BTFSC  06.0
+0F18:  GOTO   71B
+....................         menuButtonCounter++; 
+0F19:  INCF   54,F
+....................     } else { 
+0F1A:  GOTO   71D
+....................         menuButtonCounter = 0; 
+0F1B:  CLRF   54
+....................         buttonStateMenu = BUTTON_STATE_NOT_PUSHED; 
+0F1C:  BSF    3E.2
+....................     } 
+....................     if (menuButtonCounter >= (TIMEOUT_MENU_BUTTON_MILISECONDS / 50 / 3)) { 
+0F1D:  MOVF   54,W
+0F1E:  SUBLW  0C
+0F1F:  BTFSC  03.0
+0F20:  GOTO   723
+....................         buttonStateMenu = BUTTON_STATE_HELD; 
+0F21:  BCF    3E.2
+....................         menuButtonCounter = 0; 
+0F22:  CLRF   54
+....................     } 
+....................     rtos_yield(); 
+0F23:  MOVLW  2A
+0F24:  MOVWF  2E
+0F25:  MOVLW  0F
+0F26:  MOVWF  2F
+0F27:  BSF    0A.3
+0F28:  BCF    0A.4
+0F29:  GOTO   7DC
+0F2A:  MOVLW  14
+0F2B:  MOVWF  2E
+0F2C:  MOVLW  0F
+0F2D:  MOVWF  2F
+0F2E:  BSF    0A.3
+0F2F:  BCF    0A.4
+0F30:  GOTO   7DC
+0F31:  RETURN
+.................... } 
+....................  
+.................... void Task_blinkDisplay(void) { 
+....................     showDisplayCompletely = ~showDisplayCompletely; 
+0F32:  MOVLW  01
+0F33:  XORWF  3E,F
+....................     rtos_yield(); 
+0F34:  MOVLW  3B
+0F35:  MOVWF  3C
+0F36:  MOVLW  0F
+0F37:  MOVWF  3D
+0F38:  BSF    0A.3
+0F39:  BCF    0A.4
+0F3A:  GOTO   7DC
+0F3B:  MOVLW  32
+0F3C:  MOVWF  3C
+0F3D:  MOVLW  0F
+0F3E:  MOVWF  3D
+0F3F:  BSF    0A.3
+0F40:  BCF    0A.4
+0F41:  GOTO   7DC
+0F42:  RETURN
+.................... } 
+....................  
+.................... void setupHardware(void) { 
+....................     delay_ms(200); 
+*
+0F61:  MOVLW  C8
+0F62:  BSF    03.5
+0F63:  BCF    03.6
+0F64:  MOVWF  51
+0F65:  BCF    03.5
+0F66:  CALL   1C2
+....................     port_b_pullups(0xFF); 
+0F67:  MOVLW  FF
+0F68:  BSF    03.5
+0F69:  MOVWF  15
+0F6A:  BCF    01.7
+....................     WPUB = 0xFF; 
+0F6B:  MOVWF  15
+.................... } 
+....................  
+.................... void blinkDisplay(void) { 
+....................     Display_showCount(&myDisplay, FALSE); 
+*
+09D6:  BSF    03.5
+09D7:  CLRF   69
+09D8:  MOVLW  3F
+09D9:  MOVWF  68
+09DA:  CLRF   6A
+09DB:  BCF    03.5
+09DC:  CALL   000
+....................     delay_ms(200); 
+09DD:  MOVLW  C8
+09DE:  BSF    03.5
+09DF:  MOVWF  51
+09E0:  BCF    03.5
+09E1:  CALL   1C2
+....................     SevenSegmentDisplay_clearDisplay(); 
+....................     delay_ms(200); 
+*
+09F2:  MOVLW  C8
+09F3:  BSF    03.5
+09F4:  MOVWF  51
+09F5:  BCF    03.5
+09F6:  CALL   1C2
+....................     Display_showCount(&myDisplay, FALSE); 
+09F7:  BSF    03.5
+09F8:  CLRF   69
+09F9:  MOVLW  3F
+09FA:  MOVWF  68
+09FB:  CLRF   6A
+09FC:  BCF    03.5
+09FD:  CALL   000
+09FE:  RETURN
+....................     //    delay_ms(200); 
+.................... } 
+....................  
+
+Configuration Fuses:
+   Word  1: 2F82   HS NOWDT PUT NOMCLR PROTECT NOCPD BROWNOUT IESO FCMEN NOLVP NODEBUG
+   Word  2: 3FFF   BORV40 NOWRT
